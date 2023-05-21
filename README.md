@@ -227,3 +227,37 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 <img src="" alt=""/>
 </details>
 <br>
+
+# Deployment
+
+## Programs needed:
+
+### Heroku
+
+**placeholder**
+
+### GitHub
+
+**placeholder**
+
+### ElephantSQL
+
+**placeholder**
+
+## Local Development
+
+**placeholder**
+
+**loads of placeholders**
+
+**loads of placeholders**
+
+**loads of placeholders**
+
+**loads of placeholders**
+
+**loads of placeholders**
+
+# Credits 
+
+**placeholder**
