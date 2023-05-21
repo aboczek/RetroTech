@@ -120,3 +120,61 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 
 	**placeholder**
 
+- Profile account
+
+	**placeholder**
+
+
+# Authentication and Security
+
+	**placeholder**
+
+# Data Structure
+
+## Database
+
+	**placeholder**
+
+## Logic
+
+	**placeholder**
+
+# Website Structure
+
+	**placeholder**
+
+# Technology, Frameworks and Libraries used.
+
+## Languages
+
+- [HTML](https://en.wikipedia.org/wiki/HTML5) 
+
+- [CSS](https://en.wikipedia.org/wiki/CSS)
+
+- [Python](https://en.wikipedia.org/wiki/Python_(programming_language))
+
+- [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
+
+## Frameworks and Libraries used.
+
+- [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
+
+- [Heroku](https://www.heroku.com) Deployment of website.
+
+- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
+
+- [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
+
+- [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+- [Balsamiq](https://balsamiq.com/) Wireframes.
+
+- [FontAwesome](https://fontawesome.com/) Icons used in this project.
+
+- [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) used to generate new key.
+
+- [Google fonts](https://fonts.google.com/) PT-serif was used.
+
+- [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
