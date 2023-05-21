@@ -178,3 +178,51 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 - [Google fonts](https://fonts.google.com/) PT-serif was used.
 
 - [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
+
+# Features
+
+- Responsive on all devices.
+- Custom Front end admin panel.
+- Profile accounts.
+- Checkout with Stripe payments.
+- Products and Categories.
+
+## Navigation
+
+	**placeholder**
+
+# Testing
+
+	1. W3C HTML Validator, CSS Validator, CI Pylinter and JShint.
+
+	**placeholder**
+
+	2. Testing on website.
+
+	**placeholder**
+
+	3. Testing on portable devices.
+
+	**placeholder**
+
+	4. Automated and Manual testing.
+
+	**placeholder**
+
+	5. Known bugs.
+
+	**placeholder**
+
+	6. Bugs fixed.
+
+	**placeholder**
+
+	# Testing user stories
+
+	| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+	|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+	| **placeholder** | **placeholder** | **placeholder** | PASS |
+	<details><summary>Picture</summary>
+	<img src="" alt=""/>
+	</details>
+	<br>
