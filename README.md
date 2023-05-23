@@ -160,11 +160,13 @@ Image:
 | item | ForeignKey to Item model |
 | image | ImageField |
 
+<img src="docs/db.png" alt="Item model">
+
 **placeholder**
 
 ## Logic
 
-	**placeholder**
+<img src="docs/logic.png" alt="website logic" width="1000">
 
 # Website Structure
 
