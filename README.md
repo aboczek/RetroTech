@@ -133,7 +133,34 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 
 ## Database
 
-	**placeholder**
+Category:
+| Object | Field |
+|---|---|
+| ID | is automatically generated |
+| name | CharField |
+| frontend_name | CharField |
+
+Item:
+| Object | Field |
+|---|---|
+| ID | is automatically generated |
+| category | ForeignKey to Category model |
+| sku_number | CharField |
+| product_name | CharField |
+| product_model | CharField |
+| product_description | TextField |
+| price | DecimalField |
+| sale | Boolean |
+| featured | Boolean |
+
+Image:
+| Object | Field |
+|---|---|
+| ID | is automatically generated |
+| item | ForeignKey to Item model |
+| image | ImageField |
+
+**placeholder**
 
 ## Logic
 
