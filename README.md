@@ -188,13 +188,17 @@ Image:
 
 - [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
 
-- [Heroku](https://www.heroku.com) Deployment of website.
-
-- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
-
 - [Gunicorn](https://en.wikipedia.org/wiki/Gunicorn) HTTP server interface.
 
 - [Psycopg](https://wiki.postgresql.org/wiki/Psycopg) Postgres database adaptor.
+
+- [Stripe](https://stripe.com/) Payments.
+
+## Tools
+
+- [Heroku](https://www.heroku.com) Deployment of website.
+
+- [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
 
 - [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
 
