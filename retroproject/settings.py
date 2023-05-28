@@ -46,6 +46,7 @@ INSTALLED_APPS = [
     'home',
     'items',
     'basket',
+    'checkout',
 ]
 
 SITE_ID = 1
@@ -68,7 +69,10 @@ ROOT_URLCONF = 'retroproject.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [
+            os.path.join(BASE_DIR, 'templates'),
+            os.path.join(BASE_DIR, 'templates', 'allauth'),
+        ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
