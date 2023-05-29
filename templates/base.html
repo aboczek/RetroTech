@@ -8,8 +8,13 @@
 </head>
 
 <body>
+    <!-- Navbar -->
     {% include 'layout/navbar.html' %}
 
+    {% block template %}
+    {% endblock %}
+
+    <!-- Bootstrap JS-->
     {% include 'components/bootstrapjs.html' %}
 </body>
 

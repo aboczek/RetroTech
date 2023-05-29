@@ -4,10 +4,45 @@
     border: none;
 }
 
+:root {
+    --black: #000;
+    --purple: #A35DFD;
+}
+
 html {
     font-size: 62.5%;
 }
 
 body {
     font-size: 1.6rem;
+}
+
+#logo {
+    margin: 1rem 0 0 1rem;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+#slogan {
+    margin-left: 1.3rem;
+    font-size: 1.3rem;
+}
+
+#purple {
+    color: var(--purple);
+}
+
+#horizontal {
+    height: 1px;
+}
+
+/* bootstrap override */
+.nav-link {
+    color: var(--black);
+    font-size: 1.8rem;
+}
+
+.dropdown-menu {
+    font-size: 1.8rem;
+    border: none;
 }

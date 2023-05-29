@@ -1,5 +1,34 @@
 {% load static %}
 
 <header>
-    <h1>RetroTech</h1>
+    <h1 id="logo">Retro<span id="purple">Tech</span></h1>
+    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+            <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
+        </li>
+        <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                aria-expanded="false">Products</a>
+            <ul class="dropdown-menu">
+                <li><a class="dropdown-item" href="#">Handheld</a></li>
+                <li><a class="dropdown-item" href="#">Console</a></li>
+                <li><a class="dropdown-item" href="#">Accessories</a></li>
+                <li><a class="dropdown-item" href="#">Games</a></li>
+            </ul>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">FAQ</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Track your order</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link text-danger fw-bolder" href="#">Sale</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#">Checkout</a>
+        </li>
+    </ul>
+    <hr id="horizontal">
 </header>
