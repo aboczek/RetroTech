@@ -7,6 +7,9 @@
 :root {
     --black: #000;
     --purple: #A35DFD;
+    --purple-shadow: rgba(163, 93, 253, .45);
+    --white: #fff;
+    --green: #10b31b;
 }
 
 html {
@@ -17,7 +20,7 @@ body {
     font-size: 1.6rem;
 }
 
-#logo {
+.logo {
     margin: 1rem 0 0 1rem;
     font-size: 5rem;
     line-height: 1;
@@ -36,6 +39,10 @@ body {
     height: 1px;
 }
 
+.style-none {
+    list-style-type: none;
+}
+
 /* bootstrap override */
 .nav-link {
     color: var(--black);
@@ -44,5 +51,29 @@ body {
 
 .dropdown-menu {
     font-size: 1.8rem;
+    border: none;
+}
+
+.input-group-lg>.btn,
+.input-group-lg>.form-control {
+    font-size: 1.8rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--purple-shadow);
+}
+
+.border-dark {
+    border-radius: 0.3rem;
+}
+
+.border-dark:hover {
+    border-color: var(--white) !important;
+
+}
+
+.basket:hover {
+    background-color: var(--green);
+    color: var(--white);
     border: none;
 }

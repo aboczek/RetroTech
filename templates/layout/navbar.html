@@ -1,34 +1,82 @@
 {% load static %}
 
 <header>
-    <h1 id="logo">Retro<span id="purple">Tech</span></h1>
-    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
-    <ul class="nav justify-content-center">
-        <li class="nav-item">
-            <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
-        </li>
-        <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                aria-expanded="false">Products</a>
-            <ul class="dropdown-menu">
-                <li><a class="dropdown-item" href="#">Handheld</a></li>
-                <li><a class="dropdown-item" href="#">Console</a></li>
-                <li><a class="dropdown-item" href="#">Accessories</a></li>
-                <li><a class="dropdown-item" href="#">Games</a></li>
-            </ul>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">FAQ</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Track your order</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link text-danger fw-bolder" href="#">Sale</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="#">Checkout</a>
-        </li>
-    </ul>
-    <hr id="horizontal">
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-4">
+                <h1 class="logo">Retro<span id="purple">Tech</span></h1>
+                <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+            </div>
+            <div class="col-4">
+                <div class="input-group input-group-lg mt-5">
+                    <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                        aria-describedby="button-addon2">
+                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
+            </div>
+            <div class="col-4 d-flex justify-content-end ">
+                <ul class="style-none me-3 justify-content-center logo">
+                    <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Register <i class="fa-solid fa-user-plus"></i></a>
+                    </li>
+                    <!-- <li>
+                        <a href="" class="text-decoration-none nav-link">Profile <i class="fa-solid fa-user"></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                    </li> -->
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container-lg">
+        <div class="row">
+            <div class="col-12">
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
+                            aria-expanded="false">Products</a>
+                        <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" href="#">Handheld</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Console</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Accessories</a>
+                            </li>
+                            <li>
+                                <a class="dropdown-item" href="#">Games</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Track your order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger fw-bolder" href="#">Sale</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link border border-dark basket" href="#">
+                            Checkout <i class="fa-solid fa-basket-shopping"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <hr>
 </header>
