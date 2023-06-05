@@ -212,6 +212,8 @@ Image:
 
 - [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
 
+- [Freepik](https://www.freepik.com/) Freepik images
+
 # Features
 
 - Responsive on all devices.
@@ -293,4 +295,4 @@ Image:
 
 # Credits 
 
-**placeholder**
+[Freepik](https://www.freepik.com/free-vector/reviews-concept-landing-page_5156335.htm#query=reviews&position=27&from_view=search&track=locales") Freepiks website linked to person that created image.

@@ -2,38 +2,28 @@
 {% load static %}
 
 {% block template %}
-<div class="container">
+<div class="container my-5">
     <div class="row">
         <div class="col-lg-8">
             <h2 class="d-flex justify-content-center">Featured</h2>
             <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <!-- <div class="carousel-indicators">
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                        class="active" aria-current="true" aria-label="Slide 1"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                        aria-label="Slide 2"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                        aria-label="Slide 3"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="3"
-                        aria-label="Slide 4"></button>
-                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="4"
-                        aria-label="Slide 5"></button>
-                </div> -->
                 <div class="carousel-inner">
                     <div class="carousel-item active">
-                        <a href="#"><img src="media/pexels-dids-1367036.jpg" class="d-block w-100" alt="..."></a>
+                        <a href="#"><img src="{% static 'images/pexels-dids-1367036.jpg' %}" class="d-block w-100"
+                                alt="..."></a>
                     </div>
                     <div class="carousel-item">
-                        <img src="media/pexels-luis-quintero-2263816.jpg" class="d-block w-100" alt="...">
+                        <img src="{% static 'images/pexels-luis-quintero-2263816.jpg' %}" class="d-block w-100"
+                            alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="media/pexels-stas-knop-1298601.jpg" class="d-block w-100" alt="...">
+                        <img src="{% static 'images/pexels-stas-knop-1298601.jpg' %}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="media/pexels-stas-knop-1298601.jpg" class="d-block w-100" alt="...">
+                        <img src="{% static 'images/pexels-stas-knop-1298601.jpg' %}" class="d-block w-100" alt="...">
                     </div>
                     <div class="carousel-item">
-                        <img src="media/pexels-dids-1367036.jpg" class="d-block w-100" alt="...">
+                        <img src="{% static 'images/pexels-dids-1367036.jpg' %}" class="d-block w-100" alt="...">
                     </div>
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -49,7 +39,7 @@
             </div>
         </div>
         <div class="col-lg-4">
-            <h2 class="d-flex justify-content-center">
+            <h2 class="d-flex justify-content-center text-danger">
                 ON SALE
             </h2>
             <div class="container">
@@ -60,26 +50,28 @@
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <a href="#"><img src="media/pexels-caleb-oquendo-3162044.jpg"
+                                            <a href="#"><img
+                                                    src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
                                                     class="d-block w-100" alt="..."></a>
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="media/pexels-caleb-oquendo-3162044.jpg" class="d-block w-100"
-                                                alt="...">
+                                            <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
+                                                class="d-block w-100" alt="...">
                                         </div>
                                         <div class="carousel-item">
-                                            <img src="media/pexels-caleb-oquendo-3162044.jpg" class="d-block w-100"
-                                                alt="...">
+                                            <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
+                                                class="d-block w-100" alt="...">
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <h2 class="d-flex justify-content-center">Games</h2>
-                            <div class="col-12 pt-3">
+                            <h2 class="d-flex justify-content-center pt-3">Games</h2>
+                            <div class="col-12">
                                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                     <div class="carousel-inner">
                                         <div class="carousel-item active">
-                                            <a href="#"><img src="media/pexels-caleb-oquendo-3162044.jpg"
+                                            <a href="#"><img
+                                                    src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
                                                     class="d-block w-100" alt="..."></a>
                                         </div>
                                     </div>
@@ -95,11 +87,40 @@
 <div class="container">
     <div class="row">
         <div class="col-12">
-            <h3 class=" d-flex justify-content-center mt-5">Why us?</h3>
-            <ul class="text-center style-none">
-                <li>We dedicate our time to suit your needs,</li>
+            <h2 class="d-flex justify-content-center mt-5">Why us?</h2>
+            <ul class="text-center style-none pb-2">
+                <li class="py-4">We dedicate our time to suit your needs,</li>
+                <li class="py-4">Thousands customers satisfied with our service,</li>
+                <li class="py-4">Quick deliveries across the country and into Europe.</li>
+            </ul>
+            <div class="d-flex justify-content-center">
+                <img src="{% static 'images/reviews.jpg' %}" alt="reviews" class="reviews">
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="d-flex justify-content-center mt-5">Sell to us</h2>
+            <ul class="text-center style-none pb-2">
+                <li class="py-4">We buy all handhelds and consoles from companies like Retroid, Valve, Anbernic, Miyoo,
+                    Asus,
+                    Playstation, Microsoft/Xbox and Nintendo.</li>
+                <li class="py-4">Give us a shout in top of the navigation bar.</li>
+                <li class="py-4">Fill in the Details.</li>
+                <li class="py-4">Grade your device.</li>
+                <li class="py-4">Accordingly to the grade of the device we think it is we will give you an estimate
+                    offer.</li>
+                <li class="py-4">You send the device to us and we inspect it, then we pay you the money to your bank
+                    account.</li>
             </ul>
         </div>
     </div>
 </div>
+<footer>
+    <div id="footer">blabla</div>
+
+</footer>
+
 {% endblock %}
