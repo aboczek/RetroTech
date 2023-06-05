@@ -75,5 +75,4 @@ body {
 .basket:hover {
     background-color: var(--green);
     color: var(--white);
-    border: none;
 }
