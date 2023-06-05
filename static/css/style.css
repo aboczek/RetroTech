@@ -67,8 +67,13 @@ body {
 /* Footer */
 
 #footer {
-    height: 20rem;
+    height: 17rem;
     background-color: var(--d-grey);
+    margin-top: 10rem;
+}
+
+.white-txt a {
+    color: var(--white);
 }
 
 /* Bootstrap override */
