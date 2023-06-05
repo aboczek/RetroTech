@@ -26,6 +26,12 @@ body {
     line-height: 1;
 }
 
+.login-register {
+    margin: 1rem 0 0 0;
+    font-size: 5rem;
+    line-height: 1;
+}
+
 #slogan {
     margin-left: 1.3rem;
     font-size: 1.3rem;
@@ -72,7 +78,7 @@ body {
 
 }
 
-.basket:hover {
-    background-color: var(--green);
-    color: var(--white);
+.basket {
+    font-size: 4rem;
+    padding-right: 2rem;
 }
