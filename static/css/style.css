@@ -76,6 +76,14 @@ body {
     color: var(--white);
 }
 
+.subscribe {
+    font-size: 1.5rem;
+}
+
+.white-bg {
+    background-color: var(--white);
+}
+
 /* Bootstrap override */
 .nav-link {
     color: var(--black);
