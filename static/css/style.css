@@ -111,3 +111,35 @@ body {
 .border-dark:hover {
     border-color: var(--white) !important;
 }
+
+/* Media Queries */
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .sm-media-footer {
+        flex-flow: column;
+        height: 12rem;
+        margin: 0;
+        padding-bottom: 2rem;
+        background-color: var(--d-grey);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sm-media-subs {
+        width: 70%;
+        margin: 1rem auto auto;
+        justify-content: center;
+        text-align: center;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .sm-media-subs {
+        width: 90%;
+        margin: 1rem auto auto;
+        justify-content: center;
+        text-align: center;
+    }
+}
