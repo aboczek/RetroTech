@@ -58,10 +58,16 @@ body {
     color: var(--black);
 }
 
+/* Content */
+
 .reviews {
     width: 60%;
     margin: 5rem 0 5rem 0;
     border-radius: 50%;
+}
+
+#small-navbar-image {
+    display: none;
 }
 
 /* Footer */
@@ -133,6 +139,23 @@ body {
         justify-content: center;
         text-align: center;
     }
+
+    .sm-sell-to-us {
+        display: flex;
+        justify-content: center !important;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    #small-navbar-image {
+        display: flex;
+    }
+
+    #navbar-image {
+        display: none;
+    }
+
 }
 
 @media (min-width: 0px) and (max-width: 576px) {
