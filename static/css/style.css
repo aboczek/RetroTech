@@ -30,6 +30,12 @@ body {
     line-height: 1;
 }
 
+.logo-sm {
+    margin: 1rem 0 0 1rem;
+    font-size: 3rem;
+    line-height: 1;
+}
+
 .login-register {
     margin: 1rem 0 0 0;
     line-height: 1;
@@ -118,7 +124,23 @@ body {
     border-color: var(--white) !important;
 }
 
+.navbar-toggler {
+    font-size: 1.6rem !important;
+}
+
 /* Media Queries */
+
+@media (min-width: 768px) {
+    #sm-device {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .logo {
+        font-size: 4rem;
+    }
+}
 
 @media (min-width: 320px) and (max-width: 768px) {
 
@@ -156,6 +178,33 @@ body {
         display: none;
     }
 
+    .md-lg-device {
+        display: none;
+    }
+
+    /* bootstrap override */
+    .input-group-lg>.btn,
+    .input-group-lg>.form-control {
+        font-size: 1.6rem !important;
+    }
+
+    .input-group {
+        width: 70%;
+        margin: auto;
+    }
+
+    .navbar {
+        padding-bottom: 0;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: var(--black);
+        border: none;
+    }
+
+    #sm-toggler-products {
+        font-size: 1.8rem !important;
+    }
 }
 
 @media (min-width: 0px) and (max-width: 576px) {

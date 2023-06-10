@@ -1,7 +1,7 @@
 {% load static %}
 
 <header>
-    <div class="container-lg">
+    <div class="container-lg md-lg-device">
         <div class="row">
             <div class="col-4">
                 <h1 class="logo">Retro<span id="purple">Tech</span></h1>
@@ -46,7 +46,7 @@
             </div>
         </div>
     </div>
-    <div class="container-lg">
+    <div class="container-lg md-lg-device">
         <div class="row">
             <div class="col-12">
                 <ul class="nav justify-content-center">
@@ -90,5 +90,100 @@
             </div>
         </div>
     </div>
-    <hr>
+    <div id="sm-device">
+        <nav class="navbar navbar-light bg-light">
+            <div class="container-fluid">
+                <div class="d-flex flex-column">
+                    <h1 class="logo-sm">Retro<span id="purple">Tech</span></h1>
+                    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+            </div>
+        </nav>
+        <div class="collapse" id="navbarToggleExternalContent">
+            <div class="bg-light p-4">
+                <ul class="nav justify-content-center d-flex flex-column align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
+                    </li>
+                    <nav class="navbar navbar-light bg-light">
+                        <div class="container-fluid">
+                            <button class="navbar-toggler dropdown-toggle" id="sm-toggler-products" type="button"
+                                data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent1"
+                                aria-controls="navbarToggleExternalContent1" aria-expanded="false"
+                                aria-label="Toggle navigation">
+                                Products
+                            </button>
+                        </div>
+                    </nav>
+                    <div class="collapse" id="navbarToggleExternalContent1">
+                        <div class="bg-light p-4">
+                            <ul class="style-none text-dark">
+                                <li>
+                                    <a class="text-decoration-none text-dark nav-link" href="#">Handheld</a>
+                                </li>
+                                <li>
+                                    <a class="text-decoration-none text-dark nav-link" href="#">Console</a>
+                                </li>
+                                <li>
+                                    <a class="text-decoration-none text-dark nav-link" href="#">Accessories</a>
+                                </li>
+                                <li>
+                                    <a class="text-decoration-none text-dark nav-link" href="#">Games **Soon**</a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">FAQ</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Track your order</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Sell to us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-danger fw-bolder" href="#">SALE</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link fw-bolder" href="#">Checkout</a>
+                    </li>
+                </ul>
+                <hr>
+                <ul class="style-none me-3 login-register d-flex flex-column align-items-center">
+                    <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                    </li>
+                    <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Register <i class="fa-solid fa-user-plus"></i></a>
+                        <!-- <li>
+                        <a href="" class="text-decoration-none nav-link">Profile <i class="fa-solid fa-user"></i></a>
+                        </li>
+                        <li>
+                        <a href="" class="text-decoration-none nav-link">
+                            Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                        </li> -->
+                    </li>
+                    <hr>
+                    <li class="nav-item">
+                        <a class="basket ps-4" href="#">
+                            <i class="fa-solid fa-basket-shopping basket"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="input-group input-group-lg mt-4">
+            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
+                aria-describedby="button-addon2">
+            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
+                    class="fa-solid fa-magnifying-glass"></i></button>
+        </div>
+    </div>
 </header>
