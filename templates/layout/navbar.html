@@ -51,14 +51,14 @@
             <div class="col-12">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
+                        <a class="nav-link" href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
                             aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="#">Handheld</a>
+                                <a class="dropdown-item" href="{% url 'handheld' %}">Handheld</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" href="#">Console</a>
@@ -108,7 +108,7 @@
             <div class="bg-light p-4">
                 <ul class="nav justify-content-center d-flex flex-column align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Home <i class="fa-solid fa-house"></i></a>
+                        <a class="nav-link" href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a>
                     </li>
                     <nav class="navbar navbar-light bg-light">
                         <div class="container-fluid">
@@ -124,7 +124,8 @@
                         <div class="bg-light p-4">
                             <ul class="style-none text-dark">
                                 <li>
-                                    <a class="text-decoration-none text-dark nav-link" href="#">Handheld</a>
+                                    <a class="text-decoration-none text-dark nav-link"
+                                        href="{% url 'handheld' %}">Handheld</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" href="#">Console</a>

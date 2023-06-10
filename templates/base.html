@@ -5,6 +5,18 @@
 
 <head>
     {% include 'layout/head.html' %}
+
+    <!-- My own css-->
+    {% block corecss %}
+    <link href="{% static 'css/style.css' %}" rel="stylesheet" type="text/css" />
+    {% endblock %}
+
+    <!-- My Own extra css-->
+    {% block extra_css %}
+
+    {% endblock %}
+
+    <title>{{ title }}</title>
 </head>
 
 <body>

@@ -1,3 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def handheld(request):
+    """
+    Handheld devices page.
+    """
+    context = {
+        'title': 'RetroTech Handhelds',
+    }
+
+    return render(request, 'items/handheld.html', context)
