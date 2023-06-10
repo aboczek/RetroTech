@@ -170,7 +170,13 @@ Image:
 
 # Website Structure
 
-	**placeholder**
+- Most of website structure comes from Bootstrap itself, and rest is just overrides to make it look nicer.
+
+|  Screen size |  Breakpoint |
+|---|---|
+| extra small | >= 320px |
+| small | >= 576px |
+| medium | >= 768px |
 
 # Technology, Frameworks and Libraries used.
 
