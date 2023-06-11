@@ -21,3 +21,15 @@ def console(request):
     }
 
     return render(request, 'items/console.html', context)
+
+
+def accessory(request):
+    """
+    Accessories page.
+    """
+
+    context = {
+        'title': 'RetroTech Accessories',
+    }
+
+    return render(request, 'items/accessory.html', context)
