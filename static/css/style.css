@@ -182,6 +182,10 @@ body {
         display: none;
     }
 
+    .basket {
+        padding: 0 !important;
+    }
+
     /* bootstrap override */
     .input-group-lg>.btn,
     .input-group-lg>.form-control {

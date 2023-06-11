@@ -10,3 +10,14 @@ def handheld(request):
     }
 
     return render(request, 'items/handheld.html', context)
+
+
+def console(request):
+    """
+    Console devices page.
+    """
+    context = {
+        'title': 'RetroTech Consoles',
+    }
+
+    return render(request, 'items/console.html', context)

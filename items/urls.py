@@ -4,5 +4,6 @@ from django.conf.urls.static import static
 from . import views
 
 urlpatterns = [
-    path('', views.handheld, name='handheld'),
+    path('handheld/', views.handheld, name='handheld'),
+    path('console/', views.console, name='console'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
