@@ -5,6 +5,7 @@ def handheld(request):
     """
     Handheld devices page.
     """
+
     context = {
         'title': 'RetroTech Handhelds',
     }
@@ -16,6 +17,7 @@ def console(request):
     """
     Console devices page.
     """
+
     context = {
         'title': 'RetroTech Consoles',
     }
@@ -33,3 +35,15 @@ def accessory(request):
     }
 
     return render(request, 'items/accessory.html', context)
+
+
+def games(request):
+    """
+    Games page.
+    """
+
+    context = {
+        'title': 'RetroTech Games coming soon',
+    }
+
+    return render(request, 'items/games.html', context)

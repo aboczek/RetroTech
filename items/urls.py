@@ -7,4 +7,5 @@ urlpatterns = [
     path('handheld/', views.handheld, name='handheld'),
     path('console/', views.console, name='console'),
     path('accessory/', views.accessory, name='accessory'),
+    path('games/', views.games, name='games'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
