@@ -2,5 +2,86 @@
 {% load static %}
 
 {% block template %}
-hey
+
+<h2 class="d-flex justify-content-center mt-5">Frequently asked questions?</h2>
+<div class="container-md my-5">
+    <div class="row">
+        <div class="col">
+            <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <strong>Delivery & Shipping.</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Delivery is done by third party companies like <strong>DHL</strong>,
+                            <strong>DPD</strong> or <strong>AnPost</strong>.
+                            <hr>
+                            Shipping is done the same day if product was bought before 12pm, unless
+                            there is some delays which we will notify you about.
+                            <hr>
+                            Tracking will be sent to you when we hand the parcel to delivery company.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingTwo">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            <strong>Sell to us.</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Sell to us you need to contact us by **Sell to us** in navigation bar, fill
+                            in the details upload the pictures. We will contact you back and give you details where to
+                            send it to, when we receive the item we inspect the item, and contact you back with more
+                            details about quality, and money we offer you.
+
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingThree">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            <strong>Returns.</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            Returns are only accepted, if the item wasnt opened from original packaging
+                            or has been faulty from shipping.
+                            You have up to **60** days to return the product.
+                        </div>
+                    </div>
+                </div>
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingFour">
+                        <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                            <strong>Warranty.</strong>
+                        </button>
+                    </h2>
+                    <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            As a customer your product has 2 years warranty for <strong>NEW</strong> products, and for
+                            used also called second hand it all depends of grade how much it is worn out.
+                            For example Mint condition will have 6 months warranty, for example battle scared would give
+                            you 1 up to 2 months.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 {% endblock %}

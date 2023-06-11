@@ -128,6 +128,15 @@ body {
     font-size: 1.6rem !important;
 }
 
+.accordion-button {
+    font-size: 1.6rem;
+    height: 5rem;
+}
+
+.accordion-body {
+    padding: 1.5rem 1.25rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
