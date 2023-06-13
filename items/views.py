@@ -47,3 +47,15 @@ def games(request):
     }
 
     return render(request, 'items/games.html', context)
+
+
+def sell_to_us(request):
+    """
+    Sell to us page with steps how to do it.
+    """
+
+    context = {
+        'title': 'RetroTech Sell to us',
+    }
+
+    return render(request, 'items/sell-to-us.html', context)
