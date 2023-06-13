@@ -1,6 +1,16 @@
-{% extend 'base.html' %}
+{% extends "base.html" %}
 {% load static %}
 
 {% block template %}
-
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="my-5 d-flex flex-column align-items-center">
+                <label for="tracking" class="form-label">Tracking number:</label>
+                <input type="text" class="form-control" id="tracking" placeholder="Tracking number">
+                <button class="btn btn-primary mt-3" id="track-button">Track</button>
+            </div>
+        </div>
+    </div>
+</div>
 {% endblock %}

@@ -22,3 +22,15 @@ def faq(request):
     }
 
     return render(request, 'home/faq.html', context)
+
+
+def track_your_order(request):
+    """
+    Track your order page to see tracking.
+    """
+
+    context = {
+        'title': 'RetroTech Track your order.'
+    }
+
+    return render(request, 'home/tracking.html', context)

@@ -65,7 +65,7 @@ body {
     color: var(--black);
 }
 
-/* Content */
+/* Content of index.html */
 
 .reviews {
     width: 60%;
@@ -75,6 +75,17 @@ body {
 
 #small-navbar-image {
     display: none;
+}
+
+/* Track your order */
+
+#tracking {
+    font-size: 1.6rem;
+    width: 50%;
+}
+
+#track-button {
+    font-size: 1.6rem !important;
 }
 
 /* Footer */
