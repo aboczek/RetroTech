@@ -207,6 +207,12 @@ body {
         padding: 0 !important;
     }
 
+    #tracking {
+        width: 70%;
+    }
+
+
+
     /* bootstrap override */
     .input-group-lg>.btn,
     .input-group-lg>.form-control {
