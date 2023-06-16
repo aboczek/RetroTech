@@ -3,7 +3,7 @@ from django.shortcuts import render
 
 def home(request):
     """
-    Home page
+    Home page.
     """
     context = {
         'title': 'RetroTech Home Page',
