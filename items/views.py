@@ -59,3 +59,15 @@ def sell_to_us(request):
     }
 
     return render(request, 'items/sell-to-us.html', context)
+
+
+def sale(request):
+    """
+    Sale page.
+    """
+
+    context = {
+        'title': 'RetroTech SALE!!',
+    }
+
+    return render(request, 'items/sale.html', context)
