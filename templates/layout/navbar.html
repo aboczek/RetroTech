@@ -36,7 +36,7 @@
                                     </li> -->
                                 </li>
                                 <li class="nav-item">
-                                    <a class="basket ps-4" href="#">
+                                    <a class="basket ps-4" href="{% url 'checkout' %}">
                                         <i class="fa-solid fa-basket-shopping basket"></i></a>
                                 </li>
                             </ul>
@@ -161,11 +161,11 @@
                 <hr>
                 <ul class="style-none me-3 login-register d-flex flex-column align-items-center">
                     <li>
-                        <a href="" class="text-decoration-none nav-link">
+                        <a href="{% url 'account_login' %}" class="text-decoration-none nav-link">
                             Login <i class="fa-solid fa-right-to-bracket"></i></a>
                     </li>
                     <li>
-                        <a href="" class="text-decoration-none nav-link">
+                        <a href="{% url 'account_signup' %}" class="text-decoration-none nav-link">
                             Register <i class="fa-solid fa-user-plus"></i></a>
                         <!-- <li>
                         <a href="" class="text-decoration-none nav-link">Profile <i class="fa-solid fa-user"></i></a>
@@ -177,7 +177,7 @@
                     </li>
                     <hr>
                     <li class="nav-item">
-                        <a class="basket ps-4" href="#">
+                        <a class="basket ps-4" href="{% url 'checkout' %}">
                             <i class="fa-solid fa-basket-shopping basket"></i></a>
                     </li>
                 </ul>
