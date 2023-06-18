@@ -112,14 +112,32 @@ body {
 /* allauth override */
 
 #id_login,
-#id_password {
+#id_password,
+#id_email,
+#id_email2,
+#id_oldpassword,
+#id_password1,
+#id_password2,
+#id_username {
     padding: 0.5rem 1rem;
     border: 1px solid var(--input-grey);
 }
 
 #id_login:focus,
-#id_password:focus {
+#id_password:focus,
+#id_email:focus,
+#id_email2:focus,
+#id_oldpassword:focus,
+#id_password1:focus,
+#id_password2:focus,
+#id_username:focus {
     box-shadow: 0 0 0 0.25rem var(--purple-shadow);
+    border-radius: 1px;
+}
+
+#forgot-password {
+    width: 15%;
+    text-align: center;
 }
 
 /* Bootstrap override */
