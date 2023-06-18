@@ -23,7 +23,7 @@
 
                                 {% if request.user.is_authenticated %}
                                 <li>
-                                    <a href="" class="text-decoration-none nav-link">Profile <i
+                                    <a href="{% url 'profile' %}" class="text-decoration-none nav-link">Profile <i
                                             class="fa-solid fa-user"></i></a>
                                 </li>
                                 <li>

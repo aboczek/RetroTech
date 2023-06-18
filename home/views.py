@@ -34,3 +34,15 @@ def track_your_order(request):
     }
 
     return render(request, 'home/tracking.html', context)
+
+
+def profile(request):
+    """
+    Track your order page to see tracking.
+    """
+
+    context = {
+        'title': 'RetroTech User Account'
+    }
+
+    return render(request, 'home/profile.html', context)
