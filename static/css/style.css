@@ -12,6 +12,7 @@
     --white: #fff;
     --green: #10b31b;
     --d-grey: #4d4e4f;
+    --input-grey: #ced4da;
 }
 
 html {
@@ -106,6 +107,19 @@ body {
 
 .white-bg {
     background-color: var(--white);
+}
+
+/* allauth override */
+
+#id_login,
+#id_password {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--input-grey);
+}
+
+#id_login:focus,
+#id_password:focus {
+    box-shadow: 0 0 0 0.25rem var(--purple-shadow);
 }
 
 /* Bootstrap override */

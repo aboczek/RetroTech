@@ -20,6 +20,17 @@
                     <div class="row">
                         <div class="col">
                             <ul class="style-none me-3 login-register d-flex flex-row justify-content-end">
+
+                                {% if request.user.is_authenticated %}
+                                <li>
+                                    <a href="" class="text-decoration-none nav-link">Profile <i
+                                            class="fa-solid fa-user"></i></a>
+                                </li>
+                                <li>
+                                    <a href="{% url 'account_logout' %}" class="text-decoration-none nav-link">
+                                        Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                                </li>
+                                {% else %}
                                 <li>
                                     <a href="{% url 'account_login' %}" class="text-decoration-none nav-link">
                                         Login <i class="fa-solid fa-right-to-bracket"></i></a>
@@ -27,13 +38,8 @@
                                 <li>
                                     <a href="{% url 'account_signup' %}" class="text-decoration-none nav-link">
                                         Register <i class="fa-solid fa-user-plus"></i></a>
-                                    <!-- <li>
-                                    <a href="" class="text-decoration-none nav-link">Profile <i class="fa-solid fa-user"></i></a>
-                                    </li>
-                                    <li>
-                                    <a href="" class="text-decoration-none nav-link">
-                                        Logout <i class="fa-solid fa-right-from-bracket"></i></a>
-                                    </li> -->
+                                </li>
+                                {% endif %}
                                 </li>
                                 <li class="nav-item">
                                     <a class="basket ps-4" href="{% url 'checkout' %}">
