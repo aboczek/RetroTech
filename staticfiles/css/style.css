@@ -1,0 +1,280 @@
+/* Double reset/General settings */
+* {
+    padding: 0;
+    margin: 0;
+    border: none;
+}
+
+:root {
+    --black: #000;
+    --purple: #A35DFD;
+    --purple-shadow: rgba(163, 93, 253, .45);
+    --white: #fff;
+    --green: #10b31b;
+    --d-grey: #4d4e4f;
+    --input-grey: #ced4da;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh-;
+}
+
+/* Navbar */
+
+.logo {
+    margin: 1rem 0 0 1rem;
+    font-size: 5rem;
+    line-height: 1;
+}
+
+.logo-sm {
+    margin: 1rem 0 0 1rem;
+    font-size: 3rem;
+    line-height: 1;
+}
+
+.login-register {
+    margin: 1rem 0 0 0;
+    line-height: 1;
+}
+
+#slogan {
+    margin-left: 1.3rem;
+    font-size: 1.3rem;
+}
+
+#purple {
+    color: var(--purple);
+}
+
+#horizontal {
+    height: 1px;
+}
+
+.style-none {
+    list-style-type: none;
+}
+
+.basket {
+    font-size: 3rem;
+    padding: 1rem 0 0 0;
+    color: var(--black);
+}
+
+/* Content of index.html */
+
+.reviews {
+    width: 60%;
+    margin: 5rem 0 5rem 0;
+    border-radius: 50%;
+}
+
+#small-navbar-image {
+    display: none;
+}
+
+/* Track your order */
+
+#tracking {
+    font-size: 1.6rem;
+    width: 50%;
+}
+
+#track-button {
+    font-size: 1.6rem !important;
+}
+
+/* Footer */
+
+#footer {
+    height: 17rem;
+    background-color: var(--d-grey);
+    margin-top: auto;
+}
+
+.white-txt a {
+    color: var(--white);
+}
+
+.subscribe {
+    font-size: 1.5rem;
+}
+
+.white-bg {
+    background-color: var(--white);
+}
+
+/* allauth override */
+
+#id_login,
+#id_password,
+#id_email,
+#id_email2,
+#id_oldpassword,
+#id_password1,
+#id_password2,
+#id_username {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--input-grey);
+}
+
+#id_login:focus,
+#id_password:focus,
+#id_email:focus,
+#id_email2:focus,
+#id_oldpassword:focus,
+#id_password1:focus,
+#id_password2:focus,
+#id_username:focus {
+    box-shadow: 0 0 0 0.25rem var(--purple-shadow);
+    border-radius: 1px;
+}
+
+#forgot-password {
+    width: 15%;
+    text-align: center;
+}
+
+/* Bootstrap override */
+.nav-link {
+    color: var(--black);
+    font-size: 1.8rem;
+}
+
+.dropdown-menu {
+    font-size: 1.8rem;
+    border: none;
+}
+
+.input-group-lg>.btn,
+.input-group-lg>.form-control {
+    font-size: 1.8rem;
+}
+
+.form-control:focus {
+    box-shadow: 0 0 0 0.25rem var(--purple-shadow);
+}
+
+.border-dark {
+    border-radius: 0.3rem;
+}
+
+.border-dark:hover {
+    border-color: var(--white) !important;
+}
+
+.navbar-toggler {
+    font-size: 1.6rem !important;
+}
+
+.accordion-button {
+    font-size: 1.6rem;
+    height: 5rem;
+}
+
+.accordion-body {
+    padding: 1.5rem 1.25rem;
+}
+
+/* Media Queries */
+
+@media (min-width: 768px) {
+    #sm-device {
+        display: none;
+    }
+}
+
+@media (min-width: 768px) and (max-width: 900px) {
+    .logo {
+        font-size: 4rem;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 768px) {
+
+    .sm-media-footer {
+        flex-flow: column;
+        height: 12rem;
+        margin: 0;
+        padding-bottom: 2rem;
+        background-color: var(--d-grey);
+        display: flex;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sm-media-subs {
+        width: 70%;
+        margin: 1rem auto auto;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .sm-sell-to-us {
+        display: flex;
+        justify-content: center !important;
+        flex-direction: column;
+        margin: auto;
+        align-items: center;
+    }
+
+    #small-navbar-image {
+        display: flex;
+    }
+
+    #navbar-image {
+        display: none;
+    }
+
+    .md-lg-device {
+        display: none;
+    }
+
+    .basket {
+        padding: 0 !important;
+    }
+
+    #tracking {
+        width: 70%;
+    }
+
+
+
+    /* bootstrap override */
+    .input-group-lg>.btn,
+    .input-group-lg>.form-control {
+        font-size: 1.6rem !important;
+    }
+
+    .input-group {
+        width: 70%;
+        margin: auto;
+    }
+
+    .navbar {
+        padding-bottom: 0;
+    }
+
+    .navbar-light .navbar-toggler {
+        color: var(--black);
+        border: none;
+    }
+
+    #sm-toggler-products {
+        font-size: 1.8rem !important;
+    }
+}
+
+@media (min-width: 0px) and (max-width: 576px) {
+    .sm-media-subs {
+        width: 90%;
+        margin: 1rem auto auto;
+        justify-content: center;
+        text-align: center;
+    }
+}
