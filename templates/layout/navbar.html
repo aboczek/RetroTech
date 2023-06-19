@@ -19,30 +19,34 @@
                 <div class=" container">
                     <div class="row">
                         <div class="col">
-                            <ul class="style-none me-3 login-register d-flex flex-row justify-content-end">
+                            <ul class="style-none login-register d-flex flex-row justify-content-end">
                                 {% if request.user.is_authenticated %}
                                 <li>
-                                    <a href="{% url 'profile' %}" class="text-decoration-none nav-link">Profile <i
-                                            class="fa-solid fa-user"></i></a>
+                                    <a class="text-decoration-none nav-link pe-1" href="{% url 'profile' %}">
+                                        <i class="fa-solid fa-user basket d-flex justify-content-center">
+                                        </i> Account</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'account_logout' %}" class="text-decoration-none nav-link">
-                                        Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                                    <a class="text-decoration-none nav-link pe-1" href="{% url 'account_logout' %}">
+                                        <i class="fa-solid fa-right-from-bracket basket d-flex justify-content-center">
+                                        </i> Logout</a>
                                 </li>
                                 {% else %}
                                 <li>
-                                    <a href="{% url 'account_login' %}" class="text-decoration-none nav-link">
-                                        Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                                    <a class="text-decoration-none nav-link" href="{% url 'account_login' %}">
+                                        <i class="fa-solid fa-right-to-bracket basket d-flex justify-content-center">
+                                        </i> Login</a>
                                 </li>
                                 <li>
-                                    <a href="{% url 'account_signup' %}" class="text-decoration-none nav-link">
-                                        Register <i class="fa-solid fa-user-plus"></i></a>
+                                    <a class="text-decoration-none nav-link" href="{% url 'account_signup' %}">
+                                        <i class="fa-solid fa-user-plus basket d-flex justify-content-center">
+                                        </i> Signup</a>
                                 </li>
                                 {% endif %}
-                                </li>
-                                <li class="nav-item">
-                                    <a class="basket ps-4" href="{% url 'checkout' %}">
-                                        <i class="fa-solid fa-basket-shopping basket"></i></a>
+                                <li>
+                                    <a class="text-decoration-none nav-link" href="{% url 'checkout' %}">
+                                        <i class="fa-solid fa-basket-shopping basket d-flex justify-content-center">
+                                        </i>Checkout</a>
                                 </li>
                             </ul>
                         </div>
@@ -56,7 +60,8 @@
             <div class="col-12">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a>
+                        <a class="nav-link" href="{% url 'home' %}">
+                            <i class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <li class="nav-item dropdown">
                         <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
@@ -77,19 +82,20 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                        <a class="nav-link" href="{% url 'faq' %}">
+                            <i class="fa-solid fa-question"></i> FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tracking' %}">Track your order</a>
+                        <a class="nav-link" href="{% url 'tracking' %}">
+                            <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'sell-to-us' %}">Sell to us</a>
+                        <a class="nav-link" href="{% url 'sell-to-us' %}">
+                            <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">SALE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="{% url 'checkout' %}">Checkout</a>
+                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">
+                            <i class="fa-solid fa-dollar-sign"></i> SALE</a>
                     </li>
                 </ul>
             </div>
@@ -113,7 +119,7 @@
             <div class="bg-light p-4">
                 <ul class="nav justify-content-center d-flex flex-column align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">Home <i class="fa-solid fa-house"></i></a>
+                        <a class="nav-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <nav class="navbar navbar-light bg-light">
                         <div class="container-fluid">
@@ -148,46 +154,47 @@
                         </div>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'faq' %}">FAQ</a>
+                        <a class="nav-link" href="{% url 'faq' %}">
+                            <i class="fa-solid fa-question"></i> FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tracking' %}">Track your order</a>
+                        <a class="nav-link" href="{% url 'tracking' %}">
+                            <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'sell-to-us' %}">Sell to us</a>
+                        <a class="nav-link" href="{% url 'sell-to-us' %}">
+                            <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">SALE</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link fw-bolder" href="{% url 'checkout' %}">Checkout</a>
+                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">
+                            <i class="fa-solid fa-dollar-sign"></i> SALE</a>
                     </li>
                 </ul>
                 <hr>
-                <ul class="style-none me-3 login-register d-flex flex-column align-items-center">
+                <ul class="style-none me-3 pe-3 login-register d-flex flex-column align-items-center">
                     {% if request.user.is_authenticated %}
                     <li>
-                        <a href="{% url 'profile' %}" class="text-decoration-none nav-link">Profile <i
-                                class="fa-solid fa-user"></i></a>
+                        <a class="text-decoration-none nav-link" href="{% url 'profile' %}">
+                            <i class="fa-solid fa-user"></i> Profile</a>
                     </li>
                     <li>
-                        <a href="{% url 'account_logout' %}" class="text-decoration-none nav-link">
-                            Logout <i class="fa-solid fa-right-from-bracket"></i></a>
+                        <a class="text-decoration-none nav-link" href="{% url 'account_logout' %}">
+                            <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                     {% else %}
                     <li>
-                        <a href="{% url 'account_login' %}" class="text-decoration-none nav-link">
-                            Login <i class="fa-solid fa-right-to-bracket"></i></a>
+                        <a class="text-decoration-none nav-link" href="{% url 'account_login' %}">
+                            <i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     </li>
                     <li>
-                        <a href="{% url 'account_signup' %}" class="text-decoration-none nav-link">
-                            Register <i class="fa-solid fa-user-plus"></i></a>
+                        <a class="text-decoration-none nav-link" href="{% url 'account_signup' %}">
+                            <i class="fa-solid fa-user-plus"></i> Register</a>
                     </li>
                     {% endif %}
                     <hr>
                     <li class="nav-item">
-                        <a class="basket ps-4" href="{% url 'checkout' %}">
-                            <i class="fa-solid fa-basket-shopping basket"></i></a>
+                        <a class="ps-2 text-decoration-none nav-link" href="{% url 'checkout' %}">
+                            <i class="fa-solid fa-basket-shopping"></i> Checkout</a>
                     </li>
                 </ul>
             </div>
