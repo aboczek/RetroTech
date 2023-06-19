@@ -270,7 +270,7 @@ body {
     }
 }
 
-@media (min-width: 0px) and (max-width: 576px) {
+@media (max-width: 576px) {
     .sm-media-subs {
         width: 90%;
         margin: 1rem auto auto;
