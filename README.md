@@ -200,21 +200,21 @@ Image:
 
 - [Stripe](https://stripe.com/) Payments.
 
+- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
+
+- [FontAwesome](https://fontawesome.com/) Icons used in this project.
+
+- [Google fonts](https://fonts.google.com/) PT-serif was used.
+
 ## Tools
 
 - [Heroku](https://www.heroku.com) Deployment of website.
 
 - [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
 
-- [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
-
 - [Balsamiq](https://balsamiq.com/) Wireframes.
 
-- [FontAwesome](https://fontawesome.com/) Icons used in this project.
-
 - [Miniwebtool](https://miniwebtool.com/django-secret-key-generator/) used to generate new key.
-
-- [Google fonts](https://fonts.google.com/) PT-serif was used.
 
 - [Favicon](https://favicon.io/favicon-generator/) Favicon generator.
 
