@@ -22,29 +22,34 @@
                             <ul class="style-none login-register d-flex flex-row justify-content-end">
                                 {% if request.user.is_authenticated %}
                                 <li>
-                                    <a class="text-decoration-none nav-link pe-1" href="{% url 'profile' %}">
+                                    <a class="text-decoration-none nav-link pe-1" aria-label="User Account"
+                                        href="{% url 'profile' %}">
                                         <i class="fa-solid fa-user basket d-flex justify-content-center">
                                         </i> Account</a>
                                 </li>
                                 <li>
-                                    <a class="text-decoration-none nav-link pe-1" href="{% url 'account_logout' %}">
+                                    <a class="text-decoration-none nav-link pe-1" aria-label="Logout"
+                                        href="{% url 'account_logout' %}">
                                         <i class="fa-solid fa-right-from-bracket basket d-flex justify-content-center">
                                         </i> Logout</a>
                                 </li>
                                 {% else %}
                                 <li>
-                                    <a class="text-decoration-none nav-link" href="{% url 'account_login' %}">
+                                    <a class="text-decoration-none nav-link" aria-label="Login to account"
+                                        href="{% url 'account_login' %}">
                                         <i class="fa-solid fa-right-to-bracket basket d-flex justify-content-center">
                                         </i> Login</a>
                                 </li>
                                 <li>
-                                    <a class="text-decoration-none nav-link" href="{% url 'account_signup' %}">
+                                    <a class="text-decoration-none nav-link" aria-label="Signup"
+                                        href="{% url 'account_signup' %}">
                                         <i class="fa-solid fa-user-plus basket d-flex justify-content-center">
                                         </i> Signup</a>
                                 </li>
                                 {% endif %}
                                 <li>
-                                    <a class="text-decoration-none nav-link" href="{% url 'checkout' %}">
+                                    <a class="text-decoration-none nav-link" aria-label="Checkout"
+                                        href="{% url 'checkout' %}">
                                         <i class="fa-solid fa-basket-shopping basket d-flex justify-content-center">
                                         </i>Checkout</a>
                                 </li>
@@ -60,7 +65,7 @@
             <div class="col-12">
                 <ul class="nav justify-content-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}">
+                        <a class="nav-link" aria-label="Home page" href="{% url 'home' %}">
                             <i class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <li class="nav-item dropdown">
@@ -68,33 +73,36 @@
                             aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" href="{% url 'handheld' %}">Handheld</a>
+                                <a class="dropdown-item" aria-label="Handheld devices"
+                                    href="{% url 'handheld' %}">Handheld</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{% url 'console' %}">Console</a>
+                                <a class="dropdown-item" aria-label="Consoles" href="{% url 'console' %}">Console</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{% url 'accessory' %}">Accessories</a>
+                                <a class="dropdown-item" aria-label="Accessories"
+                                    href="{% url 'accessory' %}">Accessories</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" href="{% url 'games' %}">Games **Soon**</a>
+                                <a class="dropdown-item" aria-label="Games coming soon" href="{% url 'games' %}">
+                                    Games **Soon**</a>
                             </li>
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'faq' %}">
+                        <a class="nav-link" aria-label="Frequently asked questions" href="{% url 'faq' %}">
                             <i class="fa-solid fa-question"></i> FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tracking' %}">
+                        <a class="nav-link" aria-label="Track your order" href="{% url 'tracking' %}">
                             <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'sell-to-us' %}">
+                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell-to-us' %}">
                             <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">
+                        <a class="nav-link text-danger fw-bolder" aria-label="Sale" href="{% url 'sale' %}">
                             <i class="fa-solid fa-dollar-sign"></i> SALE</a>
                     </li>
                 </ul>
@@ -119,7 +127,8 @@
             <div class="bg-light p-4">
                 <ul class="nav justify-content-center d-flex flex-column align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'home' %}"><i class="fa-solid fa-house"></i> Home</a>
+                        <a class="nav-link" aria-label="Home page" href="{% url 'home' %}"><i
+                                class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <nav class="navbar navbar-light bg-light">
                         <div class="container-fluid">
@@ -135,38 +144,38 @@
                         <div class="bg-light p-4">
                             <ul class="style-none text-dark">
                                 <li>
-                                    <a class="text-decoration-none text-dark nav-link"
+                                    <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
                                         href="{% url 'handheld' %}">Handheld</a>
                                 </li>
                                 <li>
-                                    <a class="text-decoration-none text-dark nav-link"
+                                    <a class="text-decoration-none text-dark nav-link" aria-label="Consoles"
                                         href="{% url 'console' %}">Console</a>
                                 </li>
                                 <li>
-                                    <a class="text-decoration-none text-dark nav-link"
+                                    <a class="text-decoration-none text-dark nav-link" aria-label="Accessories"
                                         href="{% url 'accessory' %}">Accessories</a>
                                 </li>
                                 <li>
-                                    <a class="text-decoration-none text-dark nav-link" href="{% url 'games' %}">
-                                        Games **Soon**</a>
+                                    <a class="text-decoration-none text-dark nav-link" aria-label="Games coming soon"
+                                        href="{% url 'games' %}">Games **Soon**</a>
                                 </li>
                             </ul>
                         </div>
                     </div>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'faq' %}">
+                        <a class="nav-link" aria-label="Frequently asked questions" href="{% url 'faq' %}">
                             <i class="fa-solid fa-question"></i> FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'tracking' %}">
+                        <a class="nav-link" aria-label="Track your order" href="{% url 'tracking' %}">
                             <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="{% url 'sell-to-us' %}">
+                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell-to-us' %}">
                             <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link text-danger fw-bolder" href="{% url 'sale' %}">
+                        <a class="nav-link text-danger fw-bolder" aria-label="Sale" href="{% url 'sale' %}">
                             <i class="fa-solid fa-dollar-sign"></i> SALE</a>
                     </li>
                 </ul>
@@ -174,26 +183,27 @@
                 <ul class="style-none me-3 pe-3 login-register d-flex flex-column align-items-center">
                     {% if request.user.is_authenticated %}
                     <li>
-                        <a class="text-decoration-none nav-link" href="{% url 'profile' %}">
+                        <a class="text-decoration-none nav-link" aria-label="User Account" href="{% url 'profile' %}">
                             <i class="fa-solid fa-user"></i> Profile</a>
                     </li>
                     <li>
-                        <a class="text-decoration-none nav-link" href="{% url 'account_logout' %}">
+                        <a class="text-decoration-none nav-link" aria-label="Logout" href="{% url 'account_logout' %}">
                             <i class="fa-solid fa-right-from-bracket"></i> Logout</a>
                     </li>
                     {% else %}
                     <li>
-                        <a class="text-decoration-none nav-link" href="{% url 'account_login' %}">
+                        <a class="text-decoration-none nav-link" aria-label="Login to account"
+                            href="{% url 'account_login' %}">
                             <i class="fa-solid fa-right-to-bracket"></i> Login</a>
                     </li>
                     <li>
-                        <a class="text-decoration-none nav-link" href="{% url 'account_signup' %}">
-                            <i class="fa-solid fa-user-plus"></i> Register</a>
+                        <a class="text-decoration-none nav-link" aria-label="Signup" href="{% url 'account_signup' %}">
+                            <i class="fa-solid fa-user-plus"></i> Signup</a>
                     </li>
                     {% endif %}
                     <hr>
                     <li class="nav-item">
-                        <a class="ps-2 text-decoration-none nav-link" href="{% url 'checkout' %}">
+                        <a class="ps-2 text-decoration-none nav-link" aria-label="Checkout" href="{% url 'checkout' %}">
                             <i class="fa-solid fa-basket-shopping"></i> Checkout</a>
                     </li>
                 </ul>
