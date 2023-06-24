@@ -1,4 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from items.models import Category, Item
+from .forms import ItemsForm
+import cloudinary.uploader
 
 
 def home(request):
@@ -38,11 +41,37 @@ def track_your_order(request):
 
 def profile(request):
     """
-    Track your order page to see tracking.
+    User account.
     """
 
     context = {
-        'title': 'RetroTech User Account'
+        'title': 'RetroTech User Account',
     }
 
     return render(request, 'home/profile.html', context)
+
+
+def front_end_panel(request):
+    """
+    Front end admin panel.
+    """
+    items = Item.objects.all()
+    items_form = ItemsForm()
+
+    if request.method == 'POST':
+        items_form = ItemsForm(request.POST, request.FILES)
+        if items_form.is_valid():
+            print(request.FILES)
+            items_form.save()
+            return redirect('profile')
+
+    else:
+        ItemsForm()
+
+    context = {
+        'title': 'RetroTech User Account',
+        'items_form': items_form,
+        'items': items,
+    }
+
+    return render(request, 'home/front.html', context)

@@ -1,11 +1,26 @@
 from django.db import models
+from cloudinary.models import CloudinaryField
 
 
 class Category(models.Model):
     """
     Creates Categories to let the user use search bar.
     """
-    name = models.CharField(max_length=254)
+
+    class Meta:
+        """
+        Fixing bug in admin that would render category as categorys.
+        """
+        verbose_name_plural = 'Categories'
+
+    CATEGORY_CHOICES = {
+        ('handheld', 'Handheld'),
+        ('console', 'Console'),
+        ('accessories', 'Accessories'),
+        ('games', 'Games'),
+    }
+
+    name = models.CharField(max_length=254, choices=CATEGORY_CHOICES)
     frontend_name = models.CharField(max_length=254, null=True, blank=True)
 
     def __str__(self):
@@ -28,18 +43,14 @@ class Item(models.Model):
     product_name = models.CharField(max_length=254, null=False, blank=False)
     product_model = models.CharField(max_length=254, null=True, blank=True)
     product_description = models.TextField()
+    quantity = models.PositiveBigIntegerField(null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2,
                                 null=False, blank=False)
     sale = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)
+    image_one = CloudinaryField(null=True, blank=True, default='placeholder')
+    image_two = CloudinaryField(null=True, blank=True, default='placeholder')
+    image_three = CloudinaryField(null=True, blank=True, default='placeholder')
 
     def __str__(self):
         return str(self.product_name)
-
-
-class Image(models.Model):
-    """
-    Uploading multiply images to Item.
-    """
-    item = models.ForeignKey('Item', on_delete=models.CASCADE)
-    image = models.ImageField(null=True, blank=True)
