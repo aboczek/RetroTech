@@ -3,7 +3,7 @@ from .models import Category, Item
 
 
 class CategoryAdmin(admin.ModelAdmin):
-    """ 
+    """
     Category model.
     """
     list_display = (

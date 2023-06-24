@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from items.models import Category, Item
 
 
 def handheld(request):
@@ -6,8 +7,10 @@ def handheld(request):
     Handheld devices page.
     """
 
+    items = Item.objects.all()
     context = {
         'title': 'RetroTech Handhelds',
+        'items': items,
     }
 
     return render(request, 'items/handheld.html', context)
@@ -17,9 +20,11 @@ def console(request):
     """
     Console devices page.
     """
-
+    
+    items = Item.objects.all()
     context = {
         'title': 'RetroTech Consoles',
+        'items': items,
     }
 
     return render(request, 'items/console.html', context)
@@ -30,8 +35,10 @@ def accessory(request):
     Accessories page.
     """
 
+    items = Item.objects.all()
     context = {
         'title': 'RetroTech Accessories',
+        'items': items,
     }
 
     return render(request, 'items/accessory.html', context)

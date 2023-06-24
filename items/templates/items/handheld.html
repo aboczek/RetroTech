@@ -9,69 +9,26 @@
 <h2 class="d-flex justify-content-center align-items-center mt-5">Handhelds:</h2>
 <div class="container mb-5">
     <div class="row">
+        {% for item in items %}
+        {% if "handheld" in item.category.name %}
         <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
             <div class="card mt-5" style="width: 25rem;">
-                <a href=""><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="card-img-top"
-                        alt="..."></a>
+                {% if 'placeholder' in item.image.url %}
+                <a href=""><img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="..."></a>
+                {% else %}
+                <a href=""><img src="{{ item.image_one.url }}" class="card-img-top" alt="..."></a>
+                {% endif %}
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title">Retroid</h4>
-                    <p>Price: 150 Euro</p>
+                    <h4 class="card-title">{{ item.product_name }}</h4>
+                    <p>Price: {{ item.price }}e</p>
                     <button type="button" class="btn btn-primary">
                         Add to basket
                     </button>
                 </div>
             </div>
         </div>
-        <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
-            <div class="card mt-5" style="width: 25rem;">
-                <a href=""><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="card-img-top"
-                        alt="..."></a>
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title">Retroid</h4>
-                    <p class="text-decoration-line-through">Price: 150 Euro</p>
-                    <p class="fw-bold text-danger">OUT OF STOCK</p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
-            <div class="card mt-5" style="width: 25rem;">
-                <a href=""><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="card-img-top"
-                        alt="..."></a>
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title">Retroid</h4>
-                    <p>Price: 150 Euro</p>
-                    <button type="button" class="btn btn-primary">
-                        Add to basket
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
-            <div class="card mt-5" style="width: 25rem;">
-                <a href=""><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="card-img-top"
-                        alt="..."></a>
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title">Retroid</h4>
-                    <p>Price: 150 Euro</p>
-                    <button type="button" class="btn btn-primary">
-                        Add to basket
-                    </button>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
-            <div class="card mt-5" style="width: 25rem;">
-                <a href=""><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="card-img-top"
-                        alt="..."></a>
-                <div class="card-body d-flex flex-column justify-content-center align-items-center">
-                    <h4 class="card-title">Retroid</h4>
-                    <p>Price: 150 Euro</p>
-                    <button type="button" class="btn btn-primary">
-                        Add to basket
-                    </button>
-                </div>
-            </div>
-        </div>
+        {% endif %}
+        {% endfor %}
     </div>
 </div>
 {% endblock %}
