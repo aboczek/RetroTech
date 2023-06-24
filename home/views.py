@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect
+from django.contrib.admin.views.decorators import staff_member_required
 from items.models import Category, Item
 from .forms import ItemsForm
 import cloudinary.uploader
@@ -51,10 +52,13 @@ def profile(request):
     return render(request, 'home/profile.html', context)
 
 
+@staff_member_required
 def front_end_panel(request):
     """
     Front end admin panel.
     """
+
+    # Create items
     items = Item.objects.all()
     items_form = ItemsForm()
 

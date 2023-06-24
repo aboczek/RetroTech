@@ -8,4 +8,5 @@ urlpatterns = [
     path('faq/', views.faq, name='faq'),
     path('track-your-order/', views.track_your_order, name='tracking'),
     path('user-account/', views.profile, name='profile'),
+    path('front/', views.front_end_panel, name='front'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
