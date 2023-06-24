@@ -20,7 +20,7 @@ def console(request):
     """
     Console devices page.
     """
-    
+
     items = Item.objects.all()
     context = {
         'title': 'RetroTech Consoles',

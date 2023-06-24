@@ -9,8 +9,11 @@ def home(request):
     """
     Home page.
     """
+
+    items = Item.objects.all()
     context = {
         'title': 'RetroTech Home Page',
+        'items': items
     }
 
     return render(request, 'home/index.html', context)
