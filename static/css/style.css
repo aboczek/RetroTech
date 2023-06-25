@@ -184,6 +184,14 @@ body {
     padding: 1.5rem 1.25rem;
 }
 
+.carousel-img-one {
+    height: 26.4rem;
+}
+
+.carousel-img-two {
+    height: 57.7rem;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {
