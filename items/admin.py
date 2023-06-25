@@ -31,5 +31,5 @@ class ItemAdmin(admin.ModelAdmin):
     ordering = ('sku_number',)
 
 
-admin.site.register(Category)
-admin.site.register(Item)
+admin.site.register(Category, CategoryAdmin)
+admin.site.register(Item, ItemAdmin)
