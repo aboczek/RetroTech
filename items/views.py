@@ -73,8 +73,10 @@ def sale(request):
     Sale page.
     """
 
+    items = Item.objects.all()
     context = {
         'title': 'RetroTech SALE!!',
+        'items': items,
     }
 
     return render(request, 'items/sale.html', context)
