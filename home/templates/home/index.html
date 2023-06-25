@@ -12,7 +12,7 @@
                     {% for item in items %}
                     {% if item.featured == True %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                        <a href="{{ item.image_one.url }}"><img src="{{ item.image_one.url }}"
+                        <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
                                 class="d-block w-100 carousel-img-two" alt=""></a>
                     </div>
                     {% endif %}
@@ -45,7 +45,8 @@
                                         {% for item in items %}
                                         {% if item.sale == True %}
                                         <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                                            <a href="{{ item.image_one.url }}"><img src="{{ item.image_one.url }}"
+                                            <a href="{% url 'item_details' item.id %}"><img
+                                                    src="{{ item.image_one.url }}"
                                                     class="d-block w-100 carousel-img-one" alt="..."></a>
                                         </div>
                                         {% endif %}

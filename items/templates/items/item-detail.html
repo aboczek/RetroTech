@@ -1,0 +1,57 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col-12 col-lg-6 my-5">
+            <!-- <div id="carouselExampleDark" class="carousel carousel-dark slide">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-interval="false">
+                        <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" class="d-block w-100 "
+                            alt="...">
+                    </div>
+                    <div class="carousel-item" data-interval="false">
+                        <img src="{% static 'images/pexels-dids-1367036.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                    <div class="carousel-item" data-interval="false">
+                        <img src="{% static 'images/pexels-stas-knop-1298601.jpg' %}" class="d-block w-100" alt="...">
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div> -->
+            <div>
+                <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" alt="" id="image-box"
+                    class="d-block w-100 my-3">
+            </div>
+            <div>
+                <img src="{% static 'images/pexels-dids-1367036.jpg' %}" alt="" class="w-25 ms-5 opacity"
+                    onclick="myFunction(this)">
+                <img src="{% static 'images/pexels-stas-knop-1298601.jpg' %}" alt="" class="w-25 mx-5 opacity"
+                    onclick="myFunction(this)">
+                <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" alt="" class="w-25 opacity"
+                    onclick="myFunction(this)">
+            </div>
+        </div>
+        <div class="col-6"></div>
+    </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+    function myFunction(smallImg) {
+        let fullImg = document.querySelector("#image-box");
+        fullImg.src = smallImg.src;
+    }
+</script>
+{% endblock %}

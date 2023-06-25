@@ -14,9 +14,11 @@
         <div class="col-12 col-md-3 col-sm-6 d-flex d-flex justify-content-center align-items-center ">
             <div class="card mt-5" style="width: 25rem;">
                 {% if 'placeholder' in item.image.url %}
-                <a href=""><img src="{% static 'images/placeholder.png' %}" class="card-img-top" alt="..."></a>
+                <a href="{% url 'item_details' item.id %}"><img src="{% static 'images/placeholder.png' %}"
+                        class="card-img-top" alt="..."></a>
                 {% else %}
-                <a href=""><img src="{{ item.image_one.url }}" class="card-img-top" alt="..."></a>
+                <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}" class="card-img-top"
+                        alt="..."></a>
                 {% endif %}
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <h4 class="card-title">{{ item.product_name }}</h4>

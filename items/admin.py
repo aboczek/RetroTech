@@ -25,7 +25,9 @@ class ItemAdmin(admin.ModelAdmin):
         'price',
         'sale',
         'featured',
-        'image',
+        'image_one',
+        'image_two',
+        'image_three',
     )
 
     ordering = ('sku_number',)

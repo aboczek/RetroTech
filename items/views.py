@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from items.models import Category, Item
 
 
@@ -80,3 +80,18 @@ def sale(request):
     }
 
     return render(request, 'items/sale.html', context)
+
+
+def item_detail(request, item_id):
+    """
+    Item details to render individual items.
+    """
+
+    item = get_object_or_404(Item, pk=item_id)
+
+    context = {
+        'title': 'RetroTech {{ Item.name}}',
+        'item': item,
+    }
+
+    return render(request, 'items/item-detail.html', context)
