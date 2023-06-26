@@ -11,15 +11,14 @@
     <div class="row">
         <div class="col-12 col-lg-6 my-5">
             <div>
-                <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" alt="" id="image-box"
-                    class="d-block w-100 my-3">
+                <img src="{{ item.image_one.url }}" alt="{{ item.name }}" id="image-box" class="d-block w-100 my-3">
             </div>
             <div>
-                <img src="{% static 'images/pexels-dids-1367036.jpg' %}" alt="" class="w-25 ms-5 opacity"
+                <img src="{{ item.image_one.url }}" alt="{{ item.name }}" class="w-25 ms-5 opacity"
                     onclick="myFunction(this)">
-                <img src="{% static 'images/pexels-stas-knop-1298601.jpg' %}" alt="" class="w-25 mx-5 opacity"
+                <img src="{{ item.image_two.url }}" alt="{{ item.name }}" class="w-25 mx-5 opacity"
                     onclick="myFunction(this)">
-                <img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}" alt="" class="w-25 opacity"
+                <img src="{{ item.image_three.url }}" alt="{{ item.name }}" class="w-25 opacity"
                     onclick="myFunction(this)">
             </div>
         </div>

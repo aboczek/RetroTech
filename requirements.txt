@@ -9,6 +9,7 @@ dj-database-url==2.0.0
 Django==3.2
 django-allauth==0.54.0
 django-cloudinary-storage==0.3.0
+django-mathfilters==1.0.0
 gunicorn==20.1.0
 idna==3.4
 oauthlib==3.2.2
