@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load mathfilters %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'items/css/items.css' %}">
@@ -33,10 +34,17 @@
                 <li>
                     <p><span class="fw-bold">Description: </span> <br> {{ item.product_description }}</p>
                 </li>
+                {% if item.sale == True %}
+                <li>
+                    <p><span class="fw-bold">Price:</span> <br> {{ item.price|mul:0.7|floatformat:2 }}€</p>
+                </li>
+                {% else %}
                 <li>
                     <p><span class="fw-bold">Price:</span> <br> {{ item.price }}€</p>
                 </li>
+                {% endif %}
                 {% if item.quantity == 0 %}
+
                 <li>
                     <p class="fw-bold text-danger mt-4">OUT OF STOCK</p>
                 </li>
