@@ -36,9 +36,15 @@
                 <li>
                     <p><span class="fw-bold">Price:</span> <br> {{ item.price }}€</p>
                 </li>
+                {% if item.quantity == 0 %}
+                <li>
+                    <p class="fw-bold text-danger mt-4">OUT OF STOCK</p>
+                </li>
+                {% else %}
                 <li>
                     <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
                 </li>
+                {% endif %}
             </ul>
 
         </div>
