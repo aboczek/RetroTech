@@ -13,7 +13,7 @@
                     {% if item.featured == True %}
                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
                         <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
-                                class="d-block w-100 carousel-img-two" alt=""></a>
+                                class="d-block w-100 carousel-img-two" alt="{{ item.name }}"></a>
                     </div>
                     {% endif %}
                     {% endfor %}
@@ -47,7 +47,7 @@
                                         <div class="carousel-item {% if forloop.first %} active {% endif %}">
                                             <a href="{% url 'item_details' item.id %}"><img
                                                     src="{{ item.image_one.url }}"
-                                                    class="d-block w-100 carousel-img-one" alt="..."></a>
+                                                    class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
                                         </div>
                                         {% endif %}
                                         {% endfor %}
@@ -61,7 +61,7 @@
                                         <div class="carousel-item active">
                                             <a href="#"><img
                                                     src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
-                                                    class="d-block w-100 carousel-img-one" alt="..."></a>
+                                                    class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
                                         </div>
                                     </div>
                                 </div>
