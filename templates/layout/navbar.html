@@ -75,13 +75,16 @@
                             aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" aria-label="Handheld devices" href="">Handheld</a>
+                                <a class="dropdown-item" aria-label="Handheld devices"
+                                    href="{% url 'all_items'%}?category=handheld">Handheld</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" aria-label="Consoles" href="">Console</a>
+                                <a class="dropdown-item" aria-label="Consoles"
+                                    href="{% url 'all_items'%}?category=console">Console</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" aria-label="Accessories" href="">Accessories</a>
+                                <a class="dropdown-item" aria-label="Accessories"
+                                    href="{% url 'all_items'%}?category=accessories">Accessories</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" aria-label="Games coming soon" href="{% url 'games' %}">
@@ -145,15 +148,15 @@
                             <ul class="style-none text-dark">
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
-                                        href="">Handheld</a>
+                                        href="{% url 'all_items'%}?category=handheld">Handheld</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Consoles"
-                                        href="">Console</a>
+                                        href="{% url 'all_items'%}?category=console">Console</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Accessories"
-                                        href="">Accessories</a>
+                                        href="{% url 'all_items'%}?category=accessories">Accessories</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Games coming soon"
