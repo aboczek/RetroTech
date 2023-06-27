@@ -8,12 +8,14 @@
                 <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
             </div>
             <div class="col-4">
-                <div class="input-group input-group-lg mt-5">
-                    <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                        aria-describedby="button-addon2">
-                    <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                            class="fa-solid fa-magnifying-glass"></i></button>
-                </div>
+                <form action="{% url 'all_items' %}" method="GET">
+                    <div class="input-group input-group-lg mt-5">
+                        <input type="text" class="form-control" placeholder="Search" name="q" aria-label="Search"
+                            aria-describedby="button-addon2">
+                        <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+                                class="fa-solid fa-magnifying-glass"></i></button>
+                    </div>
+                </form>
             </div>
             <div class="col-4">
                 <div class=" container">
@@ -73,15 +75,13 @@
                             aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a class="dropdown-item" aria-label="Handheld devices"
-                                    href="{% url 'handheld' %}">Handheld</a>
+                                <a class="dropdown-item" aria-label="Handheld devices" href="">Handheld</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" aria-label="Consoles" href="{% url 'console' %}">Console</a>
+                                <a class="dropdown-item" aria-label="Consoles" href="">Console</a>
                             </li>
                             <li>
-                                <a class="dropdown-item" aria-label="Accessories"
-                                    href="{% url 'accessory' %}">Accessories</a>
+                                <a class="dropdown-item" aria-label="Accessories" href="">Accessories</a>
                             </li>
                             <li>
                                 <a class="dropdown-item" aria-label="Games coming soon" href="{% url 'games' %}">
@@ -98,7 +98,7 @@
                             <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell-to-us' %}">
+                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell_to_us' %}">
                             <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
@@ -145,15 +145,15 @@
                             <ul class="style-none text-dark">
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
-                                        href="{% url 'handheld' %}">Handheld</a>
+                                        href="">Handheld</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Consoles"
-                                        href="{% url 'console' %}">Console</a>
+                                        href="">Console</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Accessories"
-                                        href="{% url 'accessory' %}">Accessories</a>
+                                        href="">Accessories</a>
                                 </li>
                                 <li>
                                     <a class="text-decoration-none text-dark nav-link" aria-label="Games coming soon"
@@ -171,7 +171,7 @@
                             <i class="fa-solid fa-truck"></i> Track your order</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell-to-us' %}">
+                        <a class="nav-link" aria-label="Sell to us" href="{% url 'sell_to_us' %}">
                             <i class="fa-solid fa-comments-dollar"></i> Sell to us</a>
                     </li>
                     <li class="nav-item">
@@ -209,11 +209,13 @@
                 </ul>
             </div>
         </div>
-        <div class="input-group input-group-lg mt-4">
-            <input type="text" class="form-control" placeholder="Search" aria-label="Search"
-                aria-describedby="button-addon2">
-            <button class="btn btn-outline-secondary" type="button" id="button-addon2"><i
-                    class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+        <form action="{% url 'all_items' %}" method="GET">
+            <div class="input-group input-group-lg mt-4">
+                <input type="text" class="form-control" name="q" placeholder="Search" aria-label="Search"
+                    aria-describedby="button-addon2">
+                <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
+                        class="fa-solid fa-magnifying-glass"></i></button>
+            </div>
+        </form>
     </div>
 </header>

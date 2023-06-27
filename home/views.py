@@ -2,7 +2,6 @@ from django.shortcuts import render, redirect
 from django.contrib.admin.views.decorators import staff_member_required
 from items.models import Category, Item
 from .forms import ItemsForm
-import cloudinary.uploader
 
 
 def home(request):
@@ -11,9 +10,10 @@ def home(request):
     """
 
     items = Item.objects.all()
+
     context = {
         'title': 'RetroTech Home Page',
-        'items': items
+        'items': items,
     }
 
     return render(request, 'home/index.html', context)

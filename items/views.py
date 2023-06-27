@@ -1,47 +1,34 @@
-from django.shortcuts import render, get_object_or_404
-from items.models import Category, Item
+from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.db.models import Q
+from django.contrib import messages
+from items.models import Item
 
 
-def handheld(request):
+def all_items(request):
     """
     Handheld devices page.
     """
 
     items = Item.objects.all()
+    query = None
+
+    if request.GET:
+        if 'q' in request.GET:
+            query = request.GET['q']
+            if not query:
+                messages.error(request, "You didn't enter any search criteria!")
+                return redirect(reverse('all_items'))
+
+            queries = Q(product_name__icontains=query) | Q(product_description__icontains=query)
+            items = items.filter(queries)
+
     context = {
         'title': 'RetroTech Handhelds',
         'items': items,
+        'search_term': query,
     }
 
-    return render(request, 'items/handheld.html', context)
-
-
-def console(request):
-    """
-    Console devices page.
-    """
-
-    items = Item.objects.all()
-    context = {
-        'title': 'RetroTech Consoles',
-        'items': items,
-    }
-
-    return render(request, 'items/console.html', context)
-
-
-def accessory(request):
-    """
-    Accessories page.
-    """
-
-    items = Item.objects.all()
-    context = {
-        'title': 'RetroTech Accessories',
-        'items': items,
-    }
-
-    return render(request, 'items/accessory.html', context)
+    return render(request, 'items/all-items.html', context)
 
 
 def games(request):
