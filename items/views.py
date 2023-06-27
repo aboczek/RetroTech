@@ -2,6 +2,7 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
 from items.models import Item, Category
+from django.db.models.functions import Lower
 
 
 def all_items(request):
@@ -12,12 +13,28 @@ def all_items(request):
     items = Item.objects.all()
     query = None
     categories = None
+    sort = None
+    direction = None
 
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
             items = items.filter(category__name__in=categories)
             categories = Category.objects.filter(name__in=categories)
+
+        if 'sort' in request.GET:
+            sortkey = request.GET['sort']
+            sort = sortkey
+            if sortkey == 'name':
+                sortkey = 'lower_name'
+                products = products.annotate(lower_name=Lower('name'))
+            if sortkey == 'category':
+                sortkey = 'category__name'
+            if 'direction' in request.GET:
+                direction = request.GET['direction']
+                if direction == 'desc':
+                    sortkey = f'-{sortkey}'
+            items = items.order_by(sortkey)
 
         if 'q' in request.GET:
             query = request.GET['q']
@@ -28,11 +45,14 @@ def all_items(request):
             queries = Q(product_name__icontains=query) | Q(product_description__icontains=query)
             items = items.filter(queries)
 
+    current_sorting = f'{sort}_{direction}'
+
     context = {
         'title': 'RetroTech Handhelds',
         'items': items,
         'search_term': query,
         'current_categories': categories,
+        'current_sorting': current_sorting
     }
 
     return render(request, 'items/all-items.html', context)
