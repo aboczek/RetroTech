@@ -9,7 +9,7 @@
 <h2 class="d-flex justify-content-center align-items-center mt-5">Handhelds:</h2>
 <div class="container d-flex justify-content-end">
     <div class="row">
-        <div class="col mx-auto" id="sorting-right">
+        <div class="col mx-auto www" id="sorting-right">
             <select class="form-select" id="sort-selector" aria-label="sorting">
                 <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:
                 </option>
@@ -44,6 +44,13 @@
                     {% if item.quantity == 0 %}
                     <p class="fw-bold text-danger">OUT OF STOCK</p>
                     {% else %}
+                    <form action="" method="POST" class="mt-1 mb-2">
+                        {% csrf_token %}
+                        <div class="input-group">
+                            <input class="form-control font-sizing" type="number" name="quantity" value="1" min="1"
+                                max="99">
+                        </div>
+                    </form>
                     <button type="button" class="btn btn-primary">
                         Add to basket
                     </button>

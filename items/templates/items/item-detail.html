@@ -49,6 +49,14 @@
                     <p class="fw-bold text-danger mt-4">OUT OF STOCK</p>
                 </li>
                 {% else %}
+
+                <form action="" method="POST" class="mt-1 mb-2">
+                    {% csrf_token %}
+                    <div class="input-group w-25" id="item-count">
+                        <input class="form-control font-sizing" type="number" name="quantity" value="1" min="1"
+                            max="99">
+                    </div>
+                </form>
                 <li>
                     <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
                 </li>

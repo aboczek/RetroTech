@@ -89,6 +89,11 @@ body {
     cursor: pointer;
 }
 
+/* content of all items */
+.font-sizing {
+    font-size: 1.6rem;
+}
+
 /* Track your order */
 
 #tracking {
@@ -152,6 +157,7 @@ body {
 }
 
 /* Bootstrap override */
+
 .nav-link {
     color: var(--black);
     font-size: 1.8rem;
@@ -311,6 +317,10 @@ body {
 
     #sm-toggler-products {
         font-size: 1.8rem !important;
+    }
+
+    #item-count {
+        margin: 0 !important;
     }
 }
 
