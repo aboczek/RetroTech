@@ -1,3 +1,12 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def basket(request):
+    """
+    Checkout page.
+    """
+    context = {
+        'title': 'RetroTech Basket!',
+    }
+
+    return render(request, 'basket/basket.html', context)
