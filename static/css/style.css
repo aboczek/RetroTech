@@ -204,6 +204,16 @@ body {
     height: 57.7rem;
 }
 
+/* Sorting in all items */
+
+#sorting {
+    width: 15rem;
+}
+
+.form-select {
+    font-size: 1.6rem !important;
+}
+
 /* Media Queries */
 
 @media (min-width: 768px) {

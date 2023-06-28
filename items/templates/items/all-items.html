@@ -7,6 +7,20 @@
 
 {% block content %}
 <h2 class="d-flex justify-content-center align-items-center mt-5">Handhelds:</h2>
+<div class="d-flex mx-auto">
+    <select class="form-select" id="sort-selector" aria-label="sorting">
+        <option value="reset" {% if current_sorting == 'None_None' %}selected{% endif %}>Sort by:
+        </option>
+        <option value="price_asc" {% if current_sorting == 'price_asc' %}selected{% endif %}>Price (low to high)
+        </option>
+        <option value="price_desc" {% if current_sorting == 'price_desc' %}selected{% endif %}>Price (high to low)
+        </option>
+        <option value="name_asc" {% if current_sorting == 'name_asc' %}selected{% endif %}>Name (A-Z)
+        </option>
+        <option value="name_desc" {% if current_sorting == 'name_desc' %}selected{% endif %}>Name (Z-A)
+        </option>
+    </select>
+</div>
 <div class="container mb-5">
     <div class="row">
         {% for item in items %}
@@ -35,4 +49,30 @@
         {% endfor %}
     </div>
 </div>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+<script type="text/javascript">
+    $('#sort-selector').change(function () {
+        let selector = $(this);
+        let currentUrl = new URL(window.location);
+
+        let selectedVal = selector.val();
+        if (selectedVal != "reset") {
+            let sort = selectedVal.split("_")[0];
+            let direection = selectedVal.split("_")[1];
+
+            currentUrl.searchParams.set("sort", sort);
+            currentUrl.searchParams.set("direction", direection);
+
+            window.location.replace(currentUrl);
+        } else {
+            currentUrl.searchParams.delete("sort");
+            currentUrl.searchParams.delete("direction");
+
+            window.location.replace(currentUrl);
+        }
+    })
+</script>
 {% endblock %}
