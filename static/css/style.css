@@ -89,7 +89,12 @@ body {
     cursor: pointer;
 }
 
+#padding-form {
+    padding-left: 0;
+}
+
 /* content of all items */
+
 .font-sizing {
     font-size: 1.6rem;
 }

@@ -15,7 +15,7 @@ def all_items(request):
     categories = None
     sort = None
     direction = None
-
+    
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -39,7 +39,8 @@ def all_items(request):
         if 'q' in request.GET:
             query = request.GET['q']
             if not query:
-                messages.error(request, "You didn't enter any search criteria!")
+                messages.error(request,
+                               "You didn't enter any search criteria!")
                 return redirect(reverse('all_items'))
 
             queries = Q(product_name__icontains=query) | Q(product_description__icontains=query)
@@ -104,7 +105,7 @@ def item_detail(request, item_id):
     item = get_object_or_404(Item, pk=item_id)
 
     context = {
-        'title': 'RetroTech {{ Item.name}}',
+        'title': 'RetroTech',
         'item': item,
     }
 

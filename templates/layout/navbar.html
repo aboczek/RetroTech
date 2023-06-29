@@ -51,7 +51,7 @@
                                 {% endif %}
                                 <li>
                                     <a class="text-decoration-none nav-link" aria-label="Basket"
-                                        href="{% url 'basket' %}">
+                                        href="{% url 'view_basket' %}">
                                         <i class="fa-solid fa-basket-shopping basket d-flex justify-content-center">
                                         </i>Basket</a>
                                 </li>
@@ -71,8 +71,8 @@
                             <i class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#" role="button"
-                            aria-expanded="false">Products</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'all_items' %}"
+                            role="button" aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
                             <li>
                                 <a class="dropdown-item" aria-label="Handheld devices"
@@ -206,7 +206,8 @@
                     {% endif %}
                     <hr>
                     <li class="nav-item">
-                        <a class="ps-2 text-decoration-none nav-link" aria-label="Basket" href="{% url 'basket' %}">
+                        <a class="ps-2 text-decoration-none nav-link" aria-label="Basket"
+                            href="{% url 'view_basket' %}">
                             <i class="fa-solid fa-basket-shopping"></i> Basket</a>
                     </li>
                 </ul>

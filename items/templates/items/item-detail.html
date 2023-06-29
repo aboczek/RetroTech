@@ -48,23 +48,34 @@
                 <li>
                     <p class="fw-bold text-danger mt-4">OUT OF STOCK</p>
                 </li>
-                {% else %}
-
-                <form action="" method="POST" class="mt-1 mb-2">
-                    {% csrf_token %}
-                    <div class="input-group w-25" id="item-count">
-                        <input class="form-control font-sizing" type="number" name="quantity" value="1" min="1"
-                            max="99">
-                    </div>
-                </form>
-                <li>
-                    <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
-                </li>
-                {% endif %}
             </ul>
-
+            {% else %}
+            <div class="container" id="padding-form">
+                <div class="row">
+                    <form action="{% url 'add_to_basket' item.id %}" method="POST" class="mt-1 mb-2">
+                        {% csrf_token %}
+                        <p class="fw-bold">Quantity:</p>
+                        <div class="input-group w-25" id="item-count">
+                            <input class="form-control font-sizing" type="number" name="quantity" value="1" min="1"
+                                max="99" data-item_id="{{ item.id }}" id="id_qty_{{ item.id }}">
+                        </div>
+                        <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
+                        <a href="{% url 'all_items' %}" class="btn btn-warning mt-3">Continue shopping</a>
+                        <input type="hidden" name="redirect_url" value="{{ request.path }}">
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
+
+
+
+
+    {% endif %}
+
+
+</div>
+</div>
 </div>
 {% endblock %}
 
