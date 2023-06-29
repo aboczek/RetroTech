@@ -1,11 +1,15 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'items/css/items.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container my-5">
     <div class="row">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
-            <h2>Your shopping basket!</h2>
+            <h2 class="mb-5">Your shopping basket!</h2>
             <table class="table">
                 <thead>
                     <tr>
@@ -13,7 +17,6 @@
                         <th scope="col">SKU NO.</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Subtotal</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -21,13 +24,24 @@
                     <tr>
                         <td>{{ item.item.product_name }}</td>
                         <td>{{ item.item.sku_number }}</td>
-                        <td>{{ item.item.price }}€</td>
+                        <td>{{ item.item.price }} €</td>
                         <td>{{ item.quantity }}</td>
-                        <td>{{ item.price }}€</td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+        </div>
+    </div>
+    <div class="row my-3">
+        <div class="col d-flex justify-content-end">
+            <h2>Total: {{ total|floatformat:2 }} €</h2>
+        </div>
+        <div class="d-flex justify-content-end text-muted">
+            <h5>Deliveries are always free.</h5>
+        </div>
+        <div class="col d-flex justify-content-end my-5">
+            <a href="{% url 'all_items' %}" class="btn btn-warning mx-2">Continue Shopping</a>
+            <a href="" class="btn btn-success">Checkout</a>
         </div>
     </div>
 </div>
