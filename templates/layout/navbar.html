@@ -55,7 +55,7 @@
                                         <i class="fa-solid fa-basket-shopping basket d-flex justify-content-center">
                                         </i>
                                         {% if grand_total %}
-                                        ${{ grand_total|floatformat:2 }}
+                                        {{ grand_total|floatformat:2 }}€
                                         {% else %}
                                         Basket
                                         {% endif %}
@@ -216,7 +216,7 @@
                             href="{% url 'view_basket' %}">
                             <i class="fa-solid fa-basket-shopping"></i>
                             {% if grand_total %}
-                            ${{ grand_total|floatformat:2 }}
+                            {{ grand_total|floatformat:2 }}€
                             {% else %}
                             Basket
                             {% endif %}
