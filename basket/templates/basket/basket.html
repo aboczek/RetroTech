@@ -6,6 +6,9 @@
     <div class="row">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
             <h2>Your shopping basket!</h2>
+            {% if basket_items %}
+            {{ basket_items }}
+            {% endif %}
         </div>
     </div>
 </div>

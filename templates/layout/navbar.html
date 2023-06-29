@@ -53,7 +53,13 @@
                                     <a class="text-decoration-none nav-link" aria-label="Basket"
                                         href="{% url 'view_basket' %}">
                                         <i class="fa-solid fa-basket-shopping basket d-flex justify-content-center">
-                                        </i>Basket</a>
+                                        </i>
+                                        {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                        {% else %}
+                                        Basket
+                                        {% endif %}
+                                    </a>
                                 </li>
                             </ul>
                         </div>
@@ -208,7 +214,13 @@
                     <li class="nav-item">
                         <a class="ps-2 text-decoration-none nav-link" aria-label="Basket"
                             href="{% url 'view_basket' %}">
-                            <i class="fa-solid fa-basket-shopping"></i> Basket</a>
+                            <i class="fa-solid fa-basket-shopping"></i>
+                            {% if grand_total %}
+                            ${{ grand_total|floatformat:2 }}
+                            {% else %}
+                            Basket
+                            {% endif %}
+                        </a>
                     </li>
                 </ul>
             </div>
