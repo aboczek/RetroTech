@@ -7,6 +7,7 @@
 
 {% block content %}
 <div class="container my-5">
+    {% if basket_items %}
     <div class="row">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
             <h2 class="mb-5">Your shopping basket!</h2>
@@ -44,5 +45,17 @@
             <a href="" class="btn btn-success">Checkout</a>
         </div>
     </div>
+    {% else %}
+    <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+        <h2 class="mb-5">Your shopping basket.</h2>
+        <hr class="w-100">
+        <h3 class="my-5 text-muted">Your basket is empty.</h3>
+        <hr class="w-100">
+        <div class="col d-flex justify-content-end my-5">
+            <a href="{% url 'all_items' %}" class="btn btn-warning mx-2">Continue Shopping</a>
+        </div>
+    </div>
+
+    {% endif %}
 </div>
 {% endblock %}
