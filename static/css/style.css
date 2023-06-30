@@ -298,7 +298,9 @@ body {
         width: 70%;
     }
 
-
+    .opacity {
+        width: 20% !important;
+    }
 
     /* bootstrap override */
     .input-group-lg>.btn,
