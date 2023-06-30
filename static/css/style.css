@@ -326,6 +326,13 @@ body {
 
     #item-count {
         margin: 0 !important;
+        width: 30% !important;
+    }
+}
+
+@media (min-width: 320px) and (max-width: 486px) {
+    #item-count {
+        width: 40% !important;
     }
 }
 
