@@ -15,7 +15,7 @@
 
     $('.qty_input').change(function () {
         let itemId = $(this).data('item_id');
-        handleEnableDisable(itemId, size);
+        handleEnableDisable(itemId);
     });
 
     $('.increment-qty').click(function (e) {
@@ -35,6 +35,6 @@
         let allQuantityInputs = $(`.input-group-${itemId} input[name='quantity']`);
         let currentValue = parseInt($(closestInput).val());
         $(allQuantityInputs).val(currentValue - 1);
-        handleEnableDisable(itemId, size);
+        handleEnableDisable(itemId);
     });
 </script>

@@ -18,7 +18,6 @@
                         <th scope="col">SKU NO.</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
-                        <th scope="col">Update/Remove</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -29,32 +28,33 @@
                         <td>{{ item.item.price }} €</td>
                         <td>
                             <div class="container padding-form">
-                                <div class="row">
-                                    <form action="" method="POST"
-                                        class="m-auto d-flex justify-content-center item-count-basket">
+                                <div class="row d-flex flex-row justify-content-center sm-update-remove">
+                                    <form action=" {% url 'update_basket' item.item_id %}" method="POST"
+                                        class="update-form m-auto d-flex justify-content-center item-count-basket">
                                         {% csrf_token %}
-                                        <div class="input-group input-group-{{ item.item_id }}">
+                                        <div class="plus-minus input-group input-group-{{ item.item_id }}">
                                             <div class="input-group-prepend">
-                                                <button class="decrement-qty btn decrement-qty_{{ item.item_id  }}"
-                                                    data-item_id="{{ item.item_id  }}">
+                                                <button class="decrement-qty btn decrement-qty_{{ item.item_id }}"
+                                                    data-item_id="{{ item.item_id }}">
                                                     <i class="fa-solid fa-minus"></i></button>
                                             </div>
-                                            <input class="form-control font-sizing qty_input id_qty_{{ item.item_id  }}"
+                                            <input
+                                                class="sm-button form-control font-sizing qty_input id_qty_{{ item.item_id  }}"
                                                 type="number" name="quantity" value="{{ item.quantity }}" min="1"
-                                                max="99" data-item_id="{{ item.item_id  }}">
+                                                max="99" data-item_id="{{ item.item_id }}">
                                             <div class="input-group-append">
                                                 <button class="increment-qty btn increment-qty_{{ item.item_id  }}"
-                                                    data-item_id="{{ item.item_id  }}"><i class="fa-solid fa-plus"></i>
+                                                    data-item_id="{{ item.item_id }}"><i class="fa-solid fa-plus"></i>
                                                 </button>
                                             </div>
                                         </div>
                                     </form>
+                                    <a class="update-basket btn btn-secondary w-25 sm-button">Update</a>
+                                    <a class="remove-item btn btn-danger w-25 sm-button"
+                                        id="remove_{{ item.item_id }}">Remove</a>
                                 </div>
                             </div>
                         </td>
-                        <td>
-                            <a class="update-basket btn btn-secondary">Update</a>
-                            <a class="update-basket btn btn-danger" id="remove_{{ item.item_id }}">Remove</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -92,5 +92,27 @@
 {{ block.super }}
 
 {% include 'components/increment-decrement.html' %}
+
+<script type="text/javascript">
+    $('.update-basket').click(function (e) {
+        let form = $(this).prev('.update-form');
+        form.submit();
+    })
+
+    $('.remove-item').click(function (e) {
+        let csrfToken = "{{ csrf_token }}";
+        let itemId = $(this).attr('id').split('remove_')[1];
+        let url = `/basket/remove/${itemId}`;
+        let data = {
+            'csrfmiddlewaretoken': csrfToken,
+        };
+
+        $.post(url, data)
+            .done(function () {
+                location.reload();
+            });
+    })
+</script>
+
 
 {% endblock %}

@@ -113,7 +113,7 @@ body {
 /* Content of basket */
 
 .item-count-basket {
-    width: 70% !important;
+    width: 50% !important;
 }
 
 /* Footer */
@@ -340,6 +340,14 @@ body {
     .item-count-basket {
         width: 100% !important;
     }
+
+    .sm-button {
+        width: 100% !important;
+    }
+
+    .plus-minus {
+        justify-content: center;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 486px) {
@@ -353,6 +361,13 @@ body {
 
     .padding-form {
         padding: 0;
+    }
+
+    .sm-update-remove {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        width: 100%;
     }
 }
 
