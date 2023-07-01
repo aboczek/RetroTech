@@ -1,4 +1,4 @@
-from django.shortcuts import render, redirect, reverse
+from django.shortcuts import render, redirect, reverse, HttpResponse
 
 
 def view_basket(request):
@@ -38,10 +38,28 @@ def update_basket(request, item_id):
     quantity = int(request.POST.get('quantity'))
     basket = request.session.get('basket', {})
 
-    if quantity > 0:
-        basket[item_id] = quantity
+    if item_id in list(basket.keys()):
+        if quantity > 0:
+            basket[item_id] = quantity
     else:
-        basket.pop[item_id]
+        basket.pop(item_id)
 
     request.session['basket'] = basket
     return redirect(reverse('view_basket'))
+
+
+def remove_from_basket(request, item_id):
+    """
+    Remove content from basket.
+    """
+    try:
+        basket = request.session.get('basket', {})
+
+        if item_id in list(basket.keys()):
+            basket.pop(item_id)
+
+        request.session['basket'] = basket
+        return HttpResponse(status=200)
+
+    except Exception as er:
+        return HttpResponse(status=500)

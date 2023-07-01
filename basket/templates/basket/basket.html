@@ -92,27 +92,6 @@
 {{ block.super }}
 
 {% include 'components/increment-decrement.html' %}
-
-<script type="text/javascript">
-    $('.update-basket').click(function (e) {
-        let form = $(this).prev('.update-form');
-        form.submit();
-    })
-
-    $('.remove-item').click(function (e) {
-        let csrfToken = "{{ csrf_token }}";
-        let itemId = $(this).attr('id').split('remove_')[1];
-        let url = `/basket/remove/${itemId}`;
-        let data = {
-            'csrfmiddlewaretoken': csrfToken,
-        };
-
-        $.post(url, data)
-            .done(function () {
-                location.reload();
-            });
-    })
-</script>
-
+{% include 'components/update-remove.html' %}
 
 {% endblock %}
