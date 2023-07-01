@@ -18,6 +18,7 @@
                         <th scope="col">SKU NO.</th>
                         <th scope="col">Price</th>
                         <th scope="col">Quantity</th>
+                        <th scope="col">Update/Remove</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -26,7 +27,34 @@
                         <td>{{ item.item.product_name }}</td>
                         <td>{{ item.item.sku_number }}</td>
                         <td>{{ item.item.price }} €</td>
-                        <td>{{ item.quantity }}</td>
+                        <td>
+                            <div class="container padding-form">
+                                <div class="row">
+                                    <form action="" method="POST"
+                                        class="m-auto d-flex justify-content-center item-count-basket">
+                                        {% csrf_token %}
+                                        <div class="input-group input-group-{{ item.item_id }}">
+                                            <div class="input-group-prepend">
+                                                <button class="decrement-qty btn decrement-qty_{{ item.item_id  }}"
+                                                    data-item_id="{{ item.item_id  }}">
+                                                    <i class="fa-solid fa-minus"></i></button>
+                                            </div>
+                                            <input class="form-control font-sizing qty_input id_qty_{{ item.item_id  }}"
+                                                type="number" name="quantity" value="{{ item.quantity }}" min="1"
+                                                max="99" data-item_id="{{ item.item_id  }}">
+                                            <div class="input-group-append">
+                                                <button class="increment-qty btn increment-qty_{{ item.item_id  }}"
+                                                    data-item_id="{{ item.item_id  }}"><i class="fa-solid fa-plus"></i>
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <a class="update-basket btn btn-secondary">Update</a>
+                            <a class="update-basket btn btn-danger" id="remove_{{ item.item_id }}">Remove</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
@@ -58,4 +86,11 @@
 
     {% endif %}
 </div>
+{% endblock %}
+
+{% block extra_js %}
+{{ block.super }}
+
+{% include 'components/increment-decrement.html' %}
+
 {% endblock %}

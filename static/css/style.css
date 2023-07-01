@@ -110,6 +110,12 @@ body {
     font-size: 1.6rem !important;
 }
 
+/* Content of basket */
+
+.item-count-basket {
+    width: 70% !important;
+}
+
 /* Footer */
 
 #footer {
@@ -238,7 +244,7 @@ body {
 
 /* Media Queries */
 
-@media (min-width: 768px) {
+@media (min-width: 769px) {
     #sm-device {
         display: none;
     }
@@ -330,11 +336,23 @@ body {
         margin: 0 !important;
         width: 30% !important;
     }
+
+    .item-count-basket {
+        width: 100% !important;
+    }
 }
 
 @media (min-width: 320px) and (max-width: 486px) {
     #item-count {
         width: 40% !important;
+    }
+
+    .item-count-basket {
+        width: 100% !important;
+    }
+
+    .padding-form {
+        padding: 0;
     }
 }
 

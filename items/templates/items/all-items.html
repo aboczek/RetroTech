@@ -56,26 +56,7 @@
 
 {% block extra_js %}
 {{ block.super }}
-<script type="text/javascript">
-    $('#sort-selector').change(function () {
-        let selector = $(this);
-        let currentUrl = new URL(window.location);
 
-        let selectedVal = selector.val();
-        if (selectedVal != "reset") {
-            let sort = selectedVal.split("_")[0];
-            let direection = selectedVal.split("_")[1];
+{% include 'components/sorting.html' %}
 
-            currentUrl.searchParams.set("sort", sort);
-            currentUrl.searchParams.set("direction", direection);
-
-            window.location.replace(currentUrl);
-        } else {
-            currentUrl.searchParams.delete("sort");
-            currentUrl.searchParams.delete("direction");
-
-            window.location.replace(currentUrl);
-        }
-    })
-</script>
 {% endblock %}
