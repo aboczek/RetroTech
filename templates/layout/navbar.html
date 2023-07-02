@@ -7,7 +7,9 @@
                 <h1 class="logo">Retro<span id="purple">Tech</span></h1>
                 <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
             </div>
+
             <div class="col-4">
+
                 <form action="{% url 'all_items' %}" method="GET">
                     <div class="input-group input-group-lg mt-5">
                         <input type="text" class="form-control" placeholder="Search" name="q" aria-label="Search"
@@ -15,8 +17,16 @@
                         <button class="btn btn-outline-secondary" type="submit" id="button-addon2"><i
                                 class="fa-solid fa-magnifying-glass"></i></button>
                     </div>
+                    {% for message in messages %}
+                    <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
+                        {{ message }}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                    </div>
+                    {% endfor %}
                 </form>
+
             </div>
+
             <div class="col-4">
                 <div class=" container">
                     <div class="row">

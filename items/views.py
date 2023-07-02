@@ -15,7 +15,7 @@ def all_items(request):
     categories = None
     sort = None
     direction = None
-    
+
     if request.GET:
         if 'category' in request.GET:
             categories = request.GET['category'].split(',')
@@ -40,7 +40,8 @@ def all_items(request):
             query = request.GET['q']
             if not query:
                 messages.error(request,
-                               "You didn't enter any search criteria!")
+                               "You didn't enter any search criteria! \
+                                  You are viewing all products.")
                 return redirect(reverse('all_items'))
 
             queries = Q(product_name__icontains=query) | Q(product_description__icontains=query)
