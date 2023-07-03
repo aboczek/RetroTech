@@ -38,7 +38,7 @@ def add_to_basket(request, item_id):
         else:
             basket[item_id] += quantity
             messages.success(request, f'{item.product_name} has been \
-                              updated to {basket[item_id]}.')
+                              updated to quantity of {basket[item_id]}.')
     else:
         basket[item_id] = quantity
         messages.success(request, f'{item.product_name} with quantity of \
