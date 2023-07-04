@@ -21,7 +21,7 @@ html {
 
 body {
     font-size: 1.6rem;
-    min-height: 100vh-;
+    min-height: 100vh;
 }
 
 /* Navbar */
@@ -121,7 +121,7 @@ body {
 #footer {
     height: 17rem;
     background-color: var(--d-grey);
-    margin-top: auto;
+    margin: auto 0 0 0;
 }
 
 .white-txt a {
