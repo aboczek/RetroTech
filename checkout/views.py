@@ -5,6 +5,7 @@ def checkout(request):
     """
     Checkout page.
     """
+
     context = {
         'title': 'RetroTech Checkout!',
     }
