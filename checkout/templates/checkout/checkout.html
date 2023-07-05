@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load price_quantity %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
@@ -45,38 +46,40 @@
             </div>
             {% endif %}
         </div>
-        <div class=" col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
-                    {% for item in basket_items %}
+        <div class=" col-12 col-lg-6 d-flex flex-column align-items-center">
                     <h2>Your order contains:</h2>
                     <table class="table">
                         <thead>
                             <tr>
-                                <th scope="col">Product name</th>
-                                <th scope="col">Quantity</th>
-                                <th scope="col">Subtotal</th>
+                                <th scope="col">Product name:</th>
+                                <th scope="col">Quantity:</th>
+                                <th scope="col">Amount:</th>
                             </tr>
                         </thead>
+                        {% for item in basket_items %}
                         <tbody>
                             <tr>
                                 <td>{{ item.item.product_name}}</td>
                                 <td>{{ item.quantity }}</td>
-                                <td>{{ item.total }}</td>
+                                <td>{{ item.item.price | calculator:item.quantity }} €</td>
                             </tr>
+                            {% endfor %}
                         </tbody>
                     </table>
-                    {% endfor %}
-                    <h2 class="mt-5">Payment:</h2>
-                    <div class="d-flex flex-row justify-content-center">
-                        <a class="btn btn-warning" href="{% url 'view_basket' %}"><i
-                                class="fa-solid fa-basket-shopping"></i> Adjust your basket
-                        </a>
-                        <p class="mx-2">OR</p>
-                        <button class="btn btn-success" id="pay-button"><i class="fa-solid fa-lock"></i> Complete
-                            order</button>
+                    <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center">
+                        <h2 class="mt-5">Payment:</h2>
+                        <div class="d-flex flex-row justify-content-center">
+                            <a class="btn btn-warning" href="{% url 'view_basket' %}"><i
+                                    class="fa-solid fa-basket-shopping"></i> Adjust your basket
+                            </a>
+                            <p class="mx-2">OR</p>
+                            <button class="btn btn-success" id="pay-button"><i class="fa-solid fa-lock"></i> Complete
+                                order</button>
+                        </div>
+                        <p class="my-5">Your card will be charged,
+                            <span class="h2">Total: {{ grand_total|floatformat:2 }} €</span>
+                        </p>
                     </div>
-                    <p class="my-5">Your card will be charged,
-                        <span class="h2">Total: {{ grand_total|floatformat:2 }} €</span>
-                    </p>
             </div>
         </div>
     </div>
