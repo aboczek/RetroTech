@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load price_quantity %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'items/css/items.css' %}">
@@ -17,7 +18,9 @@
                         <th scope="col">Product Info</th>
                         <th scope="col">SKU NO.</th>
                         <th scope="col">Price</th>
+                        <th scope="col">Total:</th>
                         <th scope="col">Quantity</th>
+
                     </tr>
                 </thead>
                 <tbody>
@@ -26,6 +29,7 @@
                         <td>{{ item.item.product_name }}</td>
                         <td>{{ item.item.sku_number }}</td>
                         <td>{{ item.item.price }} €</td>
+                        <td>{{ item.item.price | calculator:item.quantity }} €</td>
                         <td>
                             <div class="container padding-form">
                                 <div class="row d-flex flex-row justify-content-center sm-update-remove">
@@ -63,7 +67,7 @@
     </div>
     <div class="row my-3">
         <div class="col d-flex justify-content-end mt-5">
-            <h2>Total: {{ total|floatformat:2 }} €</h2>
+            <h2>Subtotal: {{ total|floatformat:2 }} €</h2>
         </div>
         <div class="d-flex justify-content-end text-muted">
             <h5>Deliveries are always free.</h5>
