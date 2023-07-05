@@ -12,7 +12,7 @@ def checkout(request):
 
     if not basket:
         messages.error(request, 'You have nothing added to basket.')
-        return redirect(reverse('items'))
+        return redirect(reverse('all_items'))
 
     context = {
         'title': 'RetroTech Checkout!',

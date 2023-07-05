@@ -69,8 +69,9 @@
             <h5>Deliveries are always free.</h5>
         </div>
         <div class="col d-flex justify-content-end my-5">
-            <a href="{% url 'all_items' %}" class="btn btn-warning mx-2">Continue Shopping</a>
-            <a href="" class="btn btn-success">Checkout</a>
+            <a href="{% url 'all_items' %}" class="btn btn-warning mx-2"><i class="fa-solid fa-basket-shopping"></i>
+                Continue Shopping</a>
+            <a href="{% url 'checkout' %}" class="btn btn-success"><i class="fa-solid fa-lock"></i> Checkout</a>
         </div>
     </div>
     {% else %}
