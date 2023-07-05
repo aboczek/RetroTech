@@ -3,7 +3,10 @@ from items.models import Item
 
 
 def basket_contents(request):
-
+    """
+    Lets content of basket and quantity
+    and grand total to be rendered in all templates.
+    """
     basket_items = []
     total = 0
     item_count = 0
