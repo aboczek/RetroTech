@@ -53,7 +53,7 @@
                             <tr>
                                 <th scope="col">Product name:</th>
                                 <th scope="col">Quantity:</th>
-                                <th scope="col">Amount:</th>
+                                <th scope="col">Total:</th>
                             </tr>
                         </thead>
                         {% for item in basket_items %}
@@ -77,7 +77,7 @@
                                 order</button>
                         </div>
                         <p class="my-5">Your card will be charged,
-                            <span class="h2">Total: {{ grand_total|floatformat:2 }} €</span>
+                            <span class="h3 text-danger">Subtotal: {{ grand_total|floatformat:2 }}€</span>
                         </p>
                     </div>
             </div>
