@@ -4,7 +4,7 @@ from django import template
 register = template.Library()
 
 
-@register.filter(name='calc_subtotal')
+@register.filter(name='calculator')
 def calculator(price, quantity):
     """
     Calculates total price per item * quantity of it.
