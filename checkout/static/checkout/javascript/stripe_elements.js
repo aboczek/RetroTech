@@ -32,3 +32,7 @@ card.addEventListener('change', function (e) {
         errorDiv.textContent = '';
     }
 });
+
+// Handle form submit button
+
+const form = document.querySelector('#payment-form');
