@@ -20,7 +20,6 @@ body {
     border: 1px solid #ced4da;
     border-radius: 0.25rem;
     background-color: white;
-    box-shadow: 0 1px 3px 0 #e6ebf1;
     width: 100%;
     color: #212529;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;

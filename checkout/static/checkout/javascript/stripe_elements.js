@@ -4,7 +4,7 @@ var stripe = Stripe(stripe_public_key);
 var elements = stripe.elements();
 var style = {
     base: {
-        color: '#000',
+        color: '#212529',
         fontFamily: '"Helvetica Neue", Helvetica, sans-serif',
         fontSmoothing: 'antialiased',
         fontSize: '16px',

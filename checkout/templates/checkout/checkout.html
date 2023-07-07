@@ -40,7 +40,7 @@
                 </div>
                 {% else %}
                 <p>To save your details either Login to your account or Sign up!</p>
-                <div class="d-flex flex-row justify-content-center">
+                <div class="d-flex flex-row justify-content-center mb-5">
                     <a class="btn btn-primary my-2 mx-2" href="{% url 'account_login' %}">Login</a>
                     <a class="btn btn-warning my-2" href="{% url 'account_signup' }">Sign up</a>
             </div>
@@ -66,10 +66,9 @@
                                 {% endfor %}
                             </tbody>
                         </table>
-                        <p class="my-5">Your card will be charged subtotal:
-                            <span class="h3 text-danger">{{ grand_total|floatformat:2 }}€</span>
+                        <p class="d-flex justify-content-evenly w-100 me-5 fw-bold">
+                            Subtotal: <span class="d-flex justify-content-end">{{ grand_total|floatformat:2 }} €</span>
                         </p>
-                        <!-- <div class="col-12 col-lg-6 d-flex flex-column justify-content-center align-items-center"> -->
                         <h2 class="mt-5">Payment:</h2>
 
                         <div id="card-element"></div>
@@ -85,8 +84,9 @@
                                 Complete
                                 order</button>
                         </div>
-
-                        <!-- </div> -->
+                        <p class="my-5">Your card will be charged subtotal:
+                            <span class="h3 text-danger">{{ grand_total|floatformat:2 }}€</span>
+                        </p>
                 </div>
             </form>
         </div>
