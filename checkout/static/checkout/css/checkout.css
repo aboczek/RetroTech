@@ -1,14 +1,37 @@
+:root {
+    --purple: #A35DFD;
+    --purple-shadow: rgba(163, 93, 253, .45);
+}
+
+/* Double reset for Stripe */
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-size: 1.6rem;
+    min-height: 100vh;
+}
+
 .StripeElement {
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
-    border: 1px solid transparent;
-    border-radius: 0px;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
     background-color: white;
     box-shadow: 0 1px 3px 0 #e6ebf1;
-    -webkit-transition: box-shadow 150ms ease;
-    transition: box-shadow 150ms ease;
+    width: 100%;
+    color: #212529;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    background-clip: padding-box;
 }
+
+.StripeElement--focus {
+    border-color: var(--purple);
+    box-shadow: 0 0 0 0.25rem var(--purple-shadow) !important;
+}
+
 
 .StripeElement--focus {
     box-shadow: 0 1px 3px 0 #cfd7df;
