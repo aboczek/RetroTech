@@ -1,6 +1,6 @@
-const stripe_public_key = $('#id_stripe_public_key').text().slice(1, -1);
-const client_secret = $('#id_client_secret').text().slice(1, -1);
-const stripe = Stripe(stripe_public_key);
+const stripePublicKey = $('#id_stripe_public_key').text().slice(1, -1);
+const clientSecret = $('#id_client_secret').text().slice(1, -1);
+const stripe = Stripe(stripePublicKey);
 const elements = stripe.elements();
 const style = {
     base: {
@@ -36,3 +36,31 @@ card.addEventListener('change', function (e) {
 // Handle form submit button
 
 const form = document.querySelector('#payment-form');
+
+form.addEventListener('submit', function (e) {
+    e.preventDefault();
+    card.update({
+        'disabled': true
+    });
+    $('#submit-button').attr('disabled', true);
+    stripe.confirmCardPayment(clientSecret, {
+        payment_method: {
+            card: card,
+        }
+    }).then(function (result) {
+        if (result.error) {
+            var errorDiv = document.querySelector('#card-errors');
+            var html = `
+                *<span>${result.error.message}</span>`;
+            $(errorDiv).html(html);
+            card.update({
+                'disabled': false
+            });
+            $('#submit-button').attr('disabled', false);
+        } else {
+            if (result.paymentIntent.status === 'succeeded') {
+                form.submit();
+            }
+        }
+    });
+});
