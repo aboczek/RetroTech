@@ -1,6 +1,7 @@
 :root {
     --purple: #A35DFD;
     --purple-shadow: rgba(163, 93, 253, .45);
+    --grey-shadow: rgba(77, 78, 79, .5);
 }
 
 /* Double reset for Stripe */
@@ -41,4 +42,27 @@ body {
 
 .btn {
     font-size: 1.6rem !important;
+}
+
+#load-spinner {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--grey-shadow);
+    backdrop-filter: blur(0.7rem);
+    z-index: 99999;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+#spinner {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    width: 7rem;
+    height: 7rem;
 }
