@@ -1,11 +1,34 @@
-from django.shortcuts import render, redirect, reverse, get_object_or_404
+from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpResponse
 from django.contrib import messages
 from django.conf import settings
-import stripe
+from django.views.decorators.http import require_POST
 from basket.contexts import basket_contents
 from items.models import Item
 from .models import Order, OrderLineItem
 from .forms import OrderForm
+import stripe
+import json
+
+
+
+@require_POST
+def cache_checkout_data(request):
+    """
+    Caching checkout data.
+    """
+    try:
+        pid = request.POST.get('client_secret').split('_secret')[0]
+        stripe.api_key = settings.STRIPE_SECRET_KEY
+        stripe.PaymentIntent.modify(pid, metadata={
+            'basket': json.dumps(request.session.get('basket', {})),
+            'save_details': request.POST.get('save_details'),
+            'username': request.user,
+        })
+        return HttpResponse(status=200)
+    except Exception as e:
+        messages.error(request, 'Sorry, We cannot process your \
+                        payment, Please try again later.')
+        return HttpResponse(content=e, status=400)
 
 
 def checkout(request):
