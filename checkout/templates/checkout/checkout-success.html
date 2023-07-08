@@ -1,5 +1,23 @@
 {% extends 'base.html' %}
-{% load static }
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'checkout/css/checkout.css' %}">
+{% endblock %}
 
 {% block content %}
+<div class="d-flex flex-column justify-content-center align-items-center mt-5">
+    <h2 class="text-muted">Thank you for your purchase!</h2>
+</div>
+<hr class=" mt-4 mb-5">
+<div class="d-flex flex-column justify-content-center align-items-center text-center">
+    <p>Your order number: <span class="text-primary">{{ order.order_number }}</span>
+    </p>
+    <p>Email will be sent to you with your order confirmation on provided email: <span
+            class="text-primary">{{ order.email }}.</span></p>
+    <a class="btn btn-warning my-5" href="{% url 'all_items' %}">
+        <i class="fa-solid fa-basket-shopping"></i> Go back to products page
+    </a>
+</div>
+<hr class=" mt-4 mb-5">
 {% endblock %}
