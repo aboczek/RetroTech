@@ -45,26 +45,66 @@ form.addEventListener('submit', function (e) {
     $('#submit-button').attr('disabled', true);
     $('#load-spinner').fadeToggle(100);
     $('#load-spinner').css('display', 'flex');
-    stripe.confirmCardPayment(clientSecret, {
-        payment_method: {
-            card: card,
-        }
-    }).then(function (result) {
-        if (result.error) {
-            var errorDiv = document.querySelector('#card-errors');
-            var html = `
+
+    const saveDetails = Boolean($('#save-details').attr('checked'));
+    // Form using csrf token in the form
+    const csrfToken = $('input[name="csrfmiddlewaretoken"]').val();
+    const postData = {
+        'csrfmiddlewaretoken': csrfToken,
+        'client_secret': clientSecret,
+        'save_details': saveDetails,
+    };
+    const url = '/checkout/cache-checkout-data/'
+
+    $.post(url, postData).done(function () {
+        stripe.confirmCardPayment(clientSecret, {
+            payment_method: {
+                card: card,
+                billing_details: {
+                    name: $.trim(form.full_name.value),
+                    phone: $.trim(form.phone_number.value),
+                    email: $.trim(form.email.value),
+                    address: {
+                        lime1: $.trim(form.street_address1.value),
+                        line2: $.trim(form.street_address2.value),
+                        city: $.trim(form.town_or_city.value),
+                        country: $.trim(form.country.value),
+                        state: $.trim(form.county_state.value),
+                    }
+                }
+            },
+            shipping: {
+                name: $.trim(form.full_name.value),
+                phone: $.trim(form.phone_number.value),
+                address: {
+                    line1: $.trim(form.street_address1.value),
+                    line2: $.trim(form.street_address2.value),
+                    city: $.trim(form.town_or_city.value),
+                    country: $.trim(form.country.value),
+                    postal_code: $.trim(form.postcode.value),
+                    state: $.trim(form.county_state.value),
+                }
+            },
+        }).then(function (result) {
+            if (result.error) {
+                var errorDiv = document.querySelector('#card-errors');
+                var html = `
                 *<span>${result.error.message}</span>`;
-            $(errorDiv).html(html);
-            $('#load-spinner').fadeToggle(100);
-            $('#load-spinner').css('display', 'flex');
-            card.update({
-                'disabled': false
-            });
-            $('#submit-button').attr('disabled', false);
-        } else {
-            if (result.paymentIntent.status === 'succeeded') {
-                form.submit();
+                $(errorDiv).html(html);
+                $('#load-spinner').fadeToggle(100);
+                $('#load-spinner').css('display', 'flex');
+                card.update({
+                    'disabled': false
+                });
+                $('#submit-button').attr('disabled', false);
+            } else {
+                if (result.paymentIntent.status === 'succeeded') {
+                    form.submit();
+                }
             }
-        }
-    });
+        });
+    }).fail(function () {
+        // reloading page, error will be in django messages
+        location.reload();
+    })
 });
