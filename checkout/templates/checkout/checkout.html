@@ -34,9 +34,10 @@
                     <li>{{ order_form.country | as_crispy_field }}</li>
                 </ul>
                 {% if user.is_authenticated %}
-                <div class="d-flex flex-column justify-content-start m-0">
+                <div class="d-flex flex-column justify-content-center align-items-center m-0">
                     <label for="save-details">Save your details for next time!</label>
                     <input type="checkbox" id="save-details" name="save-details">
+
                 </div>
                 {% else %}
                 <p>To save your details either Login to your account or Sign up!</p>

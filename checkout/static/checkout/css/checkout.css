@@ -2,6 +2,8 @@
     --purple: #A35DFD;
     --purple-shadow: rgba(163, 93, 253, .45);
     --grey-shadow: rgba(77, 78, 79, .5);
+    --light-grey: #212529;
+    --black: #000;
 }
 
 /* Double reset for Stripe */
@@ -18,7 +20,7 @@ body {
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
-    border: 1px solid #ced4da;
+    border: 1px solid var(--light-grey);
     border-radius: 0.25rem;
     background-color: white;
     width: 100%;

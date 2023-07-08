@@ -3,6 +3,7 @@ import uuid
 from django.db import models
 from django.db.models import Sum
 from items.models import Item
+from django_countries.fields import CountryField
 
 
 class Order(models.Model):
@@ -13,7 +14,7 @@ class Order(models.Model):
     full_name = models.CharField(max_length=60, null=False, blank=False)
     email = models.EmailField(max_length=254, null=False, blank=False)
     phone_number = models.CharField(max_length=20, null=False, blank=False)
-    country = models.CharField(max_length=60, null=False, blank=False)
+    country = CountryField(blank_label='Country *', null=False, blank=False)
     postcode = models.CharField(max_length=30, null=False, blank=False)
     town_or_city = models.CharField(max_length=60, null=False, blank=False)
     street_address1 = models.CharField(max_length=100, null=False, blank=False)
