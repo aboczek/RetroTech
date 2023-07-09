@@ -6,10 +6,11 @@ Your order information is below:
 Order no. {{ order.order_number }}
 Order date: {{ order.date }}
 
+{% for item in order.lineitems.all %}
 Your order contains:
-{{ item.item.product_name }}, quantity {{ item.item.quantity }} price: {{ item.item.price }}
-
-Total price: €  {{ order.grand_total }}
+{{ item.item.product_name }}, quantity {{ item.item.quantity }} price per product € {{ item.item.price }}
+{% endfor %}
+Total price: € {{ order.grand_total }}
 
 Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
 Your phone number: {{ order.phone_number }}

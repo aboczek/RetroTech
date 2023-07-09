@@ -2,6 +2,9 @@ from django.shortcuts import render, redirect, reverse, get_object_or_404, HttpR
 from django.contrib import messages
 from django.conf import settings
 from django.views.decorators.http import require_POST
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
+
 
 from basket.contexts import basket_contents
 from items.models import Item
@@ -12,7 +15,6 @@ from .forms import OrderForm
 
 import stripe
 import json
-
 
 
 @require_POST
@@ -143,6 +145,21 @@ def checkout_success(request, order_number):
     """
     save_details = request.session.get('save_details')
     order = get_object_or_404(Order, order_number=order_number)
+
+    cust_email = order.email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
 
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
