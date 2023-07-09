@@ -51,7 +51,7 @@
 
         <div class="col-12 col-lg-6">
             <h3 class="d-flex justify-content-center align-items-center">Your order history:</h3>
-            {% for order in orders %}
+
             <table class="table">
                 <thead>
                     <tr>
@@ -61,7 +61,7 @@
                     </tr>
                 </thead>
 
-                <tbody>
+                <tbody>{% for order in orders %}
                     <tr>
                         <td><a href="{% url 'order-history' order.order_number %}" title="{{ order.order_number }}">
                                 {{ order.order_number|truncatechars:12 }}
@@ -73,10 +73,10 @@
                         <td>
                             {{ order.grand_total }}
                         </td>
-                    </tr>
+                    </tr>{% endfor %}
                 </tbody>
             </table>
-            {% endfor %}
+
         </div>
     </div>
 </div>

@@ -6,8 +6,8 @@ Your order information is below:
 Order no. {{ order.order_number }}
 Order date: {{ order.date }}
 
-{% for item in order.lineitems.all %}
 Your order contains:
+{% for item in order.lineitems.all %}
 {{ item.item.product_name }}, quantity {{ item.item.quantity }} price per product € {{ item.item.price }}
 {% endfor %}
 Total price: € {{ order.grand_total }}
