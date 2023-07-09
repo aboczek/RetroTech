@@ -57,15 +57,21 @@
                     <tr>
                         <th scope="col">Order number:</th>
                         <th scope="col">Date:</th>
-                        <th scope="col">Products:</th>
                         <th scope="col">Order total:</th>
                     </tr>
                 </thead>
 
                 <tbody>
                     <tr>
-                        <td><a href="{% url 'order-history' order.order_number %}"
-                                title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                        <td><a href="{% url 'order-history' order.order_number %}" title="{{ order.order_number }}">
+                                {{ order.order_number|truncatechars:10 }}
+                            </a>
+                        </td>
+                        <td>
+                            {{ order.date }}
+                        </td>
+                        <td>
+                            {{ order.grand_total }}
                         </td>
                     </tr>
                 </tbody>
