@@ -1,0 +1,21 @@
+Hey, Thanks for shopping with us.
+
+This is a confirmation email for your order with RetroTech.
+Your order information is below:
+
+Order no. {{ order.order_number }}
+Order date: {{ order.date }}
+
+Your order contains:
+{{ item.item.product_name }}, quantity {{ item.item.quantity }} price: {{ item.item.price }}
+
+Total price: €  {{ order.grand_total }}
+
+Your order will be shipped to {{ order.street_address1 }} in {{ order.town_or_city }}, {{ order.country }}.
+Your phone number: {{ order.phone_number }}
+
+If you have any concernes or question, contact us at {{ contact_email }}
+
+Sincerely,
+
+RetroTech!
