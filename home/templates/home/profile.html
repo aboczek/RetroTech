@@ -6,13 +6,55 @@
 {% endblock %}
 
 {% block content %}
-<div class="container">
-    <div class="row">
-        <div class="col">
-            <a href="{% url 'front' %}">Admin panel</a>
 
-            {{ profile }}
+{% if user.is_authenticated %}
+<h2 class="d-flex justify-content-center align-items-center mt-5">User account</h2>
+<hr>
+<div class="container mt-3">
+    <div class="row">
+        <div class="col d-flex justify-content-center align-items-center">
+            {% if user.is_staff %}
+            <a class="btn btn-success" href="{% url 'front' %}">Admin panel</a>
+            {% endif %}
+            <a class="btn btn-primary mx-3" href="{% url 'account_change_password' %}">Change password</a>
+            <a class="btn btn-primary" href="{% url 'account_email' %}">Change email</a>
         </div>
     </div>
 </div>
+{% endif %}
+<div class="container my-3">
+    <div class="row">
+        <div class="col-12 col-lg-6">
+            <h3 class="d-flex justify-content-center align-items-center">Your delivery information:</h3>
+            <form action="{% url 'profile' %}" method="POST" id="profile-update">
+                {% csrf_token %}
+                <ul class="list-unstyled">
+                    <li>Phone number:</li>
+                    <li>{{ userprofileform.default_phone_number| as_crispy_field }}</li>
+                    <li>Town or City:</li>
+                    <li>{{ userprofileform.default_town_or_city| as_crispy_field }}</li>
+                    <li>Street address(1):</li>
+                    <li>{{ userprofileform.default_street_address1| as_crispy_field }}</li>
+                    <li>Street address(2):</li>
+                    <li>{{ userprofileform.default_street_address2| as_crispy_field }}</li>
+                    <li>County or State:</li>
+                    <li>{{ userprofileform.default_county_state| as_crispy_field }}</li>
+                    <li>Country:</li>
+                    <li>{{ userprofileform.default_country| as_crispy_field }}</li>
+                </ul>
+                <div class="d-flex justify-content-center align-items-center">
+                    <button class="btn btn-success">Update details</button>
+                </div>
+            </form>
+        </div>
+
+        <div class="col-12 col-lg-6">
+            <h3 class="d-flex justify-content-center align-items-center">Your order history:</h3>
+            {{ orders }}
+        </div>
+    </div>
+</div>
+
+
+
 {% endblock %}

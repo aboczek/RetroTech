@@ -1,4 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from items.models import Item
 from .models import UserProfile
@@ -48,9 +49,15 @@ def profile(request):
     """
     User account.
     """
-    profile = get_object_or_404(UserProfile, user=request.user)
-    userprofileform = UserProfileForm(instance=profile)
-    orders = profile.orders.all()
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    userprofileform = UserProfileForm(instance=user_profile)
+    orders = user_profile.orders.all()
+
+    if request.method == 'POST':
+        userprofileform = UserProfileForm(request.POST, instance=user_profile)
+        if userprofileform.is_valid():
+            userprofileform.save()
+            messages.success(request, "Details have been updated successfully!")
 
     context = {
         'title': 'RetroTech User Account',
