@@ -1,6 +1,7 @@
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, get_object_or_404
 from django.contrib.admin.views.decorators import staff_member_required
-from items.models import Category, Item
+from items.models import Item
+from .models import UserProfile
 from .forms import ItemsForm
 
 
@@ -47,9 +48,10 @@ def profile(request):
     """
     User account.
     """
-
+    profile = get_object_or_404(UserProfile, user=request.user)
     context = {
         'title': 'RetroTech User Account',
+        'profile': profile,
     }
 
     return render(request, 'home/profile.html', context)
