@@ -74,10 +74,12 @@ def order_history(request, order_number):
     """
     Renders order history from user account/profile.
     """
-    order = get_object_or_404(Order, order_number=order_number)
+    # orders = get_object_or_404(Order, order_number=order_number)
+    user_profile = get_object_or_404(UserProfile, user=request.user)
+    orders = user_profile.orders.all()
 
     context = {
-        'order': order,
+        'orders': orders,
         'title': 'RetroTech Order History',
     }
 

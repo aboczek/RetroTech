@@ -62,13 +62,13 @@
                                 <tr>
                                     <td>{{ item.item.product_name}}</td>
                                     <td>{{ item.quantity }}</td>
-                                    <td>{{ item.item.price | calculator:item.quantity }} €</td>
+                                    <td>€ {{ item.item.price | calculator:item.quantity }}</td>
                                 </tr>
                                 {% endfor %}
                             </tbody>
                         </table>
                         <p class="d-flex justify-content-evenly w-100 me-5 fw-bold">
-                            Subtotal: <span class="d-flex justify-content-end">{{ grand_total|floatformat:2 }} €</span>
+                            Subtotal: <span class="d-flex justify-content-end">€ {{ grand_total|floatformat:2 }}</span>
                         </p>
                         <h2 class="mt-5">Payment:</h2>
 
@@ -88,7 +88,7 @@
                                 order</button>
                         </div>
                         <p class="my-5">Your card will be charged subtotal:
-                            <span class="h3 text-danger">{{ grand_total|floatformat:2 }}€</span>
+                            <span class="h3 text-danger"> € {{ grand_total|floatformat:2 }}</span>
                         </p>
                 </div>
             </form>
