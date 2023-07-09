@@ -1,5 +1,6 @@
 {% extends 'base.html' %}
 {% load static %}
+{% load price_quantity %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'home/css/home.css' %}">
@@ -50,11 +51,27 @@
 
         <div class="col-12 col-lg-6">
             <h3 class="d-flex justify-content-center align-items-center">Your order history:</h3>
-            {{ orders }}
+            {% for order in orders %}
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order number:</th>
+                        <th scope="col">Date:</th>
+                        <th scope="col">Products:</th>
+                        <th scope="col">Order total:</th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td><a href="{% url 'order-history' order.order_number %}"
+                                title="{{ order.order_number }}">{{ order.order_number|truncatechars:6 }}</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            {% endfor %}
         </div>
     </div>
 </div>
-
-
-
 {% endblock %}

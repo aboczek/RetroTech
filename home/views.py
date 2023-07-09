@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.admin.views.decorators import staff_member_required
 from items.models import Item
 from .models import UserProfile
+from checkout.models import Order
 from .forms import ItemsForm, UserProfileForm
 
 
@@ -50,14 +51,15 @@ def profile(request):
     User account.
     """
     user_profile = get_object_or_404(UserProfile, user=request.user)
-    userprofileform = UserProfileForm(instance=user_profile)
-    orders = user_profile.orders.all()
 
     if request.method == 'POST':
         userprofileform = UserProfileForm(request.POST, instance=user_profile)
         if userprofileform.is_valid():
             userprofileform.save()
             messages.success(request, "Details have been updated successfully!")
+
+    userprofileform = UserProfileForm(instance=user_profile)
+    orders = user_profile.orders.all()
 
     context = {
         'title': 'RetroTech User Account',
@@ -66,6 +68,20 @@ def profile(request):
     }
 
     return render(request, 'home/profile.html', context)
+
+
+def order_history(request, order_number):
+    """
+    Renders order history from user account/profile.
+    """
+    order = get_object_or_404(Order, order_number=order_number)
+
+    context = {
+        'order': order,
+        'title': 'RetroTech Order History',
+    }
+
+    return render(request, 'home/order-history.html', context)
 
 
 @staff_member_required
