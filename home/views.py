@@ -1,6 +1,6 @@
-from django.shortcuts import render, redirect, get_object_or_404
+from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
-from django.contrib.admin.views.decorators import staff_member_required
+from django.contrib.auth.decorators import login_required
 from items.models import Item
 from .models import UserProfile
 from checkout.models import Order
@@ -84,13 +84,16 @@ def order_history(request, order_number):
     return render(request, 'home/order-history.html', context)
 
 
-@staff_member_required
+@login_required
 def front_end_panel(request):
     """
     Front end admin panel.
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
 
-    # Create items.
     items = Item.objects.all()
     items_form = ItemsForm()
 
@@ -113,11 +116,16 @@ def front_end_panel(request):
     return render(request, 'home/front.html', context)
 
 
-@staff_member_required
+@login_required
 def edit_item(request, item_id):
     """
     Editing items in front end admin panel.
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
     item = get_object_or_404(Item, pk=item_id)
     edit_item_form = ItemsForm()
     if request.method == 'POST':
@@ -137,11 +145,18 @@ def edit_item(request, item_id):
     return render(request, 'home/edit-item.html', context)
 
 
+@login_required
 def delete_item(request, item_id):
     """
     Deleting items in front end admin panel.
     """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
     item = get_object_or_404(Item, pk=item_id)
     item.delete()
-    messages.success(request, f'{ item.product_name} has was successfuly deleted.')
+    messages.success(request, f'{ item.product_name} \
+                      has was successfuly deleted.')
     return redirect('front')
