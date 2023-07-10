@@ -9,11 +9,33 @@
 <div class="container">
     <div class="row">
         <div class="col-12 col-lg-6">
-            <form method="POST" enctype="multipart/form-data"
+            <form class="w-100" method="POST" enctype="multipart/form-data"
                 class="d-flex flex-column justify-content-start align-items-start">
                 {% csrf_token %}
-                {{ items_form }}
-                <button type="submit" class="btn btn-primary my-2">Create</button>
+                {{ items_form.category| as_crispy_field }}
+                {{ items_form.sku_number| as_crispy_field }}
+                {{ items_form.product_name| as_crispy_field }}
+                {{ items_form.product_model| as_crispy_field }}
+                {{ items_form.product_description| as_crispy_field }}
+                {{ items_form.quantity| as_crispy_field }}
+                {{ items_form.price| as_crispy_field }}
+                {{ items_form.sale| as_crispy_field }}
+                {{ items_form.featured| as_crispy_field }}
+                <div>
+                    <p class="m-0">Image one:</p>
+                    {{ items_form.image_one }}
+                </div>
+                <div class="my-3">
+                    <p class="m-0">Image two:</p>
+                    {{ items_form.image_two }}
+                </div>
+                <div>
+                    <p class="m-0">Image three:</p>
+                    {{ items_form.image_three }}
+                </div>
+                <div class="d-flex justify-content-center w-100">
+                    <button type="submit" class="btn btn-primary my-3">Create</button>
+                </div>
             </form>
         </div>
         <div class="col-12 col-lg-6">
