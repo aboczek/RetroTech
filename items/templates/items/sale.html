@@ -1,6 +1,5 @@
 {% extends 'base.html' %}
 {% load static %}
-{% load mathfilters %}
 
 {% block extra_css %}
 <link rel="stylesheet" href="{% static 'items/css/items.css' %}">
@@ -25,7 +24,7 @@
                 {% endif %}
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <h4 class="card-title">{{ item.product_name }}</h4>
-                    <p>Price: {{ item.price|mul:0.7|floatformat:2 }}€</p>
+                    <p>Price: € {{ item.price|floatformat:2 }}</p>
                     {% if item.quantity == 0 %}
                     <p class="fw-bold text-danger">OUT OF STOCK</p>
                     {% else %}

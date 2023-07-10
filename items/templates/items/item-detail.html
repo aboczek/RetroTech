@@ -34,18 +34,10 @@
                 <li>
                     <p><span class="fw-bold">Description: </span> <br> {{ item.product_description }}</p>
                 </li>
-                {% if item.sale == True %}
-                <li>
-                    <p><span class="fw-bold">Price:</span> <br> {{ item.price|mul:0.7|floatformat:2 }}€</p>
-                </li>
-                {% else %}
                 <li>
                     <p><span class="fw-bold">Price:</span> <br> {{ item.price }}€</p>
                 </li>
-                {% endif %}
-
             </ul>
-
             <div class="container-lg" id="padding-form">
                 <div class="row">
                     <form action="{% url 'add_to_basket' item.id %}" method="POST" class="mt-1 mb-2 ms-5">

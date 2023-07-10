@@ -29,7 +29,7 @@
                         <td>{{ item.item.product_name }}</td>
                         <td>{{ item.item.sku_number }}</td>
                         <td>{{ item.item.price }} €</td>
-                        <td>{{ item.item.price | calculator:item.quantity }} €</td>
+                        <td>€ {{ item.item.price | calculator:item.quantity }}</td>
                         <td>
                             <div class="container padding-form">
                                 <div class="row d-flex flex-row justify-content-center sm-update-remove">
