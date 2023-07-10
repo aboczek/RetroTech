@@ -1,0 +1,23 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content%}
+<div class="container-lg">
+    <div class="row">
+        <div class="col">
+            <form method="POST">
+                {% csrf_token %}
+                <h2>Edit Item</h2>
+                {{ edit_item_form|crispy }}
+                <button class="btn btn-success my-5" type="submit">Update</button>
+                <a class="btn btn-primary" href="{% url 'front' %}">Go back</a>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}

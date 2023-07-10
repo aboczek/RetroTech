@@ -8,20 +8,38 @@
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col">
+        <div class="col-12 col-lg-6">
             <form method="POST" enctype="multipart/form-data"
                 class="d-flex flex-column justify-content-start align-items-start">
                 {% csrf_token %}
                 {{ items_form }}
-                <button type="submit" class="btn btn-primary">Create</button>
+                <button type="submit" class="btn btn-primary my-2">Create</button>
             </form>
-            {% for item in items %}
-            {{ item.sku_number }}
-            {{ item.product_model }}
-            <img src="{{ item.image_one.url }}" alt="">
-            <img src="{{ item.image_two.url }}" alt="">
-            <img src="{{ item.image_three.url }}" alt="">
-            {% endfor %}
+        </div>
+        <div class="col-12 col-lg-6">
+
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product_name</th>
+                        <th scope="col">Product SKU</th>
+                        <th scope="col">Edit/Delete</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        {% for item in items %}
+                        <th><a href="{% url 'item_details' item.id %}">{{ item.product_name }}</a></th>
+                        <th>{{ item.sku_number }}</th>
+                        <th>
+                            <a class="btn btn-success" href="{% url 'edit-item' item.id %}">Edit</a>
+                            <a class="btn btn-danger" href="">DELETE</a>
+                        </th>
+                        {% endfor %}
+                    </tr>
+                </tbody>
+            </table>
+
 
         </div>
     </div>

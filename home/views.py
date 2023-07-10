@@ -74,8 +74,6 @@ def order_history(request, order_number):
     """
     Renders order history from user account/profile.
     """
-    # user_profile = get_object_or_404(UserProfile, user=request.user)
-    # orders = user_profile.orders.all()
     order = get_object_or_404(Order, order_number=order_number)
 
     context = {
@@ -92,7 +90,7 @@ def front_end_panel(request):
     Front end admin panel.
     """
 
-    # Create items
+    # Create items.
     items = Item.objects.all()
     items_form = ItemsForm()
 
@@ -101,7 +99,7 @@ def front_end_panel(request):
         if items_form.is_valid():
             print(request.FILES)
             items_form.save()
-            return redirect('profile')
+            return redirect('front')
 
     else:
         ItemsForm()
@@ -113,3 +111,26 @@ def front_end_panel(request):
     }
 
     return render(request, 'home/front.html', context)
+
+
+def edit_item(request, item_id):
+    """
+    Editing items in front end admin panel.
+    """
+    item = get_object_or_404(Item, pk=item_id)
+    edit_item_form = ItemsForm()
+    if request.method == 'POST':
+        edit_item_form = ItemsForm(request.POST,
+                                   request.FILES,
+                                   instance=item)
+        if edit_item_form.is_valid():
+            edit_item_form.save()
+            messages.success(request, 'Update was successful!')
+            return redirect('front')
+    edit_item_form = ItemsForm(instance=item)
+    context = {
+        'edit_item_form': edit_item_form,
+        'title': 'RetroTech Lets edit boss!'
+    }
+
+    return render(request, 'home/edit-item.html', context)

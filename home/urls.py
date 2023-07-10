@@ -9,5 +9,8 @@ urlpatterns = [
     path('track-your-order/', views.track_your_order, name='tracking'),
     path('user-account/', views.profile, name='profile'),
     path('front/', views.front_end_panel, name='front'),
-    path('order-history/<order_number>', views.order_history, name='order-history'),
+    path('order-history/<order_number>',
+         views.order_history,
+         name='order-history'),
+    path('edit-item/<item_id>', views.edit_item, name='edit-item'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

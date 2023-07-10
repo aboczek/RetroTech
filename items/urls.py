@@ -8,5 +8,5 @@ urlpatterns = [
     path('games/', views.games, name='games'),
     path('sell-to-us/', views.sell_to_us, name='sell_to_us'),
     path('sale/', views.sale, name='sale'),
-    path('<item_id>', views.item_detail, name='item_details'),
+    path('<int:item_id>', views.item_detail, name='item_details'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

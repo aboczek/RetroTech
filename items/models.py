@@ -38,7 +38,7 @@ class Item(models.Model):
     Item database model.
     """
     category = models.ForeignKey('Category', null=True,
-                                 blank=True, on_delete=models.SET_NULL)
+                                 blank=True, on_delete=models.CASCADE)
     sku_number = models.CharField(max_length=254, null=True, blank=True)
     product_name = models.CharField(max_length=254, null=False, blank=False)
     product_model = models.CharField(max_length=254, null=True, blank=True)
