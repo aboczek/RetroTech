@@ -113,6 +113,7 @@ def front_end_panel(request):
     return render(request, 'home/front.html', context)
 
 
+@staff_member_required
 def edit_item(request, item_id):
     """
     Editing items in front end admin panel.
@@ -134,3 +135,13 @@ def edit_item(request, item_id):
     }
 
     return render(request, 'home/edit-item.html', context)
+
+
+def delete_item(request, item_id):
+    """
+    Deleting items in front end admin panel.
+    """
+    item = get_object_or_404(Item, pk=item_id)
+    item.delete()
+    messages.success(request, f'{ item.product_name} has was successfuly deleted.')
+    return redirect('front')

@@ -33,7 +33,7 @@
                         <th>{{ item.sku_number }}</th>
                         <th>
                             <a class="btn btn-success" href="{% url 'edit-item' item.id %}">Edit</a>
-                            <a class="btn btn-danger" href="">DELETE</a>
+                            <a class="btn btn-danger" href="{% url 'delete-item' item.id %}">DELETE</a>
                         </th>
                         {% endfor %}
                     </tr>
