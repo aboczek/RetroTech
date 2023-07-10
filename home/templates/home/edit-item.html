@@ -6,18 +6,38 @@
 {% endblock %}
 
 {% block content%}
-<div class="container-lg">
+<div class="container">
     <div class="row">
-        <div class="col">
-            <form method="POST">
+        <div class="col-2"></div>
+        <div class="col-8">
+            <form class="d-flex flex-column" method="POST">
                 {% csrf_token %}
-                <h2>Edit Item</h2>
-                {{ edit_item_form|crispy }}
-                <button class="btn btn-success my-5" type="submit">Update</button>
-                <a class="btn btn-primary" href="{% url 'front' %}">Go back</a>
+                <h2 class="d-flex justify-content-center mt-5">Edit Item</h2>
+                {{ edit_item_form.category| as_crispy_field }}
+                {{ edit_item_form.sku_number| as_crispy_field }}
+                {{ edit_item_form.product_name| as_crispy_field }}
+                {{ edit_item_form.product_model| as_crispy_field }}
+                {{ edit_item_form.product_description| as_crispy_field }}
+                {{ edit_item_form.quantity| as_crispy_field }}
+                {{ edit_item_form.price| as_crispy_field }}
+                {{ edit_item_form.sale| as_crispy_field }}
+                {{ edit_item_form.featured| as_crispy_field }}
+                <div>
+                    {{ edit_item_form.image_one }}
+                </div>
+                <div>
+                    {{ edit_item_form.image_two }}
+                </div>
+                <div>
+                    {{ edit_item_form.image_three }}
+                </div>
+                <div class="d-flex justify-content-center">
+                    <button class="btn btn-success my-5 mx-2" type="submit">Update</button>
+                    <a class="btn btn-primary my-5" href="{% url 'front' %}">Go back</a>
+                </div>
             </form>
-
         </div>
+        <div class="col-2"></div>
     </div>
 </div>
 {% endblock %}
