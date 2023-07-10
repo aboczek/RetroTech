@@ -37,3 +37,14 @@ def create_or_update_user_profile(sender, instance, created, **kwargs):
         UserProfile.objects.create(user=instance)
     # if user exists save the profile
     instance.userprofile.save()
+
+
+class Newsletter(models.Model):
+    """
+    Newsletter email model.
+    """
+    full_name = models.CharField(max_length=50, blank=False, null=False)
+    email = models.EmailField(max_length=254, blank=False, null=False)
+
+    def __str__(self):
+        return str(self.email)
