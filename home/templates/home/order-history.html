@@ -27,9 +27,9 @@
                 {% for item in order.lineitems.all %}
                 <tr>
                     <td>{{ item.item.product_name }}</td>
-                    <td>{{ item.item.quantity }}</td>
-                    <td>{{ item.item.price }}</td>
-                    <td>{{ item.item.price | calculator:item.quantity }} €</td>
+                    <td>{{ item.quantity }}</td>
+                    <td>€ {{ item.item.price }}</td>
+                    <td>€ {{ item.item.price | calculator:item.quantity }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
