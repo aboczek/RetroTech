@@ -54,3 +54,23 @@ class Item(models.Model):
 
     def __str__(self):
         return str(self.product_name)
+
+
+class Sell_to_us(models.Model):
+    """
+    Sell to us model.
+    """
+    full_name = models.CharField(max_length=50, null=False, blank=False)
+    brand = models.CharField(max_length=25, null=False, blank=False)
+    model = models.CharField(max_length=50, null=False, blank=False)
+    grade = models.CharField(max_length=10, null=False, blank=False)
+    description = models.CharField(max_length=254, null=False, blank=False)
+    sell_image_one = CloudinaryField(null=True,
+                                     blank=True,
+                                     default='placeholder')
+    sell_image_two = CloudinaryField(null=True,
+                                     blank=True,
+                                     default='placeholder')
+    sell_image_three = CloudinaryField(null=True,
+                                       blank=True,
+                                       default='placeholder')

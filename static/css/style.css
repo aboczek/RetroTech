@@ -136,6 +136,12 @@ body {
     background-color: var(--white);
 }
 
+.sm-media-subs>label {
+    color: white;
+    padding-top: 0.5rem;
+    padding-right: 0.5rem;
+}
+
 /* allauth override */
 
 #id_login,
