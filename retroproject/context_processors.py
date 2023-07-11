@@ -15,10 +15,11 @@ def newsletter(request):
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
             if Newsletter.objects.filter(email=instance.email).exists():
-                messages.error(request, 'This email is already subscribed!')
+                messages.error(request, f'{instance.email} is \
+                                already subscribed!')
             else:
                 instance.save()
-                messages.success(request, 'Email has \
+                messages.success(request, f'{instance.email} has \
                                   subscribed for newsletter!')
 
     else:
