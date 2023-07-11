@@ -56,11 +56,12 @@ class Item(models.Model):
         return str(self.product_name)
 
 
-class Sell_to_us(models.Model):
+class SellToUs(models.Model):
     """
     Sell to us model.
     """
     full_name = models.CharField(max_length=50, null=False, blank=False)
+    email = models.EmailField(max_length=254, null=False, blank=False)
     brand = models.CharField(max_length=25, null=False, blank=False)
     model = models.CharField(max_length=50, null=False, blank=False)
     grade = models.CharField(max_length=10, null=False, blank=False)
@@ -74,3 +75,6 @@ class Sell_to_us(models.Model):
     sell_image_three = CloudinaryField(null=True,
                                        blank=True,
                                        default='placeholder')
+
+    def __str__(self):
+        return str(self.full_name)
