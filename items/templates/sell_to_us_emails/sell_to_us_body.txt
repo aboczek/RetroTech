@@ -1,0 +1,8 @@
+Hi {{ instance.full_name }}
+
+This is confirmation that we have received your query about your device,
+We will respond up to 3 business days!
+
+Sincerely
+
+RetroTech!

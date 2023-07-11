@@ -1,9 +1,12 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
+from django.conf import settings
+from django.core.mail import send_mail
+from django.template.loader import render_to_string
 from django.contrib import messages
+from django.db.models.functions import Lower
 from items.models import Item, Category, SellToUs
 from .forms import SellToUsForm
-from django.db.models.functions import Lower
 
 
 def all_items(request):
@@ -79,9 +82,23 @@ def sell_to_us(request):
     """
     sell_form = SellToUsForm()
     if request.method == 'POST':
-        sell_form = SellToUsForm()
+        sell_form = SellToUsForm(request.POST)
         if sell_form.is_valid():
-            sell_form.save()
+            instance = sell_form.save()
+            instance.save()
+            cust_email = instance
+            subject = render_to_string(
+                'sell_to_us_emails/sell_to_us_subject.txt',
+                {'instance': instance})
+            body = render_to_string(
+                'sell_to_us_emails/sell_to_us_body.txt',
+                {'instance': instance})
+            send_mail(
+                subject,
+                body,
+                settings.DEFAULT_FROM_EMAIL,
+                [cust_email]
+            )
             return redirect('sell_to_us')
 
     else:
