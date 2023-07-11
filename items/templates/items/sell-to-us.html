@@ -1,16 +1,37 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+
 {% block content %}
 <div class="container">
     <div class="row">
-        <div class="col d-flex flex-column justify-content-center align-items-center mt-5">
-            <h2>Hey there, I see you want to sell us your device.</h2>
-            <p class="my-5">You need to fill in Details: Full name, brand, model, grade of the device and small
-                description
-                about it.</p>
+        <div class="col-2"></div>
+        <div class="col-8 mt-5">
+            <form method="POST">
+                {% csrf_token %}
+                <div class="d-flex flex-column text-center justify-content-center">
+                    <h2>Hey there, I see you want to sell us your device.</h2>
+                    <p class="my-5">You need to fill in Details: Full name, brand, model, grade of the device and small
+                        description about it.</p>
+                </div>
+                {{ sell_form.full_name | as_crispy_field }}
+                {{ sell_form.email | as_crispy_field }}
+                {{ sell_form.brand | as_crispy_field }}
+                {{ sell_form.model| as_crispy_field }}
+                {{ sell_form.grade | as_crispy_field }}
+                {{ sell_form.description | as_crispy_field }}
+                {{ sell_form.sell_image_one | as_crispy_field }}
+                {{ sell_form.sell_image_two | as_crispy_field }}
+                {{ sell_form.sell_image_three | as_crispy_field }}
+                <p class="text-muted">*if no image it will be saved as placeholder</p>
+                <button class="btn btn-success my-3" type="submit">Submit</button>
+            </form>
         </div>
+        <div class="col-2"></div>
     </div>
 </div>
-
 {% endblock %}

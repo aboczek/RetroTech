@@ -73,10 +73,6 @@ body {
     border-radius: 50%;
 }
 
-#small-navbar-image {
-    display: none;
-}
-
 /* Content of item-detail.html */
 
 .opacity {
@@ -292,14 +288,6 @@ body {
         flex-direction: column;
         margin: auto;
         align-items: center;
-    }
-
-    #small-navbar-image {
-        display: flex;
-    }
-
-    #navbar-image {
-        display: none;
     }
 
     .md-lg-device {

@@ -105,7 +105,7 @@ def front_end_panel(request):
             return redirect('front')
 
     else:
-        ItemsForm()
+        items_form = ItemsForm()
 
     context = {
         'title': 'RetroTech User Account',

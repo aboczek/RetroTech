@@ -65,7 +65,7 @@ class SellToUs(models.Model):
     brand = models.CharField(max_length=25, null=False, blank=False)
     model = models.CharField(max_length=50, null=False, blank=False)
     grade = models.CharField(max_length=10, null=False, blank=False)
-    description = models.CharField(max_length=254, null=False, blank=False)
+    description = models.TextField(max_length=254, null=False, blank=False)
     sell_image_one = CloudinaryField(null=True,
                                      blank=True,
                                      default='placeholder')

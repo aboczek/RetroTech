@@ -1,7 +1,8 @@
 from django.shortcuts import render, redirect, reverse, get_object_or_404
 from django.db.models import Q
 from django.contrib import messages
-from items.models import Item, Category
+from items.models import Item, Category, SellToUs
+from .forms import SellToUsForm
 from django.db.models.functions import Lower
 
 
@@ -76,9 +77,19 @@ def sell_to_us(request):
     """
     Sell to us page with steps how to do it.
     """
+    sell_form = SellToUsForm()
+    if request.method == 'POST':
+        sell_form = SellToUsForm()
+        if sell_form.is_valid():
+            sell_form.save()
+            return redirect('sell_to_us')
+
+    else:
+        sell_form = SellToUsForm()
 
     context = {
         'title': 'RetroTech Sell to us',
+        'sell_form': sell_form,
     }
 
     return render(request, 'items/sell-to-us.html', context)
