@@ -37,9 +37,9 @@
             </div>
             <div class="col-12 col-sm-12 col-md-4 col-lg-4 sm-media-footer">
                 <h4 class="text-white pt-5">Subscribe to newsletter about new products and much more!</h4>
-                <form class="d-flex py-2 sm-media-subs">
-                    <input class="form-control me-2 subscribe" type="newsletter" placeholder="Newsletter"
-                        aria-label="Newsletter" name="newsletter">
+                <form class="d-flex py-2 sm-media-subs" method="POST">
+                    {% csrf_token %}
+                    {{ newsletter_form }}
                     <button class="btn btn-outline-success subscribe white-bg" type="submit">Subscribe</button>
                 </form>
             </div>

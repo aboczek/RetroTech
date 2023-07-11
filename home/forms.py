@@ -1,5 +1,6 @@
 from django import forms
 from items.models import Item
+from .models import Newsletter
 from checkout.models import UserProfile
 
 
@@ -52,3 +53,15 @@ class UserProfileForm(forms.ModelForm):
                     placeholder = placeholders[field]
                 self.fields[field].widget.attrs['placeholder'] = placeholder
             self.fields[field].label = False
+
+
+class NewsletterForm(forms.ModelForm):
+    """
+    Takes emails for newsletter subscribers.
+    """
+    class Meta:
+        """
+        Meta for NewsletterForm
+        """
+        model = Newsletter
+        fields = ('email',)

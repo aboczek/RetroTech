@@ -2,9 +2,9 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from items.models import Item
-from .models import UserProfile
+from .models import UserProfile, Newsletter
 from checkout.models import Order
-from .forms import ItemsForm, UserProfileForm
+from .forms import ItemsForm, UserProfileForm, NewsletterForm
 
 
 def home(request):
@@ -26,9 +26,10 @@ def faq(request):
     """
     Frequently asked questions page.
     """
-
+    newsletter = NewsletterForm()
     context = {
-        'title': 'RetroTech FAQ?'
+        'title': 'RetroTech FAQ?',
+        'newsletter': newsletter,
     }
 
     return render(request, 'home/faq.html', context)
@@ -100,7 +101,6 @@ def front_end_panel(request):
     if request.method == 'POST':
         items_form = ItemsForm(request.POST, request.FILES)
         if items_form.is_valid():
-            print(request.FILES)
             items_form.save()
             return redirect('front')
 

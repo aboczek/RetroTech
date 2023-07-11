@@ -103,6 +103,7 @@ TEMPLATES = [
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
                 'basket.contexts.basket_contents',
+                'retroproject.context_processors.newsletter',
             ],
             'builtins': [
                 'crispy_forms.templatetags.crispy_forms_tags',

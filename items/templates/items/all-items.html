@@ -40,7 +40,7 @@
                 {% endif %}
                 <div class="card-body d-flex flex-column justify-content-center align-items-center">
                     <h4 class="card-title">{{ item.product_name }}</h4>
-                    <p>Price: {{ item.price }}€</p>
+                    <p>Price: € {{ item.price }}</p>
                     {% if item.quantity == 0 %}
                     <p class="fw-bold text-danger">OUT OF STOCK</p>
                     {% else %}
