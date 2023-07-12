@@ -160,3 +160,34 @@ def delete_item(request, item_id):
     messages.success(request, f'{ item.product_name} \
                       has was successfuly deleted.')
     return redirect('front')
+
+
+@login_required
+def newsletter_email(request):
+    """
+    Rendering subscribed emails.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
+    emails = Newsletter.objects.all()
+
+    context = {
+        'title': 'RetroTech Newsletter Emails',
+        'emails': emails,
+    }
+
+    return render(request, 'home/newsletter-emails.html', context)
+
+
+@login_required
+def delete_newsletter_email(request, email_id):
+    """
+    Deleting newsletter emails if subscribed person wants to.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
