@@ -86,6 +86,18 @@ def order_history(request, order_number):
     return render(request, 'home/order-history.html', context)
 
 
+def terms_conditions(request):
+    """
+    Terms and conditions.
+    """
+
+    context = {
+        'title': 'RetroTech Terms and Conditions',
+    }
+
+    return render(request, 'home/terms-conditions', context)
+
+
 @login_required
 def front_end_panel(request):
     """
