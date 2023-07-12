@@ -1,5 +1,20 @@
 {% extends 'base.html' %}
+{% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
 
-{% block content%}
+{% block content %}
+<div class="container-lg">
+    <div class="row">
+        <div class="col d-flex flex-column align-items-center text-center my-5">
+            <h2>Terms & Conditions</h2>
+            <p>RetroTech does not have any copyright rights for any images used on this website, everything is used as
+                for educational purpose only.
+                if You as company dont want of your pictures used please contact me at: retrotechemail@gmail.com
+            </p>
+        </div>
+    </div>
+</div>
 {% endblock %}

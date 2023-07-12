@@ -95,7 +95,7 @@ def terms_conditions(request):
         'title': 'RetroTech Terms and Conditions',
     }
 
-    return render(request, 'home/terms-conditions', context)
+    return render(request, 'home/terms-conditions.html', context)
 
 
 @login_required
