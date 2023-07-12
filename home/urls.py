@@ -19,4 +19,6 @@ urlpatterns = [
     path('delete-email/<email_id>',
          views.delete_newsletter_email, name='delete-email'),
     path('sell-to-me/', views.sell_to_me, name='sell-to-me'),
+    path('sell-details/<sell_id>',
+         views.sell_to_me_details, name='sell-to-me-details'),
 ] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)

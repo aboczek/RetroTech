@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center my-3">
+                <a class="btn btn-warning" href="{% url 'profile' %}">Go back to User Account</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col d-flex flex-column justify-content-center align-items-center my-5">
+            <ul class="list-unstyled">
+                <li>{{ sell.full_name }}</li>
+                <li>{{ sell.email }}</li>
+                <li>{{ sell.brand }}</li>
+                <li>{{ sell.model }}</li>
+                <li>{{ sell.description }}</li>
+            </ul>
+            <div class="d-flex flex-row sell-images">
+                <a href="{{ sell.sell_image_one.url }}" target="_blank"><img src="{{ sell.sell_image_one.url }}"
+                        alt="{{ sell.model }}"></a>
+                <a class="mx-3" href="{{ sell.sell_image_two.url }}" target="_blank"><img
+                        src="{{ sell.sell_image_one.url }}" alt="{{ sell.model }}"></a>
+                <a href="{{ sell.sell_image_three.url }}" target="_blank"><img src="{{ sell.sell_image_one.url }}"
+                        alt="{{ sell.model }}"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

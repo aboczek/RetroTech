@@ -2,9 +2,9 @@ from django.shortcuts import render, reverse, redirect, get_object_or_404
 from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from items.models import Item
-from .models import UserProfile, Newsletter
 from items.models import SellToUs
 from checkout.models import Order
+from .models import UserProfile, Newsletter
 from .forms import ItemsForm, UserProfileForm, NewsletterForm
 
 
@@ -218,3 +218,23 @@ def sell_to_me(request):
     }
 
     return render(request, 'home/sell-to-me.html', context)
+
+
+@login_required
+def sell_to_me_details(request, sell_id):
+    """
+    Takes sell to us id and renders as detailed query sent to me.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
+    sell = get_object_or_404(SellToUs, pk=sell_id)
+
+    context = {
+        'title': 'RetroTech Sell to me details',
+        'sell': sell,
+    }
+
+    return render(request, 'home/sell-to-me-details.html', context)

@@ -1,6 +1,10 @@
 {% extends 'base.html' %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container-lg">
     <div class="row">
@@ -22,7 +26,7 @@
                         <td>{{ sell.email }}</td>
                         <td>{{ sell.brand }}</td>
                         <td>{{ sell.grade }}</td>
-
+                        <td><a class="btn btn-primary" href="{% url 'sell-to-me-details' sell.id %}">Details</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
