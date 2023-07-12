@@ -4,6 +4,7 @@
     font-size: 1.6rem !important;
 }
 
-.sell-images>a {
+.sell-images {
     width: 30rem;
+    height: 30rem;
 }
