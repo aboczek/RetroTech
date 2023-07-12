@@ -20,11 +20,14 @@
                     {% for email in emails %}
                     <tr>
                         <td>{{ email.email }}</td>
-                        <td><a class="btn btn-danger" href="">Remove</a></td>
+                        <td><a class="btn btn-danger" href="{% url 'delete-email' email.id %}">Remove</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
             </table>
+            <div>
+                <a class="btn btn-warning" href="{% url 'profile' %}">Go back to Account</a>
+            </div>
         </div>
     </div>
 </div>
