@@ -9,6 +9,13 @@
 <div class="container-lg">
     <div class="row">
         <div class="col">
+            <div class="d-flex justify-content-center my-3">
+                <a class="btn btn-warning" href="{% url 'profile' %}">Go back to Account</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
             <table class="table">
                 <thead>
                     <tr>
@@ -25,9 +32,6 @@
                     {% endfor %}
                 </tbody>
             </table>
-            <div>
-                <a class="btn btn-warning" href="{% url 'profile' %}">Go back to Account</a>
-            </div>
         </div>
     </div>
 </div>

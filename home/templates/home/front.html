@@ -7,6 +7,11 @@
 
 {% block content %}
 <div class="container">
+    <div class="rov">
+        <div class="col d-flex justify-content-center my-3">
+            <a class="btn btn-warning" href="{% url 'profile' %}">Go back to Account</a>
+        </div>
+    </div>
     <div class="row">
         <div class="col-12 col-lg-6">
             <form class="w-100" method="POST" enctype="multipart/form-data"
@@ -39,7 +44,6 @@
             </form>
         </div>
         <div class="col-12 col-lg-6">
-
             <table class="table">
                 <thead>
                     <tr>
@@ -61,8 +65,6 @@
                     </tr>
                 </tbody>
             </table>
-
-
         </div>
     </div>
 </div>
