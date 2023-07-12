@@ -1,0 +1,33 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<div class="container-lg">
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Full Name</th>
+                        <th scope="col">Email</th>
+                        <th scope="col">Brand</th>
+                        <th scope="col">Grade</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for sell in sells %}
+                    <tr>
+                        <td>{{ sell.full_name }}</td>
+                        <td>{{ sell.email }}</td>
+                        <td>{{ sell.brand }}</td>
+                        <td>{{ sell.grade }}</td>
+
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock  %}

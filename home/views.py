@@ -3,6 +3,7 @@ from django.contrib import messages
 from django.contrib.auth.decorators import login_required
 from items.models import Item
 from .models import UserProfile, Newsletter
+from items.models import SellToUs
 from checkout.models import Order
 from .forms import ItemsForm, UserProfileForm, NewsletterForm
 
@@ -197,3 +198,23 @@ def delete_newsletter_email(request, email_id):
     messages.success(request, f'{ email.email} \
                       has was successfully removed.')
     return redirect('newsletter-emails')
+
+
+@login_required
+def sell_to_me(request):
+    """
+    Rendering messages send to me to sell items.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
+    sells = SellToUs.objects.all()
+
+    context = {
+        'title': 'RetroTech Sell to me!?',
+        'sells': sells,
+    }
+
+    return render(request, 'home/sell-to-me.html', context)

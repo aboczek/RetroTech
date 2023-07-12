@@ -16,7 +16,7 @@
         <div class="col d-flex justify-content-center align-items-center">
             {% if user.is_staff %}
             <a class="btn btn-success" href="{% url 'newsletter-emails' %}">Newsletter emails</a>
-            <a class="btn btn-success mx-3" href="">Sell to us</a>
+            <a class="btn btn-success mx-3" href="{% url 'sell-to-me' %}">Sell to us</a>
             <a class="btn btn-success" href="{% url 'front' %}">Admin panel</a>
             {% endif %}
             <a class="btn btn-primary mx-3" href="{% url 'account_change_password' %}">Change password</a>
