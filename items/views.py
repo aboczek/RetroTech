@@ -82,7 +82,7 @@ def sell_to_us(request):
     """
     sell_form = SellToUsForm()
     if request.method == 'POST':
-        sell_form = SellToUsForm(request.POST)
+        sell_form = SellToUsForm(request.POST, request.FILES)
         if sell_form.is_valid():
             instance = sell_form.save()
             instance.save()
