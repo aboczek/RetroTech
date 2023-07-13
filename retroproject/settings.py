@@ -209,7 +209,7 @@ if 'DEVELOPMENT' in os.environ:
     DEFAULT_FROM_EMAIL = 'retrotech@tech.com'
 else:
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
-    EMAIL_USER_HOST = os.environ.get('EMAIL_HOST_USER')
+    EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER')
     EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD')
     DEFAULT_FROM_EMAIL = os.environ.get('EMAIL_HOST_USER')
     EMAIL_USE_TLS = True
