@@ -53,16 +53,16 @@
                     </tr>
                 </thead>
                 <tbody>
+                    {% for item in items %}
                     <tr>
-                        {% for item in items %}
                         <th><a href="{% url 'item_details' item.id %}">{{ item.product_name }}</a></th>
                         <th>{{ item.sku_number }}</th>
                         <th>
                             <a class="btn btn-success" href="{% url 'edit-item' item.id %}">Edit</a>
                             <a class="btn btn-danger" href="{% url 'delete-item' item.id %}">DELETE</a>
                         </th>
-                        {% endfor %}
                     </tr>
+                    {% endfor %}
                 </tbody>
             </table>
         </div>
