@@ -92,7 +92,7 @@ def sell_to_us(request):
                 {'instance': instance})
             body = render_to_string(
                 'sell_to_us_emails/sell_to_us_body.txt',
-                {'instance': instance})
+                {'instance': instance, 'contact_email': settings.DEFAULT_FROM_EMAIL})
             send_mail(
                 subject,
                 body,
