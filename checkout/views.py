@@ -148,6 +148,21 @@ def checkout_success(request, order_number):
     save_details = request.session.get('save_details')
     order = get_object_or_404(Order, order_number=order_number)
 
+    cust_email = order.email
+    subject = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_subject.txt',
+        {'order': order})
+    body = render_to_string(
+        'checkout/confirmation_emails/confirmation_email_body.txt',
+        {'order': order, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+
+    send_mail(
+        subject,
+        body,
+        settings.DEFAULT_FROM_EMAIL,
+        [cust_email]
+    )
+
     if request.user.is_authenticated:
         profile = UserProfile.objects.get(user=request.user)
         order.user_profile = profile
@@ -169,7 +184,6 @@ def checkout_success(request, order_number):
 
     else:
         order.save()
-
 
     messages.success(request, f'Order successfully processed! \
                       Your order number is {order_number}. A \
