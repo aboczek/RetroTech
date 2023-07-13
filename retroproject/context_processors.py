@@ -24,7 +24,8 @@ def newsletter(request):
                     {'instace': instance})
                 body = render_to_string(
                     'newsletter_emails/newsletter_email_body.txt',
-                    {'instace': instance, 'contact_email': settings.DEFAULT_FROM_EMAIL})
+                    {'instace': instance,
+                     'contact_email': settings.DEFAULT_FROM_EMAIL})
 
                 send_mail(
                     subject,
