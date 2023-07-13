@@ -86,7 +86,7 @@ def sell_to_us(request):
         if sell_form.is_valid():
             instance = sell_form.save()
             instance.save()
-            cust_email = instance
+            cust_email = instance.email
             subject = render_to_string(
                 'sell_to_us_emails/sell_to_us_subject.txt',
                 {'instance': instance})

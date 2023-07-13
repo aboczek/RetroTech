@@ -18,7 +18,7 @@ def newsletter(request):
             instance = newsletter_form.save(commit=False)
             if Newsletter.objects.filter(email=instance.email).exists():
 
-                cust_email = instance
+                cust_email = instance.email
                 subject = render_to_string(
                     'newsletter_emails/newsletter_email_subject.txt',
                     {'instace': instance})
