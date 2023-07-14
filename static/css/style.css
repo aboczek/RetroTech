@@ -235,6 +235,11 @@ body {
     height: 57.7rem;
 }
 
+.btn-outline-secondary:hover {
+    background-color: var(--purple);
+    border-color: var(--purple);
+}
+
 /* Sorting in all items */
 
 #sorting {
