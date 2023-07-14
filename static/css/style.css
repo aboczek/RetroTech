@@ -30,12 +30,14 @@ body {
     margin: 1rem 0 0 1rem;
     font-size: 5rem;
     line-height: 1;
+    color: var(--black);
 }
 
 .logo-sm {
     margin: 1rem 0 0 1rem;
     font-size: 3rem;
     line-height: 1;
+    color: var(--black);
 }
 
 .login-register {

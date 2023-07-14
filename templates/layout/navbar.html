@@ -4,8 +4,11 @@
     <div class="container-lg md-lg-device">
         <div class="row">
             <div class="col-4">
-                <h1 class="logo">Retro<span id="purple">Tech</span></h1>
-                <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                <a class="text-decoration-none" href="{% url 'home' %}">
+                    <h1 class="logo">Retro<span id="purple">Tech</span></h1>
+                    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                </a>
+
             </div>
             <div class="col-4">
                 <form action="{% url 'all_items' %}" method="GET">
@@ -128,8 +131,11 @@
         <nav class="navbar navbar-light bg-light">
             <div class="container-fluid">
                 <div class="d-flex flex-column">
-                    <h1 class="logo-sm">Retro<span id="purple">Tech</span></h1>
-                    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                    <a class="text-decoration-none" href="{% url 'home' %}">
+                        <h1 class="logo-sm">Retro<span id="purple">Tech</span></h1>
+                        <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                    </a>
+
                 </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
