@@ -264,6 +264,21 @@ body {
 
 /* Media Queries */
 
+@media (max-width: 990px) {
+    .carousel-img-one {
+        height: auto;
+    }
+
+    .carousel-img-two {
+        height: auto;
+    }
+
+    #margin-sale {
+        margin-top: 3rem;
+        margin-bottom: 3rem;
+    }
+}
+
 @media (min-width: 769px) {
     #sm-device {
         display: none;
