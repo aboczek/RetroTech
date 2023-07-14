@@ -13,6 +13,7 @@
     --green: #10b31b;
     --d-grey: #4d4e4f;
     --input-grey: #ced4da;
+    --light-black: #212121;
 }
 
 html {
@@ -143,6 +144,28 @@ body {
     color: white;
     padding-top: 0.5rem;
     padding-right: 0.5rem;
+}
+
+.foot-hover:hover {
+    display: flex;
+    width: auto;
+    background-color: var(--light-black);
+    color: var(--black);
+    padding-left: 0.2rem;
+    border-radius: 2rem;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
+}
+
+.foot-hover {
+    display: flex;
+    width: auto;
+    padding-left: 0.2rem;
+    border-radius: 2rem;
+    justify-content: center;
+    height: 3rem;
+    align-items: center;
 }
 
 /* allauth override */
