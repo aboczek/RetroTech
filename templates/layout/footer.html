@@ -40,8 +40,9 @@
                 <h4 class="text-white pt-5">Subscribe to newsletter about new products and much more!</h4>
                 <form class="d-flex py-2 sm-media-subs" method="POST">
                     {% csrf_token %}
-                    {{ newsletter_form }}
-                    <button class="btn btn-outline-success subscribe white-bg" type="submit">Subscribe</button>
+                    {{ newsletter_form|crispy }}
+                    <button class="btn btn-outline-success subscribe white-bg" id="news"
+                        type="submit">Subscribe</button>
                 </form>
             </div>
         </div>

@@ -18,7 +18,10 @@ def newsletter(request):
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
             if Newsletter.objects.filter(news_email=instance.news_email).exists():
-
+                messages.error(request, f'{instance.news_email} is \
+                                already subscribed!')
+            else:
+                instance.save()
                 cust_email = instance.news_email
                 subject = render_to_string(
                     'newsletter_emails/newsletter_email_subject.txt',
@@ -34,10 +37,6 @@ def newsletter(request):
                     settings.DEFAULT_FROM_EMAIL,
                     [cust_email]
                 )
-                messages.error(request, f'{instance.news_email} is \
-                                already subscribed!')
-            else:
-                instance.save()
                 messages.success(request, f'{instance.news_email} has \
                                   subscribed for newsletter!')
 
