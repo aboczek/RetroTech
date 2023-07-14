@@ -208,7 +208,7 @@ def delete_newsletter_email(request, email_id):
 
     email = get_object_or_404(Newsletter, pk=email_id)
     email.delete()
-    messages.success(request, f'{ email.email} \
+    messages.success(request, f'{ email.news_email } \
                       has was successfully removed.')
     return redirect('newsletter-emails')
 

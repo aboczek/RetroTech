@@ -43,7 +43,7 @@ class Newsletter(models.Model):
     """
     Newsletter email model.
     """
-    email = models.EmailField(max_length=254, blank=False, null=False)
+    news_email = models.EmailField(max_length=254, blank=False, null=False)
 
     def __str__(self):
-        return str(self.email)
+        return str(self.news_email)

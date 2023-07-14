@@ -64,4 +64,4 @@ class NewsletterForm(forms.ModelForm):
         Meta for NewsletterForm
         """
         model = Newsletter
-        fields = ('email',)
+        fields = ('news_email',)

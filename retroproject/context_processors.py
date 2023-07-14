@@ -12,13 +12,14 @@ def newsletter(request):
     """
     newsletter_form = NewsletterForm()
 
-    if request.method == 'POST':
+    # if request.method == 'POST':
+    if 'news_email' in request.POST and request.method == 'POST':
         newsletter_form = NewsletterForm(request.POST)
         if newsletter_form.is_valid():
             instance = newsletter_form.save(commit=False)
-            if Newsletter.objects.filter(email=instance.email).exists():
+            if Newsletter.objects.filter(news_email=instance.news_email).exists():
 
-                cust_email = instance.email
+                cust_email = instance.news_email
                 subject = render_to_string(
                     'newsletter_emails/newsletter_email_subject.txt',
                     {'instace': instance})
@@ -33,11 +34,11 @@ def newsletter(request):
                     settings.DEFAULT_FROM_EMAIL,
                     [cust_email]
                 )
-                messages.error(request, f'{instance.email} is \
+                messages.error(request, f'{instance.news_email} is \
                                 already subscribed!')
             else:
                 instance.save()
-                messages.success(request, f'{instance.email} has \
+                messages.success(request, f'{instance.news_email} has \
                                   subscribed for newsletter!')
 
     else:
