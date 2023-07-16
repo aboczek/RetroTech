@@ -1,0 +1,56 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-lg">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center my-3">
+                <a class="btn btn-warning" href="{% url 'admin-orders' %}">Go back</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Product name</th>
+                        <th scope="col">Model</th>
+                        <th scope="col">Quantity</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for item in order.lineitems.all %}
+                    {% for it in items %}
+                    <tr>
+                        <td><a href="{% url 'item_details' it.id %}"
+                                title="leads to item page">{{ item.item.product_name }}</a> </td>
+                        <td>{{ item.item.product_model }}</td>
+                        <td>{{ item.quantity }}</td>
+                    </tr>
+                    {% endfor %}
+                    {% endfor %}
+                </tbody>
+            </table>
+            <h2 class="mt-5">Details</h2>
+            <hr>
+            <ul class="list-unstyled">
+                <li>Full Name: <span class="fw-bold"> {{ order.full_name }}</span></li>
+                <li>Email: <span class="fw-bold"> {{ order.email }}</span></li>
+                <li>Phone number: <span class="fw-bold"> {{ order.phone_number }}</span></li>
+                <li>Town or City: <span class="fw-bold">{{ order.town_or_city }}</span> </li>
+                <li>Street address(1): <span class="fw-bold"> {{ order.street_address1 }}</span></li>
+                <li>Street address(2): <span class="fw-bold"> {{ order.street_address2 }}</span></li>
+                <li>County or State: <span class="fw-bold"> {{ order.county_state }}</span></li>
+                <li>Country: <span class="fw-bold">{{ order.country }}</span> </li>
+            </ul>
+            <hr>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -251,3 +251,40 @@ def sell_to_me_details(request, sell_id):
     }
 
     return render(request, 'home/sell-to-me-details.html', context)
+
+
+@login_required
+def admin_orders(request):
+    """
+    Preview of orders made on website.
+    """
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+
+    orders = Order.objects.all()
+
+    context = {
+        'title': 'RetroTech Orders',
+        'orders': orders,
+    }
+
+    return render(request, 'home/orders.html', context)
+
+
+@login_required
+def admin_orders_preview(request, order_id):
+    """
+    Preview of selected orders.
+    """
+    items = Item.objects.all()
+    order = get_object_or_404(Order, pk=order_id)
+
+    context = {
+        'title': 'RetroTech Order preview',
+        'order': order,
+        'items': items,
+    }
+
+    return render(request, 'home/admin-orders-preview.html', context)

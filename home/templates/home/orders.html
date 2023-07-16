@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
+{% block content %}
+<div class="container-lg">
+    <div class="row">
+        <div class="col">
+            <div class="d-flex justify-content-center my-3">
+                <a class="btn btn-warning" href="{% url 'profile' %}">Go back</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">Order number</th>
+                        <th scope="col">Full name</th>
+                        <th scope="col">Total price</th>
+                        <th scope="col">Link</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for order in orders %}
+                    <tr>
+                        <td>{{ order.order_number }}</td>
+                        <td>{{ order.full_name }}</td>
+                        <td>{{ order.grand_total }}</td>
+                        <td><a class="btn btn-primary" href="{% url 'admin-orders-preview' order.id %}">Order</a></td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+{% endblock %}
