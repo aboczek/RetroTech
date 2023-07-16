@@ -86,9 +86,13 @@
                             <i class="fa-solid fa-house"></i> Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="{% url 'all_items' %}"
-                            role="button" aria-expanded="false">Products</a>
+                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="" role="button"
+                            aria-expanded="false">Products</a>
                         <ul class="dropdown-menu">
+                            <li>
+                                <a class="dropdown-item" aria-label="Handheld devices"
+                                    href="{% url 'all_items' %}">All</a>
+                            </li>
                             <li>
                                 <a class="dropdown-item" aria-label="Handheld devices"
                                     href="{% url 'all_items'%}?category=handheld">Handheld</a>

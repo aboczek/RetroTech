@@ -270,6 +270,17 @@ body {
     color: var(--purple);
 }
 
+.dropdown:hover>.dropdown-menu {
+    display: block;
+    margin-top: 0;
+}
+
+/* required to override js code from bootstrap */
+.dropdown-menu.show {
+    transform: none !important;
+    transform: translate(0px, 37px) !important;
+}
+
 /* Sorting in all items */
 
 #sorting {
