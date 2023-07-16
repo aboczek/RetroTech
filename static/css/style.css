@@ -7,7 +7,7 @@
 
 :root {
     --black: #000;
-    --purple: #A35DFD;
+    --purple: #6A02F2;
     --purple-shadow: rgba(163, 93, 253, .45);
     --white: #fff;
     --green: #10b31b;
@@ -263,6 +263,11 @@ body {
 .btn-outline-secondary:hover {
     background-color: var(--purple);
     border-color: var(--purple);
+}
+
+.nav-link:focus,
+.nav-link:hover {
+    color: var(--purple);
 }
 
 /* Sorting in all items */
