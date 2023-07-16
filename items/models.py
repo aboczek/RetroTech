@@ -46,11 +46,19 @@ class Item(models.Model):
     quantity = models.PositiveBigIntegerField(null=False, blank=False)
     price = models.DecimalField(max_digits=6, decimal_places=2,
                                 null=False, blank=False)
+    original_price = models.DecimalField(max_digits=6, decimal_places=2,
+                                         null=False, blank=False)
     sale = models.BooleanField(default=False)
     featured = models.BooleanField(default=False)
     image_one = CloudinaryField(null=True, blank=True, default='placeholder')
     image_two = CloudinaryField(null=True, blank=True, default='placeholder')
     image_three = CloudinaryField(null=True, blank=True, default='placeholder')
+
+    def get_original_price(self):
+        """
+        Gets original price.
+        """
+        return self.original_price
 
     def __str__(self):
         return str(self.product_name)

@@ -11,3 +11,6 @@ def update_sale_price(sender, instance, **kwargs):
     """
     if instance.sale:
         instance.price = instance.price * Decimal('0.7')
+    else:
+        original_price = instance.get_original_price()
+        instance.price = original_price

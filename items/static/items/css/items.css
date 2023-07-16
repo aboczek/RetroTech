@@ -1,4 +1,15 @@
-/* Bootstrap override */
+:root {
+    --black: #000;
+    --purple: #6A02F2;
+    --purple-shadow: rgba(163, 93, 253, .45);
+    --white: #fff;
+    --green: #10b31b;
+    --d-grey: #4d4e4f;
+    --light-grey: #eeebeb;
+    --input-grey: #d3d8dd;
+    --light-black: #212121;
+    --gold: #ffc107;
+}
 
 .btn {
     font-size: 1.6rem !important;
@@ -15,4 +26,8 @@
 
 .card-width-two {
     width: 25rem;
+}
+
+.card-body {
+    background-color: var(--light-grey);
 }

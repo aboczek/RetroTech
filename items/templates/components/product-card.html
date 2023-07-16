@@ -11,8 +11,12 @@
                 alt="{{ item.name }}"></a>
         {% endif %}
         <div class="card-body d-flex flex-column justify-content-center align-items-center">
-            <h4 class="card-title">{{ item.product_name }}</h4>
+            <h3 class="card-title text-primary">{{ item.product_name }}</h3>
+            {% if item.sale %}
+            <p class="text-success fw-bold">Price: € {{ item.price|floatformat:2 }}</p>
+            {% else %}
             <p>Price: € {{ item.price }}</p>
+            {% endif %}
             {% if item.quantity == 0 %}
             <p class="fw-bold text-danger">OUT OF STOCK</p>
             {% else %}
