@@ -3,3 +3,7 @@
 .btn {
     font-size: 1.6rem !important;
 }
+
+#image-box {
+    max-height: 50rem;
+}

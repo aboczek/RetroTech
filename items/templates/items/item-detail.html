@@ -61,8 +61,8 @@
                                 </button>
                             </div>
                         </div>
-                        <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
                         <a href="{% url 'all_items' %}" class="btn btn-warning mt-3">Continue shopping</a>
+                        <button class="btn btn-success mt-3" type="submit">Add to Basket</button>
                         <input type="hidden" name="redirect_url" value="{{ request.path }}">
                         {% endif %}
                     </form>
