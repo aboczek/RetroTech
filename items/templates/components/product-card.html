@@ -13,7 +13,12 @@
         <div class="card-body d-flex flex-column justify-content-center align-items-center">
             <h3 class="card-title text-primary">{{ item.product_name }}</h3>
             {% if item.sale %}
-            <p class="text-success fw-bold">Price: € {{ item.price|floatformat:2 }}</p>
+            <p class="fw-bold m-0 mt-3">Price:</p>
+            <p>€
+                <span class="text-decoration-line-through text-danger m-0">
+                    {{ item.original_price|floatformat:2 }}
+                </span>
+                <span class="text-success fw-bold">{{ item.price|floatformat:2 }}</span> </p>
             {% else %}
             <p>Price: € {{ item.price }}</p>
             {% endif %}
