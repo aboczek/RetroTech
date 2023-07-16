@@ -7,88 +7,14 @@
 
 {% block content %}
 <div class="container-lg my-5">
-    <div class="row">
-        <div class="col-lg-8">
-            <h2 class="d-flex justify-content-center">Featured</h2>
-            <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    {% for item in items %}
-                    {% if item.featured == True %}
-                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                        <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
-                                class="d-block w-100 carousel-img-two" alt="{{ item.name }}"></a>
-                    </div>
-                    {% endif %}
-                    {% endfor %}
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                    data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-        </div>
-        <div class="col-lg-4">
-            <h2 class="d-flex justify-content-center text-danger" id="margin-sale">
-                ON SALE
-            </h2>
-            <div class="container-lg">
-                <div class="row">
-                    <div class="col-12">
-                        <div class="row">
-                            <div class="col-12 pb-3">
-                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        {% for item in items %}
-                                        {% if item.sale == True %}
-                                        <div class="carousel-item {% if forloop.first %} active {% endif %}">
-                                            <a href="{% url 'item_details' item.id %}"><img
-                                                    src="{{ item.image_one.url }}"
-                                                    class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
-                                        </div>
-                                        {% endif %}
-                                        {% endfor %}
-                                    </div>
-                                </div>
-                            </div>
-                            <h2 class="d-flex justify-content-center pt-3" id="margin-sale">Games</h2>
-                            <div class="col-12">
-                                <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
-                                    <div class="carousel-inner">
-                                        <div class="carousel-item active">
-                                            <a href="#"><img
-                                                    src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
-                                                    class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+
+    {% include 'components/carousel-featured.html' %}
+
 </div>
 <div class="container-lg">
-    <div class="row">
-        <div class="col-12">
-            <h2 class="d-flex justify-content-center mt-5">Why us?</h2>
-            <ul class="text-center style-none pb-2">
-                <li class="py-4">We dedicate our time to suit your needs,</li>
-                <li class="py-4">Thousands customers satisfied with our service,</li>
-                <li class="py-4">Quick deliveries across the country and into Europe.</li>
-            </ul>
-            <div class="d-flex justify-content-center">
-                <img src="{% static 'images/reviews.jpg' %}" alt="reviews" class="reviews">
-            </div>
-        </div>
-    </div>
+
+    {% include 'components/why-us.html' %}
+
 </div>
 <div class="container-lg min-vw-100">
     <div class="row">
@@ -97,157 +23,18 @@
             <p class="d-flex justify-content-center my-5">Here is few steps..</p>
         </div>
         <div class="container">
+
+            {% include 'components/sell-to-us-steps.html' %}
+
             <div class="row">
-                <div class="col-12 d-md-flex justify-content-evenly sm-sell-to-us">
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width">
-                            <div class="card-body">
-                                <h3 class="card-title">1.</h5>
-                                    <p class="card-text">Give us a shout.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width">
-                            <div class="card-body">
-                                <h3 class="card-title">2.</h5>
-                                    <p class="card-text">Fill in the Details.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width">
-                            <div class="card-body">
-                                <h3 class="card-title">3.</h5>
-                                    <p class="card-text">Grade your device.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <Div class="row">
-                <div class="col-12 d-md-flex justify-content-evenly sm-sell-to-us mb-5">
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width">
-                            <div class="card-body">
-                                <h3 class="card-title">4.</h5>
-                                    <p class="card-text">Accordingly to the grade of the device We think it
-                                        is, We
-                                        will give you an estimate offer.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width">
-                            <div class="card-body">
-                                <h3 class="card-title">5.</h5>
-                                    <p class="card-text">
-                                        You send the device to us and we inspect it, then We pay you
-                                        the money to your bank account.
-                                    </p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="d-flex justify-content-center text-center py-5">
-                        <div class="card text-center card-width-twenty">
-                            <div class="card-body">
-                                <h3 class="card-title">6.</h5>
-                                    <p>Want to sell your device?</p><a href="{% url 'sell_to_us' %}"
-                                        class="fw-bold">Start Here.</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="col-12">
+                    <h2 class="d-flex justify-content-center mt-5">
+                        We buy all handhelds and consoles from companies:
+                    </h2>
                 </div>
             </div>
             <div class="row mb-5">
-                <div class="col-12">
-                    <h2 class="d-flex justify-content-center my-5">We buy all handhelds and consoles from companies:
-                    </h2>
-                </div>
-                <div class="row">
-                    <div class="col-12 d-md-flex justify-content-evenly sm-sell-to-us">
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/retroid.jpg' %}" alt="Retroid logo">
-                                    <p class="card-text">Retroid
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width ">
-                                <div class="card-body">
-                                    <img src="{% static 'images/valve.png' %}" alt="Valve logo">
-                                    <p class="card-text">Valve
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/anbernic.webp' %}" alt="Anbernic logo">
-                                    <p class="card-text">Anbernic
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/miyoo.png' %}" alt="Miyoo logo">
-                                    <p class="card-text">Miyoo
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="col-12 d-md-flex justify-content-evenly sm-sell-to-us">
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/playstation1.png' %}" alt="Playstation logo">
-                                    <p class="card-text">Playstation
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/xbox.png' %}" alt="Xbox logo">
-                                    <p class="card-text">Microsoft/Xbox
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/nintendo.png' %}" alt="Nintendo logo">
-                                    <p class="card-text">Nintendo
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="text-center pb-2 mt-5">
-                            <div class="card text-center card-width card-width">
-                                <div class="card-body">
-                                    <img src="{% static 'images/asus.png' %}" alt="Asus logo">
-                                    <p class="card-text">Asus
-                                    </p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                {% include 'components/handheld-brands.html' %}
             </div>
         </div>
     </div>

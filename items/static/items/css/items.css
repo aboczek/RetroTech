@@ -7,3 +7,12 @@
 #image-box {
     max-height: 50rem;
 }
+
+.img-sizing {
+    height: 20rem;
+    max-width: 25rem;
+}
+
+.card-width-two {
+    width: 25rem;
+}

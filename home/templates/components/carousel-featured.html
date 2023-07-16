@@ -1,0 +1,67 @@
+{% load static %}
+
+<div class="row">
+    <div class="col-lg-8">
+        <h2 class="d-flex justify-content-center">Featured</h2>
+        <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                {% for item in items %}
+                {% if item.featured == True %}
+                <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                    <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
+                            class="d-block w-100 carousel-img-two" alt="{{ item.name }}"></a>
+                </div>
+                {% endif %}
+                {% endfor %}
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+    <div class="col-lg-4">
+        <h2 class="d-flex justify-content-center text-danger" id="margin-sale">
+            ON SALE
+        </h2>
+        <div class="container-lg">
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 pb-3">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    {% for item in items %}
+                                    {% if item.sale == True %}
+                                    <div class="carousel-item {% if forloop.first %} active {% endif %}">
+                                        <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
+                                                class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
+                                    </div>
+                                    {% endif %}
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        </div>
+                        <h2 class="d-flex justify-content-center pt-3" id="margin-sale">Games</h2>
+                        <div class="col-12">
+                            <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+                                <div class="carousel-inner">
+                                    <div class="carousel-item active">
+                                        <a href="#"><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
+                                                class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -12,57 +12,9 @@
     <div class="row">
         <div class="col-12 d-flex flex-column justify-content-center align-items-center">
             <h2 class="mb-5">Your shopping basket!</h2>
-            <table class="table">
-                <thead>
-                    <tr>
-                        <th scope="col">Product Info</th>
-                        <th scope="col">SKU NO.</th>
-                        <th scope="col">Price</th>
-                        <th scope="col">Total:</th>
-                        <th scope="col">Quantity</th>
 
-                    </tr>
-                </thead>
-                <tbody>
-                    {% for item in basket_items %}
-                    <tr>
-                        <td>{{ item.item.product_name }}</td>
-                        <td>{{ item.item.sku_number }}</td>
-                        <td>{{ item.item.price }} €</td>
-                        <td>€ {{ item.item.price | calculator:item.quantity }}</td>
-                        <td>
-                            <div class="container padding-form">
-                                <div class="row d-flex flex-row justify-content-center sm-update-remove">
-                                    <form action=" {% url 'update_basket' item.item_id %}" method="POST"
-                                        class="update-form m-auto d-flex justify-content-center item-count-basket">
-                                        {% csrf_token %}
-                                        <div class="plus-minus input-group input-group-{{ item.item_id }}">
-                                            <div class="input-group-prepend">
-                                                <button class="decrement-qty btn decrement-qty_{{ item.item_id }}"
-                                                    data-item_id="{{ item.item_id }}">
-                                                    <i class="fa-solid fa-minus"></i></button>
-                                            </div>
-                                            <input
-                                                class="sm-button form-control font-sizing qty_input id_qty_{{ item.item_id  }}"
-                                                type="number" name="quantity" value="{{ item.quantity }}" min="1"
-                                                max="99" data-item_id="{{ item.item_id }}">
-                                            <div class="input-group-append">
-                                                <button class="increment-qty btn increment-qty_{{ item.item_id  }}"
-                                                    data-item_id="{{ item.item_id }}"><i class="fa-solid fa-plus"></i>
-                                                </button>
-                                            </div>
-                                        </div>
-                                    </form>
-                                    <a class="update-basket btn btn-secondary w-25 sm-button">Update</a>
-                                    <a class="remove-item btn btn-danger w-25 sm-button"
-                                        id="remove_{{ item.item_id }}">Remove</a>
-                                </div>
-                            </div>
-                        </td>
-                    </tr>
-                    {% endfor %}
-                </tbody>
-            </table>
+            {% include 'components/basket-preview.html' %}
+
         </div>
     </div>
     <div class="row my-3">
@@ -96,7 +48,7 @@
 {% block extra_js %}
 {{ block.super }}
 
-{% include 'components/increment-decrement.html' %}
-{% include 'components/update-remove.html' %}
+{% include 'components/script/increment-decrement.html' %}
+{% include 'components/script/update-remove.html' %}
 
 {% endblock %}
