@@ -1,6 +1,10 @@
 {% extends "base.html" %}
 {% load static %}
 
+{% block extra_css %}
+<link rel="stylesheet" href="{% static 'home/css/home.css' %}">
+{% endblock %}
+
 {% block content %}
 <div class="container">
     <div class="row">
@@ -8,7 +12,10 @@
             <div class="my-5 d-flex flex-column align-items-center">
                 <label for="tracking" class="form-label">Tracking number:</label>
                 <input type="text" class="form-control" id="tracking" placeholder="Tracking number">
-                <button class="btn btn-primary mt-3" id="track-button">Track</button>
+                <p class="text-muted">*Tracking redirects to relevant delivery company.</p>
+                <a class="btn btn-primary mt-3" href="https://dpd.ie/tracking" target="_blank" rel="noopener">
+                    Track
+                </a>
             </div>
         </div>
     </div>
