@@ -68,3 +68,11 @@ body {
     width: 7rem;
     height: 7rem;
 }
+
+/* Media queries */
+
+@media (max-width: 990px) {
+    #checkout-payment {
+        width: 100% !important;
+    }
+}

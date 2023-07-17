@@ -5,8 +5,8 @@
         <div class="row">
             <div class="col-4">
                 <a class="text-decoration-none" href="{% url 'home' %}">
-                    <h1 class="logo">Retro<span id="purple">Tech</span></h1>
-                    <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                    <h1 class="logo">Retro<span class="purple">Tech</span></h1>
+                    <p class="text-muted slogan">"Old but <span class="text-warning">Gold</span>"</p>
                 </a>
 
             </div>
@@ -136,8 +136,8 @@
             <div class="container-fluid">
                 <div class="d-flex flex-column">
                     <a class="text-decoration-none" href="{% url 'home' %}">
-                        <h1 class="logo-sm">Retro<span id="purple">Tech</span></h1>
-                        <p id="slogan" class="text-muted">"Old but <span class="text-warning">Gold</span>"</p>
+                        <p class="logo-sm fs-1">Retro<span class="purple">Tech</span></p>
+                        <p class="text-muted slogan">"Old but <span class="text-warning">Gold</span>"</p>
                     </a>
 
                 </div>
@@ -149,48 +149,50 @@
             </div>
         </nav>
         <div class="collapse" id="navbarToggleExternalContent">
-            <div class="bg-light p-4">
+            <div class="bg-light p-4 justify-content-center d-flex flex-column">
                 <ul class="nav justify-content-center d-flex flex-column align-items-center">
                     <li class="nav-item">
                         <a class="nav-link" aria-label="Home page" href="{% url 'home' %}"><i
                                 class="fa-solid fa-house"></i> Home</a>
                     </li>
-                    <nav class="navbar navbar-light bg-light">
-                        <div class="container-fluid">
-                            <button class="navbar-toggler dropdown-toggle" id="sm-toggler-products" type="button"
-                                data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent1"
-                                aria-controls="navbarToggleExternalContent1" aria-expanded="false"
-                                aria-label="Toggle navigation">
-                                Products
-                            </button>
-                        </div>
-                    </nav>
-                    <div class="collapse" id="navbarToggleExternalContent1">
-                        <div class="bg-light p-4">
-                            <ul class="style-none text-dark">
-                                <li>
-                                    <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
-                                        href="{% url 'all_items' %}">All</a>
-                                </li>
-                                <li>
-                                    <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
-                                        href="{% url 'all_items'%}?category=handheld">Handheld</a>
-                                </li>
-                                <li>
-                                    <a class="text-decoration-none text-dark nav-link" aria-label="Consoles"
-                                        href="{% url 'all_items'%}?category=console">Console</a>
-                                </li>
-                                <li>
-                                    <a class="text-decoration-none text-dark nav-link" aria-label="Accessories"
-                                        href="{% url 'all_items'%}?category=accessories">Accessories</a>
-                                </li>
-                                <li>
-                                    <a class="text-decoration-none text-dark nav-link" aria-label="Games coming soon"
-                                        href="{% url 'games' %}">Games **Soon**</a>
-                                </li>
-                            </ul>
-                        </div>
+                </ul>
+                <nav class="navbar navbar-light bg-light justify-content-center">
+                    <div class="container-fluid d-flex justify-content-center align-items-center">
+                        <button class="navbar-toggler dropdown-toggle" id="sm-toggler-products" type="button"
+                            data-bs-toggle="collapse" data-bs-target="#navbarToggleExternalContent1"
+                            aria-controls="navbarToggleExternalContent1" aria-expanded="false"
+                            aria-label="Toggle navigation">
+                            Products
+                        </button>
                     </div>
+                </nav>
+                <div class="collapse" id="navbarToggleExternalContent1">
+                    <div class="bg-light p-4">
+                        <ul class="style-none text-dark d-flex flex-column align-items-center p-0 m-0">
+                            <li>
+                                <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
+                                    href="{% url 'all_items' %}">All</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none text-dark nav-link" aria-label="Handheld devices"
+                                    href="{% url 'all_items'%}?category=handheld">Handheld</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none text-dark nav-link" aria-label="Consoles"
+                                    href="{% url 'all_items'%}?category=console">Console</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none text-dark nav-link" aria-label="Accessories"
+                                    href="{% url 'all_items'%}?category=accessories">Accessories</a>
+                            </li>
+                            <li>
+                                <a class="text-decoration-none text-dark nav-link" aria-label="Games coming soon"
+                                    href="{% url 'games' %}">Games **Soon**</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <ul class="nav justify-content-center d-flex flex-column align-items-center">
                     <li class="nav-item">
                         <a class="nav-link text-danger fw-bolder" aria-label="Sale" href="{% url 'sale' %}">
                             <i class="fa-solid fa-dollar-sign"></i> SALE</a>
@@ -230,9 +232,8 @@
                             <i class="fa-solid fa-user-plus"></i> Sign up</a>
                     </li>
                     {% endif %}
-                    <hr>
                     <li class="nav-item">
-                        <a class="ps-2 text-decoration-none nav-link" aria-label="Basket"
+                        <a class="ps-2 mt-2 text-decoration-none nav-link" aria-label="Basket"
                             href="{% url 'view_basket' %}">
                             <i class="fa-solid fa-basket-shopping"></i>
                             {% if grand_total %}
