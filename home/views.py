@@ -117,6 +117,7 @@ def front_end_panel(request):
         items_form = ItemsForm(request.POST, request.FILES)
         if items_form.is_valid():
             items_form.save()
+            messages.success(request, 'Product has been created!')
             return redirect('front')
 
     else:
