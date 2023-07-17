@@ -21,7 +21,8 @@
                 </span>
                 <span class="text-success fw-bold">{{ item.price|floatformat:2 }}</span> </p>
             {% else %}
-            <p>Price: € {{ item.price }}</p>
+            <p class="fw-bold m-0 mt-3">Price:</p>
+            <p> € {{ item.price }}</p>
             {% endif %}
             {% if item.quantity == 0 %}
             <p class="fw-bold text-danger">OUT OF STOCK</p>

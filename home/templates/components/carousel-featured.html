@@ -5,13 +5,13 @@
         <h2 class="d-flex justify-content-center">Featured</h2>
         <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
-                {% for item in items %}
-                {% if item.featured == True %}
+                {% for item in items_featured %}
+
                 <div class="carousel-item {% if forloop.first %} active {% endif %}">
                     <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
-                            class="d-block w-100 carousel-img-two" alt="{{ item.name }}"></a>
+                            class="d-block w-100 carousel-img-two" alt="{{ item.product_name }}"></a>
                 </div>
-                {% endif %}
+
                 {% endfor %}
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -37,13 +37,13 @@
                         <div class="col-12 pb-3">
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
-                                    {% for item in items %}
-                                    {% if item.sale == True %}
+                                    {% for item in items_sale %}
+
                                     <div class="carousel-item {% if forloop.first %} active {% endif %}">
                                         <a href="{% url 'item_details' item.id %}"><img src="{{ item.image_one.url }}"
-                                                class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
+                                                class="d-block w-100 carousel-img-one" alt="{{ item.produc_name }}"></a>
                                     </div>
-                                    {% endif %}
+
                                     {% endfor %}
                                 </div>
                             </div>
@@ -53,8 +53,10 @@
                             <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                                 <div class="carousel-inner">
                                     <div class="carousel-item active">
-                                        <a href="#"><img src="{% static 'images/pexels-caleb-oquendo-3162044.jpg' %}"
-                                                class="d-block w-100 carousel-img-one" alt="{{ item.name }}"></a>
+                                        <a href="#"><img
+                                                src="{% static 'images/pexels-caleb-oquendo-3162044-min_1.webp' %}"
+                                                class="d-block w-100 carousel-img-one"
+                                                alt="{{ item.product_name }}"></a>
                                     </div>
                                 </div>
                             </div>

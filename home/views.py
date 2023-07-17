@@ -12,12 +12,13 @@ def home(request):
     """
     Home page.
     """
-
-    items = Item.objects.all()
+    items_sale = Item.objects.filter(sale=True)
+    items_featured = Item.objects.filter(featured=True)
 
     context = {
         'title': 'RetroTech Home Page',
-        'items': items,
+        'items_sale': items_sale,
+        'items_featured': items_featured
     }
 
     return render(request, 'home/index.html', context)

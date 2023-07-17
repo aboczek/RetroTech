@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col-2"></div>
         <div class="col-8">
-            <form class="d-flex flex-column" method="POST">
+            <form class="d-flex flex-column" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 <h2 class="d-flex justify-content-center mt-5">Edit Item</h2>
                 {{ edit_item_form.category| as_crispy_field }}

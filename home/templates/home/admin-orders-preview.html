@@ -25,15 +25,18 @@
                     </tr>
                 </thead>
                 <tbody>
+
                     {% for item in order.lineitems.all %}
-                    {% for it in items %}
+
                     <tr>
-                        <td><a href="{% url 'item_details' it.id %}"
-                                title="leads to item page">{{ item.item.product_name }}</a> </td>
+                        <td>
+                            <a href="{% url 'item_details' item.item.id %}" title="leads to item page">
+                                {{ item.item.product_name }}
+                            </a>
+                        </td>
                         <td>{{ item.item.product_model }}</td>
                         <td>{{ item.quantity }}</td>
                     </tr>
-                    {% endfor %}
                     {% endfor %}
                 </tbody>
             </table>
