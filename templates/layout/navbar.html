@@ -141,6 +141,17 @@
                     </a>
 
                 </div>
+                <div class="nav-item">
+                    <a class="ps-2 mt-2 text-decoration-none nav-link" aria-label="Basket"
+                        href="{% url 'view_basket' %}">
+                        <i class="fa-solid fa-basket-shopping"></i>
+                        {% if grand_total %}
+                        €{{ grand_total|floatformat:2 }}
+                        {% else %}
+                        Basket
+                        {% endif %}
+                    </a>
+                </div>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent"
                     aria-expanded="false" aria-label="Toggle navigation">
@@ -232,26 +243,17 @@
                             <i class="fa-solid fa-user-plus"></i> Sign up</a>
                     </li>
                     {% endif %}
-                    <li class="nav-item">
-                        <a class="ps-2 mt-2 text-decoration-none nav-link" aria-label="Basket"
-                            href="{% url 'view_basket' %}">
-                            <i class="fa-solid fa-basket-shopping"></i>
-                            {% if grand_total %}
-                            €{{ grand_total|floatformat:2 }}
-                            {% else %}
-                            Basket
-                            {% endif %}
-                        </a>
-                    </li>
                 </ul>
             </div>
         </div>
         <form action="{% url 'all_items' %}" method="GET">
-            <div class="input-group input-group-lg mt-4">
-                <input type="text" class="form-control" name="q" placeholder="Search" aria-label="Search"
-                    aria-describedby="button-addon3">
-                <button class="btn btn-outline-secondary" type="submit" id="button-addon3"><i
-                        class="fa-solid fa-magnifying-glass"></i></button>
+            <div class="input-group input-group-lg d-flex flex-column mt-4">
+                <div class="d-flex flex-row">
+                    <input type="text" class="form-control" name="q" placeholder="Search" aria-label="Search"
+                        aria-describedby="button-addon3">
+                    <button class="btn btn-outline-secondary" type="submit" id="button-addon3"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </div>
                 {% for message in messages %}
                 <div class="alert {{ message.tags }} alert-dismissible fade show" id="msg" role="alert">
                     {{ message }}
