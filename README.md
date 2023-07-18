@@ -165,6 +165,8 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 
 # Authentication and Security
 
+### Authentication
+
 - Project uses [Allauth](https://django-allauth.readthedocs.io/en/latest/) as login system, pages were adjusted and styled. Emailing system to login, email confirmation, password recovery and so on works and is being sent.
 
 - Unwanted visitors trying to access restricted pages in project will be redirected to home with message that they are allowed on this site. ``@Login_required`` and 
@@ -175,6 +177,10 @@ Websites goal is to promote my RetroTech shop and gain new customers.
                         redirecting to home page.')
         return redirect(reverse('home'))
         ```
+
+### Security
+
+- All secret keys are stored in **env.py** or stored in variables in [Heroku](https://www.heroku.com/).
 
 # Data Structure
 
