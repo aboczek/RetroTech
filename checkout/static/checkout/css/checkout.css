@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 :root {
     --purple: #A35DFD;
     --purple-shadow: rgba(163, 93, 253, .45);
@@ -17,6 +24,7 @@ body {
 }
 
 .StripeElement {
+    -webkit-box-sizing: border-box;
     box-sizing: border-box;
     height: 40px;
     padding: 10px 12px;
@@ -25,12 +33,17 @@ body {
     background-color: white;
     width: 100%;
     color: #212529;
+    -webkit-transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
+    -o-transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out, -webkit-box-shadow .15s ease-in-out;
     background-clip: padding-box;
 }
 
 .StripeElement--focus {
     border-color: var(--purple);
+    -webkit-box-shadow: 0 0 0 0.25rem var(--purple-shadow) !important;
     box-shadow: 0 0 0 0.25rem var(--purple-shadow) !important;
 }
 
@@ -54,15 +67,26 @@ body {
     width: 100%;
     height: 100%;
     background: var(--grey-shadow);
+    -webkit-backdrop-filter: blur(0.7rem);
     backdrop-filter: blur(0.7rem);
     z-index: 99999;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
     align-items: center !important;
+    -webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
     justify-content: center !important;
 }
 
 #spinner {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     margin: 0;
     width: 7rem;

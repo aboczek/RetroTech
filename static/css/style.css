@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v8.4.14,
+* Autoprefixer: v10.4.7
+* Browsers: last 4 version
+*/
+
 /* Double reset/General settings */
 * {
     padding: 0;
@@ -148,24 +155,36 @@ body {
 }
 
 .foot-hover:hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: auto;
     background-color: var(--light-black);
     color: var(--black);
     padding-left: 0.2rem;
     border-radius: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
 .foot-hover {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
     width: auto;
     padding-left: 0.2rem;
     border-radius: 2rem;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
     height: 3rem;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
     align-items: center;
 }
 
@@ -193,6 +212,7 @@ body {
 #id_password1:focus,
 #id_password2:focus,
 #id_username:focus {
+    -webkit-box-shadow: 0 0 0 0.25rem var(--purple-shadow);
     box-shadow: 0 0 0 0.25rem var(--purple-shadow);
     border-radius: 1px;
 }
@@ -229,6 +249,7 @@ body {
 
 .form-control:focus {
     border-color: var(--purple);
+    -webkit-box-shadow: 0 0 0 0.25rem var(--purple-shadow);
     box-shadow: 0 0 0 0.25rem var(--purple-shadow);
 }
 
@@ -278,7 +299,11 @@ body {
 
 /* required to override js code from bootstrap */
 .dropdown-menu.show {
+    -webkit-transform: none !important;
+    -ms-transform: none !important;
     transform: none !important;
+    -webkit-transform: translate(0px, 37px) !important;
+    -ms-transform: translate(0px, 37px) !important;
     transform: translate(0px, 37px) !important;
 }
 
@@ -293,12 +318,17 @@ body {
 }
 
 #sorting-right {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: end;
+    -ms-flex-pack: end;
     justify-content: end;
 }
 
 .form-select:focus {
     border-color: var(--purple);
+    -webkit-box-shadow: 0 0 0 0.25rem var(--purple-shadow);
     box-shadow: 0 0 0 0.25rem var(--purple-shadow);
 }
 
@@ -334,12 +364,19 @@ body {
 @media (min-width: 320px) and (max-width: 768px) {
 
     .sm-media-footer {
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-flow: column;
         flex-flow: column;
         height: 15rem;
         margin: 0;
         padding-bottom: 2rem;
         background-color: var(--d-grey);
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         text-align: center;
     }
@@ -347,15 +384,26 @@ body {
     .sm-media-subs {
         width: 70%;
         margin: 1rem auto auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         text-align: center;
     }
 
     .sm-sell-to-us {
+        display: -webkit-box;
+        display: -ms-flexbox;
         display: flex;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
         justify-content: center !important;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: normal;
+        -ms-flex-direction: column;
         flex-direction: column;
         margin: auto;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
         align-items: center;
     }
 
@@ -413,6 +461,8 @@ body {
     }
 
     .plus-minus {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
     }
 }
@@ -431,8 +481,15 @@ body {
     }
 
     .sm-update-remove {
+        display: -webkit-box !important;
+        display: -ms-flexbox !important;
         display: flex !important;
+        -webkit-box-orient: vertical !important;
+        -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
         flex-direction: column !important;
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
         justify-content: center !important;
         width: 100%;
     }
@@ -442,6 +499,8 @@ body {
     .sm-media-subs {
         width: 90%;
         margin: 1rem auto auto;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
         justify-content: center;
         text-align: center;
     }

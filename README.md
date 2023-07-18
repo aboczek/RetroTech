@@ -50,6 +50,7 @@ Motivation for this project is to sell and buy consoles on this website.
     - As a user, I want to be able to add item to shopping bag.
     - As a user, I want to be able to continue shopping after adding one or more items in the bag.
     - As a user, I want to be able to pay for my shopping with Stripe.
+    - As a user, I want to be able to sign up for newsletter.
 
 [Back to top](#)
 
