@@ -158,10 +158,23 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 
 	**placeholder**
 
+- Newsletter
+
+    **placeholder**
+
 
 # Authentication and Security
 
-	**placeholder**
+- Project uses [Allauth](https://django-allauth.readthedocs.io/en/latest/) as login system, pages were adjusted and styled. Emailing system to login, email confirmation, password recovery and so on works and is being sent.
+
+- Unwanted visitors trying to access restricted pages in project will be redirected to home with message that they are allowed on this site. ``@Login_required`` and 
+
+    ```
+    if not request.user.is_superuser:
+        messages.error(request, 'You arent allowed there! \
+                        redirecting to home page.')
+        return redirect(reverse('home'))
+        ```
 
 # Data Structure
 
