@@ -74,6 +74,10 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 - Categories with products.
 - Checkout.
 - Sales.
+- Newsletter.
+- Sell to us.
+- Login system.
+- Storing cusomter details if logged in.
 
 ## Expectations
 
@@ -90,15 +94,41 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 - Colors
     - Colors used on website are:
 
-    **placeholder**
+    - Gold: #ffc107;
+
+        <img src="docs/gold.png" alt="gold color" width="15%"/>
+
+    - Purple: #6A02F2;
+
+        <img src="docs/purple.png" alt="purple color" width="15%"/>
+    
+    - Grey: ##4d4e4f;
+
+        <img src="docs/d-grey.png" alt="grey color" width="15%"/>
+
+    - light grey: #eeebeb;
+
+        <img src="docs/light-grey.png" alt="light grey color" width="15%"/>
+
+    - white: #fff;
+
+        <img src="docs/white.png" alt="white color" width="15%"/>
 
 - Fonts:
 
-    **placeholder**
+    Font was used default from Boostrap 5, [Helvetica Neue](https://fontsgeek.com/helvetica-neue-font), [Helvetica](https://fontsgeek.com/helvetica-font), [Arial](https://fontsgeek.com/arial-font), and [sans-serif](https://fontsgeek.com/sans-serif-font) in its default font stack.
 
 - Images: 
 
-    **placeholder**
+    - [Freepik](https://www.freepik.com/free-vector/reviews-concept-landing-page_5156335.htm#query=reviews&position=27&from_view=search&track=locales")
+
+    - [Currys.ie](https://www.currys.ie/)
+
+    - [Smyths](https://www.smythstoys.com/ie/en-ie/)
+
+    - [Retroid](https://www.goretroid.com/)
+
+    - [Anbernic](https://anbernic.com/)
 
 [Back to top](#)
 
@@ -395,4 +425,14 @@ lineitem_total is calculated items price * quantity.
 
 # Credits 
 
-[Freepik](https://www.freepik.com/free-vector/reviews-concept-landing-page_5156335.htm#query=reviews&position=27&from_view=search&track=locales") Freepiks website linked to person that created image.
+- [Simen Daehlin](https://github.com/Eventyret) My Mentor.
+- [Freepik](https://www.freepik.com/free-vector/reviews-concept-landing-page_5156335.htm#query=reviews&position=27&from_view=search&track=locales") Freepiks website linked to person that created image.
+- [Currys.ie](https://www.currys.ie/) Used for images for products.
+- [Smyths](https://www.smythstoys.com/ie/en-ie/) Used for images for products.
+- [Retroid](https://www.goretroid.com/) Used for images for products.
+- [Anbernic](https://anbernic.com/) Used for images for products.
+- [The W3C Markup Validation Service](https://validator.w3.org/) Validation of HTML.
+- [The W3C CSS Validation Service](https://jigsaw.w3.org/css-validator/) Validation of CSS.
+- [Python linter](https://pep8ci.herokuapp.com/#) used to lint python code.
+- [JShint](https://jshint.com/) used to lint javascript.
+- [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
