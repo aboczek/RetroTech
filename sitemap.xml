@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://retrotech.herokuapp.com/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/accounts/login/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/accounts/signup/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/basket/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/all/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/all/?category=handheld</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/all/?category=console</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/all/?category=accessories</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/games/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/sell-to-us/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/sale/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/track-your-order/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/faq/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/13</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/17</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/15</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/16</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/19</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/terms-and-conditions/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/accounts/password/reset/</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/10</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/12</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/11</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/18</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://retrotech.herokuapp.com/14</loc>
+  <lastmod>2023-07-18T21:33:43+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>
