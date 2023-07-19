@@ -472,7 +472,76 @@ lineitem_total is calculated items price * quantity.
 
 4. Automated and Manual testing.
 
-	**placeholder**
+### Automated testing:  
+
+- No automated testing has been done.
+     
+### Manual testing:
+
+- Testing navigation:
+    - Press Sell to us button and will lead to Sell to us page. **This is example**.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-1.png" alt="home page test"/>
+    <img src="docs/manual-testing/manutal-testing-2.png" alt="sell to us page test"/>
+    </details>
+        <br>
+
+- Login, Sign up and Log out:
+    - Press Sign up, fill in your details and confirm your email!
+
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-3.png" alt="testing sign up"/>
+    <img src="docs/manual-testing/manual-testing-4.png" alt="testing sign up"/>
+    <img src="docs/manual-testing/manual-testing-5.png" alt="testing sign up"/>
+    </details>
+    <br>    
+
+    - Press Login, fill in your username and password.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-6.png" alt="testing login"/>
+    <img src="docs/manual-testing/manual-testing-7.png" alt="testing login"/>
+    <img src="docs/manual-testing/manual-testing-8.png" alt="testing login"/>
+    </details>
+    <br>  
+
+    - While logged in navigate on Logout.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-9.png" alt="testing logout"/>
+    <img src="docs/manual-testing/manual-testing-10.png" alt="testing logout"/>
+    <img src="docs/manual-testing/manual-testing-11.png" alt="testing logout"/>
+    </details>
+    <br> 
+
+- Add Items to basket, adjust basket, remove Items.
+
+    - Navigate to any product you want, press add to basket.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-12.png" alt="add item to basket"/>
+    <img src="docs/manual-testing/manual-testing-13.png" alt="add item to basket"/>
+    </details>
+    <br>
+
+    - Adjust basket, navigate to basket and press + or - accordingly and press Update. Quantity cannot be less than 1 and higher than 99 it will throw errors and wont let you do anything else.
+
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-14.png" alt="adjust basket"/>
+    <img src="docs/manual-testing/manual-testing-15.png" alt="adjust basket"/>
+    <img src="docs/manual-testing/manual-testing-16.png" alt="adjust basket"/>
+    <img src="docs/manual-testing/manual-testing-17.png" alt="adjust basket"/>
+    <img src="docs/manual-testing/manual-testing-18.png" alt="adjust basket"/>
+    </details>
+    <br>
+
+    - Remove Item from basket.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-19.png" alt="add item to basket"/>
+    <img src="docs/manual-testing/manual-testing-20.png" alt="add item to basket"/>
+    </details>
+    <br>
+
+- Make Purchase and Save your Details to your account.
+
+    - Add Item to basket, navigate to basket, press **Checkout**
 
 5. Known bugs.
 
