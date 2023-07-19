@@ -460,7 +460,15 @@ lineitem_total is calculated items price * quantity.
 
 3. Testing on portable devices.
 
-	**placeholder**
+	I have tested project on my OnePLus phone and in Developer tools. Everything seems to be fine.
+
+    Two screenshots as an example.
+
+    - Mobile phone.
+        <img src="docs/testing-phone.png" alt="testing phone">
+
+    - Tablet.
+        <img src="docs/testing-tablet.png" alt="testing tablet">
 
 4. Automated and Manual testing.
 
