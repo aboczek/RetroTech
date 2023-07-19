@@ -2,7 +2,7 @@
 
 Welcome to my project about shop called **RetroTech**. This shop is about handheld consoles mainly but will have other ones as well like PlayStation or Xbox and ability to sell them to me.
 
-<img src="" alt="">**placeholder**
+<img src="docs/website-image.png" alt="home page" width="900">
 
 ## Table of content:
 
@@ -299,8 +299,6 @@ lineitem_total is calculated items price * quantity.
 
 <img src="docs/db.png" alt="Item model">
 
-**placeholder**
-
 ## Logic
 
 <img src="docs/logic.png" alt="website logic" width="1000">
@@ -345,13 +343,13 @@ lineitem_total is calculated items price * quantity.
 
 - [FontAwesome](https://fontawesome.com/) Icons used in this project.
 
-- [Google fonts](https://fonts.google.com/) PT-serif was used.
-
 ## Tools
 
 - [Heroku](https://www.heroku.com) Deployment of website.
 
 - [ElephantSQL](https://www.elephantsql.com/) Database storing all schemas and data.
+
+- [Cloudinary](https://cloudinary.com/) Storing static files and images.
 
 - [Balsamiq](https://balsamiq.com/) Wireframes.
 
@@ -380,11 +378,85 @@ lineitem_total is calculated items price * quantity.
 
 1. W3C HTML Validator, CSS Validator, CI Pylinter and JShint.
 
-	**placeholder**
+    - HTML All files have been tested no errors and no warnings on my own code.
+
+	    <img src="docs/indexhtml.png" alt="html validator" width="700">
+
+    - CSS all files te sted.
+        
+        - style.css(main css)
+        <img src="docs/main-css.png" alt="css validator" width="700">
+
+        - home.css
+        <img src="docs/home.png" alt="css validator" width="700">
+
+        - items.css
+        <img src="docs/items.png" alt="css validator" width="700">
+
+        - checkout.css
+        <img src="docs/checkout.png" alt="css validator" width="700">
+
+    - Python using CI Pylinter.
+
+        - Home app.
+
+            <img src="docs/home-forms.png" alt="python validator" width="700">
+
+            <img src="docs/home-models.png" alt="python validator" width="700">
+
+            <img src="docs/home-views.png" alt="python validator" width="700">
+
+        - Items app.
+
+            <img src="docs/items-forms.png" alt="python validator" width="700">
+
+            <img src="docs/items-models.png" alt="python validator" width="700">
+
+            <img src="docs/items-sale-signals.png" alt="python validator" width="700">
+
+            <img src="docs/items-views.png" alt="python validator" width="700">
+
+        - Basket app.
+
+            <img src="docs/views-basket.png" alt="python validator" width="700">
+
+            <img src="docs/price-quantity.png" alt="python validator" width="700">
+
+            <img src="docs/context.png" alt="python validator" width="700">
+
+        - Checkout app.
+
+            <img src="docs/forms-checkout.png" alt="python validator" width="700">
+
+            <img src="docs/models-checkout.png" alt="python validator" width="700">
+
+            <img src="docs/signals-checkout.png" alt="python validator" width="700">
+
+            <img src="docs/views-checkout.png" alt="python validator" width="700">
+
+        - Retrotech project.
+
+            <img src="docs/context-processors.png" alt="python validator">
+
+
+    - Javascript.
+
+        - Autoclosing script for messages.
+
+            <img src="docs/autoclose.png" alt="javascript">
+
 
 2. Testing on website.
 
-	**placeholder**
+	- Lighthouse:
+
+        - Desktop
+
+            <img src="docs/lighthouse-desktop.png" alt="lighthouse score desktop">
+
+        - Mobile
+
+            <img src="docs/lighthouse-mobile.png" alt="lighthouse score mobile">
 
 3. Testing on portable devices.
 
