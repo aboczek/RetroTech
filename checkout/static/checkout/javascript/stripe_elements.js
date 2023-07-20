@@ -87,8 +87,8 @@ form.addEventListener('submit', function (e) {
             },
         }).then(function (result) {
             if (result.error) {
-                var errorDiv = document.querySelector('#card-errors');
-                var html = `
+                let errorDiv = document.querySelector('#card-errors');
+                let html = `
                 *<span>${result.error.message}</span>`;
                 $(errorDiv).html(html);
                 $('#load-spinner').fadeToggle(100);

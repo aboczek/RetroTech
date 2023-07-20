@@ -43,41 +43,42 @@
                 <p>To save your details either Login to your account or Sign up!</p>
                 <div class="d-flex flex-row justify-content-center mb-5">
                     <a class="btn btn-primary my-2 mx-2" href="{% url 'account_login' %}">Login</a>
-                    <a class="btn btn-warning my-2" href="{% url 'account_signup' }">Sign up</a>
+                    <a class="btn btn-warning my-2" href="{% url 'account_signup' %}">Sign up</a>
                 </div>
                 {% endif %}
-            
-            <div class=" d-flex flex-column justify-content-center align-items-center w-50 mt-5" id="checkout-payment">
-                        <h2>Your order contains:</h2>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Product name:</th>
-                                    <th scope="col">Quantity:</th>
-                                    <th scope="col">Total:</th>
-                                </tr>
-                            </thead>
-                            {% for item in basket_items %}
-                            <tbody>
-                                <tr>
-                                    <td>{{ item.item.product_name}}</td>
-                                    <td>{{ item.quantity }}</td>
-                                    <td>€ {{ item.item.price | calculator:item.quantity }}</td>
-                                </tr>
-                                {% endfor %}
-                            </tbody>
-                        </table>
-                        <p class="d-flex justify-content-evenly w-100 me-5 fw-bold">
-                            Subtotal: <span class="d-flex justify-content-end">€
-                                {{ grand_total|floatformat:2 }}</span>
-                        </p>
-                        <h2 class="mt-5">Payment:</h2>
 
-                        <div id="card-element"></div>
+                <div class=" d-flex flex-column justify-content-center align-items-center w-50 mt-5"
+                    id="checkout-payment">
+                    <h2>Your order contains:</h2>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Product name:</th>
+                                <th scope="col">Quantity:</th>
+                                <th scope="col">Total:</th>
+                            </tr>
+                        </thead>
+                        {% for item in basket_items %}
+                        <tbody>
+                            <tr>
+                                <td>{{ item.item.product_name}}</td>
+                                <td>{{ item.quantity }}</td>
+                                <td>€ {{ item.item.price | calculator:item.quantity }}</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                    <p class="d-flex justify-content-evenly w-100 me-5 fw-bold">
+                        Subtotal: <span class="d-flex justify-content-end">€
+                            {{ grand_total|floatformat:2 }}</span>
+                    </p>
+                    <h2 class="mt-5">Payment:</h2>
 
-                        <div class="d-flex align-items-start text-danger mt-2 ps-2 w-100" id="card-errors" role="alert">
-                        </div>
-                        <input type="hidden" value="{{ client_secret }}" name="client_secret">
+                    <div id="card-element"></div>
+
+                    <div class="d-flex align-items-start text-danger mt-2 ps-2 w-100" id="card-errors" role="alert">
+                    </div>
+                    <input type="hidden" value="{{ client_secret }}" name="client_secret">
                 </div>
                 <div class="d-flex flex-row justify-content-center my-3">
                     <a class="btn btn-warning" href="{% url 'view_basket' %}">
