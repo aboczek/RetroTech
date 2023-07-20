@@ -7,14 +7,14 @@
 {% endblock %}
 
 {% block content %}
-<div class="container mt-5">
-    <div class="row">
-        <form action="{% url 'checkout' %}" method="POST" id="payment-form">
-            {% csrf_token %}
-            <div class="col-12 d-flex flex-column justify-content-center align-items-center">
+<form action="{% url 'checkout' %}" method="POST" id="payment-form">
+    {% csrf_token %}
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-12 col-md-6 d-flex flex-column justify-content-center align-items-center">
                 <h2>Fill in your details:</h2>
                 <ul class="mt-5 list-unstyled">
-                    <li>First and last name:</li>
+                    <li>Full name:</li>
                     <li>{{ order_form.full_name | as_crispy_field }}</li>
                     <li>Email Address:</li>
                     <li>{{ order_form.email | as_crispy_field }}</li>
@@ -46,9 +46,10 @@
                     <a class="btn btn-warning my-2" href="{% url 'account_signup' %}">Sign up</a>
                 </div>
                 {% endif %}
+            </div>
 
-                <div class=" d-flex flex-column justify-content-center align-items-center w-50 mt-5"
-                    id="checkout-payment">
+            <div class="col-12 col-md-6 d-flex flex-column">
+                <div class=" d-flex flex-column justify-content-center align-items-center mt-5" id="checkout-payment">
                     <h2>Your order contains:</h2>
                     <table class="table">
                         <thead>
@@ -58,8 +59,8 @@
                                 <th scope="col">Total:</th>
                             </tr>
                         </thead>
-                        {% for item in basket_items %}
                         <tbody>
+                            {% for item in basket_items %}
                             <tr>
                                 <td>{{ item.item.product_name}}</td>
                                 <td>{{ item.quantity }}</td>
@@ -68,7 +69,7 @@
                             {% endfor %}
                         </tbody>
                     </table>
-                    <p class="d-flex justify-content-evenly w-100 me-5 fw-bold">
+                    <p class="d-flex justify-content-evenly me-5 fw-bold">
                         Subtotal: <span class="d-flex justify-content-end">€
                             {{ grand_total|floatformat:2 }}</span>
                     </p>
@@ -89,19 +90,22 @@
                         Complete order
                     </button>
                 </div>
-                <p class="my-5">Your card will be charged subtotal:
-                    <span class="h3 text-danger"> € {{ grand_total|floatformat:2 }}</span>
-                </p>
-            </div>
-            <div id="load-spinner">
-                <div class="spinner-grow spinner-grow-sm" id="spinner" role="status">
-                    <span class="visually-hidden">Loading...</span>
+                <div class="d-flex flex-row justify-content-center">
+                    <p class="my-5">Your card will be charged subtotal:
+                        <span class="h3 text-danger"> € {{ grand_total|floatformat:2 }}</span>
+                    </p>
                 </div>
             </div>
-        </form>
-    </div>
-</div>
 
+
+        </div>
+        <div id="load-spinner">
+            <div class="spinner-grow spinner-grow-sm" id="spinner" role="status">
+                <span class="visually-hidden">Loading...</span>
+            </div>
+        </div>
+    </div>
+</form>
 {% endblock %}
 
 {% block extra_js %}
