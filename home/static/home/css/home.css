@@ -35,10 +35,6 @@
     width: 20rem;
 }
 
-.card {
-    border: none;
-}
-
 .index-banner {
     background-color: var(--gold);
     height: 20rem;
@@ -52,7 +48,31 @@
     font-size: 2rem !important;
 }
 
+.btn-sell {
+    height: 3.5rem;
+    width: 12rem;
+    background-color: var(--purple);
+    color: var(--white);
+}
+
+.btn-sell:hover {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    height: 5rem;
+    width: 15rem;
+    background-color: var(--purple);
+    color: var(--white);
+    transition: 600ms;
+}
+
 .banner-btn:hover {
     background-color: var(--purple);
     color: var(--white);
+}
+
+.hover-effect:hover {
+    background-color: var(--light-grey);
+    box-shadow: var(--purple-shadow) 0px 12px 28px 0px, var(--purple-shadow) 0px 2px 4px 0px, var(--purple-shadow) 0px 0px 0px 1px inset;
 }
