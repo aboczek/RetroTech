@@ -22,7 +22,7 @@ class Order(models.Model):
     postcode = models.CharField(max_length=30, null=False, blank=False)
     town_or_city = models.CharField(max_length=60, null=False, blank=False)
     street_address1 = models.CharField(max_length=100, null=False, blank=False)
-    street_address2 = models.CharField(max_length=100, null=False, blank=False)
+    street_address2 = models.CharField(max_length=100, null=True, blank=True)
     county_state = models.CharField(max_length=100, null=True, blank=True)
     date = models.DateTimeField(auto_now_add=True)
     order_total = models.DecimalField(max_digits=10, decimal_places=2,
