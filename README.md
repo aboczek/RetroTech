@@ -327,8 +327,6 @@ lineitem_total is calculated items price * quantity.
 
 - [JavaScript](https://en.wikipedia.org/wiki/JavaScript)
 
-- [Jquery](https://en.wikipedia.org/wiki/JQuery)
-
 ## Frameworks and Libraries used.
 
 - [Django](https://www.djangoproject.com/) Python-based web framework that follows the model–template–views architectural pattern.
@@ -342,6 +340,8 @@ lineitem_total is calculated items price * quantity.
 - [Bootstrap](https://getbootstrap.com/) Bootstrap 5 was used in this project.
 
 - [FontAwesome](https://fontawesome.com/) Icons used in this project.
+
+- [Jquery](https://en.wikipedia.org/wiki/JQuery)
 
 ## Tools
 
@@ -364,10 +364,13 @@ lineitem_total is calculated items price * quantity.
 - Responsive on all devices.
 - Custom Front end admin panel.
 - Profile accounts.
+- Saving details at checkout to user account.
 - Checkout with Stripe payments.
 - Products and Categories.
 - Newsletter
 - Emails on newsletter signup, sell to us and if checkout is successful.
+- Sell to us.
+- Sale.
 
 ## Navigation
 	
