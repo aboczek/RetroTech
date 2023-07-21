@@ -596,9 +596,18 @@ lineitem_total is calculated items price * quantity.
 
     - Hover or press on **Products** select any category or all, press on item to view details.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-38.png" alt="sell to us"/>
-    <img src="docs/manual-testing/manual-testing-39.png" alt="sell to us"/>
-    <img src="docs/manual-testing/manual-testing-40.png" alt="sell to us"/>
+    <img src="docs/manual-testing/manual-testing-38.png" alt="view products"/>
+    <img src="docs/manual-testing/manual-testing-39.png" alt="view products"/>
+    <img src="docs/manual-testing/manual-testing-40.png" alt="view products"/>
+    </details>
+    <br>
+
+- View products on Sale.
+
+    - Navigate to **SALE**.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-41.png" alt="view products on sale"/>
+    <img src="docs/manual-testing/manual-testing-42.png" alt="view products on sale"/>
     </details>
     <br>
 
