@@ -572,6 +572,16 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- Sell to us
+
+    - Navigate to **Sell to us**, fill in the details, upload pictures if you have any. You will receive email from us and you will be notified in navigation bar as well if form was successful.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-32.png" alt="newsletter signup"/>
+    <img src="docs/manual-testing/manual-testing-33.png" alt="newsletter signup"/>
+    <img src="docs/manual-testing/manual-testing-34.png" alt="newsletter signup"/>
+    </details>
+    <br>
+
 5. Known bugs.
 
 	**placeholder**
