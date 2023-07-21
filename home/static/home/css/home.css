@@ -73,6 +73,6 @@
 }
 
 .hover-effect:hover {
-    background-color: var(--light-grey);
+    background-color: var(--gold);
     box-shadow: var(--purple-shadow) 0px 12px 28px 0px, var(--purple-shadow) 0px 2px 4px 0px, var(--purple-shadow) 0px 0px 0px 1px inset;
 }
