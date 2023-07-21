@@ -668,10 +668,21 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-    - While logged in as superuser check if email already been subscribed to newsletter
+    - While logged in as superuser check if email already been subscribed to newsletter.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-57.png" alt="testing newsletter admin"/>
     <img src="docs/manual-testing/manual-testing-58.png" alt="testing newsletter admin"/>
+    </details>
+    <br>
+
+    - While logged in as super user, check sell to us queries and check if sending queries works.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-32.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-33.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-34.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-35.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-60.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-61.png" alt="testing newsletter admin"/>
     </details>
     <br>
 
