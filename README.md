@@ -544,7 +544,33 @@ lineitem_total is calculated items price * quantity.
 
 - Make Purchase and while saving details to your account.
 
-    - Add Item to basket, navigate to basket, press **Checkout**
+    - Add Item to basket, navigate to basket, press **Checkout** then fill in your details and press **Complete order**.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-21.png" alt="make purchase"/>
+    <img src="docs/manual-testing/manual-testing-22.png" alt="make purchase"/>
+    <img src="docs/manual-testing/manual-testing-23.png" alt="make purchase"/>
+    <img src="docs/manual-testing/manual-testing-24.png" alt="make purchase"/>
+    <img src="docs/manual-testing/manual-testing-25.png" alt="make purchase"/>
+    </details>
+    <br>
+
+    - To save your details into your account you need to be logged in, if you dont have an account create one. Select checkbox and when you submit the order by pressing **Complete order**, it will save your details to your account.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-26.png" alt="save details to your account"/>
+    <img src="docs/manual-testing/manual-testing-27.png" alt="save details to your account"/>
+    <img src="docs/manual-testing/manual-testing-28.png" alt="save details to your account"/>
+    </details>
+    <br>
+
+- Sign up for Newsletter
+
+    - In footer you have input field, type in your email. If your email was in my database it will throw an error that email is already signed for newsletter.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-29.png" alt="newsletter signup"/>
+    <img src="docs/manual-testing/manual-testing-30.png" alt="newsletter signup"/>
+    <img src="docs/manual-testing/manual-testing-31.png" alt="newsletter signup"/>
+    </details>
+    <br>
 
 5. Known bugs.
 
