@@ -625,8 +625,17 @@ lineitem_total is calculated items price * quantity.
 
     - Navigate to **FAQ?**
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-46.png" alt="view track your order"/>
-    <img src="docs/manual-testing/manual-testing-47.png" alt="view track your order"/>
+    <img src="docs/manual-testing/manual-testing-46.png" alt="view faq"/>
+    <img src="docs/manual-testing/manual-testing-47.png" alt="view faq"/>
+    </details>
+    <br>
+
+- View Terms and Conditions
+
+    - Scroll down to footer and navigate to **Terms & Conditions**.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-48.png" alt="view terms and conditions"/>
+    <img src="docs/manual-testing/manual-testing-49.png" alt="view terms and conditions"/>
     </details>
     <br>
 
