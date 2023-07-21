@@ -657,6 +657,25 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- Front end admin panel preview of newsletter emails.
+
+    - While logged in as superuser you will see 4 green buttons in your account, press Newsletter emails, it will render emails subscribed to newsletter. To test out we will input random fake email.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-53.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-54.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-55.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-56.png" alt="testing newsletter admin"/>
+    </details>
+    <br>
+
+    - While logged in as superuser check if email already been subscribed to newsletter
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-57.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-58.png" alt="testing newsletter admin"/>
+    </details>
+    <br>
+
+
 5. Known bugs.
 
 	**placeholder**
