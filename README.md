@@ -592,6 +592,16 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- View products and details.
+
+    - Hover or press on **Products** select any category or all, press on item to view details.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-38.png" alt="sell to us"/>
+    <img src="docs/manual-testing/manual-testing-39.png" alt="sell to us"/>
+    <img src="docs/manual-testing/manual-testing-40.png" alt="sell to us"/>
+    </details>
+    <br>
+
 5. Known bugs.
 
 	**placeholder**
