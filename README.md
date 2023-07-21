@@ -699,13 +699,30 @@ lineitem_total is calculated items price * quantity.
 
 - Front end admin panel FULL CRUD functionality.
 
-    - While logged in as super user, check admin panel button with CRUD.
+    - While logged in as super user, check custom admin panel with CRUD for products.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-62.png" alt="testing order preview"/>
-    <img src="docs/manual-testing/manual-testing-63.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-64.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-65.png" alt="testing order preview"/>
     </details>
     <br>
-    
+
+- CREATE.
+
+    - While logged in as super user, and navigated to cusom admin panel, create a product.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-66.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-67.png" alt="testing order preview"/>
+    </details>
+    <br>
+
+    - While logged in as super user, and navigated to custom admin panel, select newly added product.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-67.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-68.png" alt="testing order preview"/>
+    </details>
+    <br>
+
+
 5. Known bugs.
 
 	**placeholder**
