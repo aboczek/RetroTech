@@ -617,11 +617,18 @@ lineitem_total is calculated items price * quantity.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-43.png" alt="view track your order"/>
     <img src="docs/manual-testing/manual-testing-44.png" alt="view track your order"/>
-    <img src="docs/manual-testing/manual-testing-44.png" alt="view track your order"/>
+    <img src="docs/manual-testing/manual-testing-45.png" alt="view track your order"/>
     </details>
     <br>
 
+- View FAQ?
 
+    - Navigate to **FAQ?**
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-46.png" alt="view track your order"/>
+    <img src="docs/manual-testing/manual-testing-47.png" alt="view track your order"/>
+    </details>
+    <br>
 
 5. Known bugs.
 
