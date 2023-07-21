@@ -562,6 +562,16 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- After purchase while logged in check order history.
+
+    - Go into your account on right hand side you will have your order press on order number, it will open page what you have ordered quantity and total price you paid.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-35.png" alt="user account order history"/>
+    <img src="docs/manual-testing/manual-testing-36.png" alt="user account order history"/>
+    <img src="docs/manual-testing/manual-testing-37.png" alt="user account order history"/>
+    </details>
+    <br>
+
 - Sign up for Newsletter
 
     - In footer you have input field, type in your email. If your email was in my database it will throw an error that email is already signed for newsletter.
@@ -576,9 +586,9 @@ lineitem_total is calculated items price * quantity.
 
     - Navigate to **Sell to us**, fill in the details, upload pictures if you have any. You will receive email from us and you will be notified in navigation bar as well if form was successful.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-32.png" alt="newsletter signup"/>
-    <img src="docs/manual-testing/manual-testing-33.png" alt="newsletter signup"/>
-    <img src="docs/manual-testing/manual-testing-34.png" alt="newsletter signup"/>
+    <img src="docs/manual-testing/manual-testing-32.png" alt="sell to us"/>
+    <img src="docs/manual-testing/manual-testing-33.png" alt="sell to us"/>
+    <img src="docs/manual-testing/manual-testing-34.png" alt="sell to us"/>
     </details>
     <br>
 
