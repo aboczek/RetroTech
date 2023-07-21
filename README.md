@@ -611,6 +611,18 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- View track your order.
+
+    - Navigate to **track your order** 
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-43.png" alt="view track your order"/>
+    <img src="docs/manual-testing/manual-testing-44.png" alt="view track your order"/>
+    <img src="docs/manual-testing/manual-testing-44.png" alt="view track your order"/>
+    </details>
+    <br>
+
+
+
 5. Known bugs.
 
 	**placeholder**
