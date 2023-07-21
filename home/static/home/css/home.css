@@ -51,7 +51,7 @@
 .btn-sell {
     height: 3.5rem;
     width: 12rem;
-    background-color: var(--purple);
+    background-color: var(--d-grey);
     color: var(--white);
 }
 
@@ -62,8 +62,8 @@
     align-items: center;
     height: 5rem;
     width: 15rem;
-    background-color: var(--purple);
-    color: var(--white);
+    background-color: var(--gold);
+    color: var(--black);
     transition: 600ms;
 }
 
@@ -73,6 +73,7 @@
 }
 
 .hover-effect:hover {
-    background-color: var(--gold);
-    box-shadow: var(--purple-shadow) 0px 12px 28px 0px, var(--purple-shadow) 0px 2px 4px 0px, var(--purple-shadow) 0px 0px 0px 1px inset;
+    color: var(--white);
+    background-color: var(--purple);
+    box-shadow: var(--gold) 0px 12px 28px 0px, var(--gold) 0px 2px 4px 0px, var(--gold) 0px 0px 0px 1px inset;
 }

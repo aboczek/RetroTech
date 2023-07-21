@@ -385,7 +385,7 @@ lineitem_total is calculated items price * quantity.
 
 	    <img src="docs/indexhtml.png" alt="html validator" width="700">
 
-    - CSS all files te sted.
+    - CSS all files tested.
         
         - style.css(main css)
         <img src="docs/main-css.png" alt="css validator" width="700">
@@ -542,7 +542,7 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-- Make Purchase and Save your Details to your account.
+- Make Purchase and while saving details to your account.
 
     - Add Item to basket, navigate to basket, press **Checkout**
 
