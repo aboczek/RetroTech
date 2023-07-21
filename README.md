@@ -675,6 +675,8 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- Front end admin panel sell to us queries.
+
     - While logged in as super user, check sell to us queries and check if sending queries works and preview them.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-32.png" alt="sell to us admin"/>
@@ -686,6 +688,8 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- Front end admin panel orders made by customers.
+
     - While logged in as super user, check for submited orders and preview them. We will check order done already before by fake email.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-62.png" alt="testing order preview"/>
@@ -693,7 +697,15 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- Front end admin panel FULL CRUD functionality.
 
+    - While logged in as super user, check admin panel button with CRUD.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-62.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-63.png" alt="testing order preview"/>
+    </details>
+    <br>
+    
 5. Known bugs.
 
 	**placeholder**
