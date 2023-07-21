@@ -701,8 +701,8 @@ lineitem_total is calculated items price * quantity.
 
     - While logged in as super user, check custom admin panel with CRUD for products.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-64.png" alt="testing order preview"/>
-    <img src="docs/manual-testing/manual-testing-65.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-64.png" alt="crud admin panel"/>
+    <img src="docs/manual-testing/manual-testing-65.png" alt="crud admin panel"/>
     </details>
     <br>
 
@@ -710,18 +710,29 @@ lineitem_total is calculated items price * quantity.
 
     - While logged in as super user, and navigated to cusom admin panel, create a product.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-66.png" alt="testing order preview"/>
-    <img src="docs/manual-testing/manual-testing-67.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-66.png" alt="create product"/>
+    <img src="docs/manual-testing/manual-testing-67.png" alt="create product"/>
     </details>
     <br>
+
+- READ.
 
     - While logged in as super user, and navigated to custom admin panel, select newly added product.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-67.png" alt="testing order preview"/>
-    <img src="docs/manual-testing/manual-testing-68.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-67.png" alt="read product"/>
+    <img src="docs/manual-testing/manual-testing-68.png" alt="read product"/>
     </details>
     <br>
 
+- UPDATE.
+
+    - While logged in as super user, and navigated to custom admin panel, select edit button. Then adjust any of fields you want and preview change in product.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-69.png" alt="edit product"/>
+    <img src="docs/manual-testing/manual-testing-70.png" alt="edit product"/>
+    <img src="docs/manual-testing/manual-testing-71.png" alt="edit product"/>
+    </details>
+    <br>
 
 5. Known bugs.
 
