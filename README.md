@@ -481,6 +481,9 @@ lineitem_total is calculated items price * quantity.
      
 ### Manual testing:
 
+
+#### Customer side
+
 - Testing navigation:
     - Press Sell to us button and will lead to Sell to us page. **This is example**.
     <details><summary>Picture</summary>
@@ -572,7 +575,7 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-- Sign up for Newsletter
+- Sign up for Newsletter.
 
     - In footer you have input field, type in your email. If your email was in my database it will throw an error that email is already signed for newsletter.
     <details><summary>Picture</summary>
@@ -582,7 +585,7 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-- Sell to us
+- Sell to us.
 
     - Navigate to **Sell to us**, fill in the details, upload pictures if you have any. You will receive email from us and you will be notified in navigation bar as well if form was successful.
     <details><summary>Picture</summary>
@@ -621,7 +624,7 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-- View FAQ?
+- View FAQ?.
 
     - Navigate to **FAQ?**
     <details><summary>Picture</summary>
@@ -630,12 +633,27 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-- View Terms and Conditions
+- View Terms and Conditions.
 
     - Scroll down to footer and navigate to **Terms & Conditions**.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-48.png" alt="view terms and conditions"/>
     <img src="docs/manual-testing/manual-testing-49.png" alt="view terms and conditions"/>
+    </details>
+    <br>
+
+- Testing search function.
+
+    - Navigate to search bar 
+
+#### Front end admin panel
+- Front end admin panel testing.
+
+    - Login to your account that has superuser privilages and go to account.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-50.png" alt="login to superuser account"/>
+    <img src="docs/manual-testing/manual-testing-51.png" alt="login to superuser account"/>
+    <img src="docs/manual-testing/manual-testing-52.png" alt="login to superuser account"/>
     </details>
     <br>
 
