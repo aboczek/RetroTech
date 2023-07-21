@@ -734,6 +734,15 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+- DELETE.
+
+    - While logged in as super user, and navigated to custom admin panel, select delete button. Product should be deleted from database.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-72.png" alt="delete product"/>
+    <img src="docs/manual-testing/manual-testing-73.png" alt="delete product"/>
+    </details>
+    <br>
+
 5. Known bugs.
 
 	**placeholder**
