@@ -659,7 +659,7 @@ lineitem_total is calculated items price * quantity.
 
 - Front end admin panel preview of newsletter emails.
 
-    - While logged in as superuser you will see 4 green buttons in your account, press Newsletter emails, it will render emails subscribed to newsletter. To test out we will input random fake email.
+    - While logged in as super user you will see 4 green buttons in your account, press Newsletter emails, it will render emails subscribed to newsletter. To test out we will input random fake email.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-53.png" alt="testing newsletter admin"/>
     <img src="docs/manual-testing/manual-testing-54.png" alt="testing newsletter admin"/>
@@ -668,21 +668,28 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
-    - While logged in as superuser check if email already been subscribed to newsletter.
+    - While logged in as super user check if email already been subscribed to newsletter.
     <details><summary>Picture</summary>
     <img src="docs/manual-testing/manual-testing-57.png" alt="testing newsletter admin"/>
     <img src="docs/manual-testing/manual-testing-58.png" alt="testing newsletter admin"/>
     </details>
     <br>
 
-    - While logged in as super user, check sell to us queries and check if sending queries works.
+    - While logged in as super user, check sell to us queries and check if sending queries works and preview them.
     <details><summary>Picture</summary>
-    <img src="docs/manual-testing/manual-testing-32.png" alt="testing newsletter admin"/>
-    <img src="docs/manual-testing/manual-testing-33.png" alt="testing newsletter admin"/>
-    <img src="docs/manual-testing/manual-testing-34.png" alt="testing newsletter admin"/>
-    <img src="docs/manual-testing/manual-testing-35.png" alt="testing newsletter admin"/>
-    <img src="docs/manual-testing/manual-testing-60.png" alt="testing newsletter admin"/>
-    <img src="docs/manual-testing/manual-testing-61.png" alt="testing newsletter admin"/>
+    <img src="docs/manual-testing/manual-testing-32.png" alt="sell to us admin"/>
+    <img src="docs/manual-testing/manual-testing-33.png" alt="sell to us admin"/>
+    <img src="docs/manual-testing/manual-testing-34.png" alt="sell to us admin"/>
+    <img src="docs/manual-testing/manual-testing-35.png" alt="sell to us admin"/>
+    <img src="docs/manual-testing/manual-testing-60.png" alt="sell to us admin"/>
+    <img src="docs/manual-testing/manual-testing-61.png" alt="sell to us admin"/>
+    </details>
+    <br>
+
+    - While logged in as super user, check for submited orders and preview them. We will check order done already before by fake email.
+    <details><summary>Picture</summary>
+    <img src="docs/manual-testing/manual-testing-62.png" alt="testing order preview"/>
+    <img src="docs/manual-testing/manual-testing-63.png" alt="testing order preview"/>
     </details>
     <br>
 
