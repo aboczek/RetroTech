@@ -378,10 +378,16 @@ lineitem_total is calculated items price * quantity.
 
 - Navigation bar.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/navigation-1.png" alt="navbar">
+    </details>
+    <br>
 - Footer.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/navigation-2.png" alt="footer">
+    </details>
+    <br>
 
 - Content of index.html.
 
@@ -573,10 +579,16 @@ lineitem_total is calculated items price * quantity.
 
 - Navigation bar.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/nav-tablet-1.png" alt="navbar">
+    </details>
+    <br>
 - Footer.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/nav-tablet-2.png" alt="footer">
+    </details>
+    <br>
 
 - Content of index.html.
 
@@ -764,11 +776,17 @@ lineitem_total is calculated items price * quantity.
 
 - Navigation bar.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/nav-mobile-1.png" alt="navbar">
     <img src="docs/navigation/nav-mobile1-1.png" alt="navbar open">
+    </details>
+    <br>
 - Footer.
 
+    <details><summary>Picture</summary>
     <img src="docs/navigation/nav-mobile-2.png" alt="footer">
+    </details>
+    <br>
 
 - Content of index.html.
 
@@ -829,7 +847,7 @@ lineitem_total is calculated items price * quantity.
 - Checkout.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/nav-mobile-12.png alt="checkout navigation"/>
+    <img src="docs/navigation/nav-mobile-12.png" alt="checkout navigation"/>
     </details>
     <br>
 
