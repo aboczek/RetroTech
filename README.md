@@ -523,49 +523,240 @@ lineitem_total is calculated items price * quantity.
 - Newsletter emails **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-26.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-26.png" alt="newsletter admin navigation"/>
     </details>
     <br>
 
 - Sell to us **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-27.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-27.png" alt="sell to us admin navigation"/>
     </details>
     <br>
 
 - Sell to us details **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-28.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-28.png" alt="sell to us details admin navigation"/>
     </details>
     <br>
 
 - Orders **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-29.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-29.png" alt="orders admin navigation"/>
     </details>
     <br>
 
 - Order details **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-29.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-32.png" alt="order details admin navigation"/>
     </details>
     <br>
-    
+
 - Custom admin panel **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-30.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-30.png" alt="custom admin panel admin navigation"/>
     </details>
     <br>
 
 - Edit product **ADMIN SIDE**.
 
     <details><summary>Picture</summary>
-    <img src="docs/navigation/navigation-31.png" alt="user account admin navigation"/>
+    <img src="docs/navigation/navigation-31.png" alt="edit product admin navigation"/>
+    </details>
+    <br>
+
+#### Small Tablets
+
+- Navigation bar.
+
+    <img src="docs/navigation/nav-tablet-1.png" alt="navbar">
+- Footer.
+
+    <img src="docs/navigation/nav-tablet-2.png" alt="footer">
+
+- Content of index.html.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-3.png" alt="home page navigation"/>
+    </details>
+    <br>
+
+- Content of products, all look the same just filtered.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-4.png" alt="products navigation"/>
+    </details>
+    <br>
+
+- Product details.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-9.png" alt="products details navigation"/>
+    </details>
+    <br>
+
+- Sell to us.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-5.png" alt="sell to us navigation"/>
+    </details>
+    <br>
+
+- Sale.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-6.png" alt="sale navigation"/>
+    </details>
+    <br>
+
+- Track your order.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-7.png" alt="track your order navigation"/>
+    </details>
+    <br>
+
+- FAQ?.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-8.png" alt="track your order navigation"/>
+    </details>
+    <br>
+
+- Basket.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-13.png" alt="basket navigation"/>
+    </details>
+    <br>
+
+- Checkout.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-14.png" alt="checkout navigation"/>
+    </details>
+    <br>
+
+- Checkout Success.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-15.png" alt="checkout success navigation"/>
+    </details>
+    <br>
+
+- Terms and Conditions.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-10.png" alt="terms and conditions navigation"/>
+    </details>
+    <br>
+
+- Login page.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-11.png" alt="login page navigation"/>
+    </details>
+    <br>
+
+- Logout page.
+    
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-28.png" alt="logout page navigation"/>
+    </details>
+    <br>
+
+- Sign up page.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-12.png" alt="sign up navigation"/>
+    </details>
+    <br>
+
+- User account.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-16.png" alt="user account navigation"/>
+    </details>
+    <br>
+
+- User account change password.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-18.png" alt="change password navigation"/>
+    </details>
+    <br>
+
+- User account change email.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-19.png" alt="change email navigation"/>
+    </details>
+    <br>
+
+- Order history.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-17.png" alt="order history navigation"/>
+    </details>
+    <br>
+
+- User account **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-20.png" alt="user account admin navigation"/>
+    </details>
+    <br>
+
+- Newsletter emails **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-21.png" alt="newsletter admin navigation"/>
+    </details>
+    <br>
+
+- Sell to us **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-22.png" alt="sell to us admin navigation"/>
+    </details>
+    <br>
+
+- Sell to us details **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-23.png" alt="sell to us details admin navigation"/>
+    </details>
+    <br>
+
+- Orders **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-24.png" alt="orders admin navigation"/>
+    </details>
+    <br>
+
+- Order details **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-25.png" alt="order details admin navigation"/>
+    </details>
+    <br>
+
+- Custom admin panel **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-26.png" alt="custom admin panel admin navigation"/>
+    </details>
+    <br>
+
+- Edit product **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-tablet-27.png" alt="edit product admin navigation"/>
     </details>
     <br>
 
