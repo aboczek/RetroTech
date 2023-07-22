@@ -71,6 +71,7 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 ## Facebook Marketing
 
 - E-commerce online shopping site selling Retro handheld devices and more, You can sell your console or handheld to us as well.
+- Purpose of Facebook business page is to extend reach to new customers and hopefully returning ones.
 - Business model is Business to customer(B2C) 
 
 <img src="docs/facebook-marketing.png" alt="facebook wireframe">
