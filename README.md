@@ -68,6 +68,13 @@ Websites goal is to promote my RetroTech shop and gain new customers.
     </details>
     <br>
 
+## Facebook Marketing
+
+- E-commerce online shopping site selling Retro handheld devices and more, You can sell your console or handheld to us as well.
+- Business model is Business to customer(B2C) 
+
+<img src="docs/facebook-marketing.png" alt="facebook wireframe">
+
 ## Requirements
 
 - Home page.
