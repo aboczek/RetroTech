@@ -760,6 +760,198 @@ lineitem_total is calculated items price * quantity.
     </details>
     <br>
 
+#### Mobile
+
+- Navigation bar.
+
+    <img src="docs/navigation/nav-mobile-1.png" alt="navbar">
+    <img src="docs/navigation/nav-mobile1-1.png" alt="navbar open">
+- Footer.
+
+    <img src="docs/navigation/nav-mobile-2.png" alt="footer">
+
+- Content of index.html.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-3.png" alt="home page navigation"/>
+    </details>
+    <br>
+
+- Content of products, all look the same just filtered.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-4.png" alt="products navigation"/>
+    </details>
+    <br>
+
+- Product details.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-10.png" alt="products details navigation"/>
+    </details>
+    <br>
+
+- Sell to us.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-6.png" alt="sell to us navigation"/>
+    </details>
+    <br>
+
+- Sale.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-5.png" alt="sale navigation"/>
+    </details>
+    <br>
+
+- Track your order.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-7.png" alt="track your order navigation"/>
+    </details>
+    <br>
+
+- FAQ?.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-8.png" alt="track your order navigation"/>
+    </details>
+    <br>
+
+- Basket.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-11.png" alt="basket navigation"/>
+    </details>
+    <br>
+
+- Checkout.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-12.png alt="checkout navigation"/>
+    </details>
+    <br>
+
+- Checkout Success.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-13.png" alt="checkout success navigation"/>
+    </details>
+    <br>
+
+- Terms and Conditions.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-9.png" alt="terms and conditions navigation"/>
+    </details>
+    <br>
+
+- Login page.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-14.png" alt="login page navigation"/>
+    </details>
+    <br>
+
+- Logout page.
+    
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-20.png" alt="logout page navigation"/>
+    </details>
+    <br>
+
+- Sign up page.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-15.png" alt="sign up navigation"/>
+    </details>
+    <br>
+
+- User account.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-16.png" alt="user account navigation"/>
+    </details>
+    <br>
+
+- User account change password.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-18.png" alt="change password navigation"/>
+    </details>
+    <br>
+
+- User account change email.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-19.png" alt="change email navigation"/>
+    </details>
+    <br>
+
+- Order history.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-17.png" alt="order history navigation"/>
+    </details>
+    <br>
+
+- User account **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-21.png" alt="user account admin navigation"/>
+    </details>
+    <br>
+
+- Newsletter emails **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-22.png" alt="newsletter admin navigation"/>
+    </details>
+    <br>
+
+- Sell to us **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-23.png" alt="sell to us admin navigation"/>
+    </details>
+    <br>
+
+- Sell to us details **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-24.png" alt="sell to us details admin navigation"/>
+    </details>
+    <br>
+
+- Orders **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-25.png" alt="orders admin navigation"/>
+    </details>
+    <br>
+
+- Order details **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-26.png" alt="order details admin navigation"/>
+    </details>
+    <br>
+
+- Custom admin panel **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-27.png" alt="custom admin panel admin navigation"/>
+    </details>
+    <br>
+
+- Edit product **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/navigation/nav-mobile-28.png" alt="edit product admin navigation"/>
+    </details>
+    <br>
+
 # Testing
 
 1. W3C HTML Validator, CSS Validator, CI Pylinter and JShint.

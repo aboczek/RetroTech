@@ -28,7 +28,7 @@
                 <tbody>
                     {% for order in orders %}
                     <tr>
-                        <td>{{ order.order_number }}</td>
+                        <td>{{ order.order_number|truncatechars:12 }}</td>
                         <td>{{ order.full_name }}</td>
                         <td>{{ order.grand_total }}</td>
                         <td><a class="btn btn-primary" href="{% url 'admin-orders-preview' order.id %}">Order</a></td>

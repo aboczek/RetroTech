@@ -23,13 +23,20 @@
                 <li>{{ sell.model }}</li>
                 <li>{{ sell.description }}</li>
             </ul>
-            <div class="d-flex flex-row sell-images justify-content-center">
-                <a href="{{ sell.sell_image_one.url }}"><img class="sell-images" src="{{ sell.sell_image_one.url }}"
-                        alt=""></a>
-                <a href="{{ sell.sell_image_two.url }}"><img class="sell-images" src="{{ sell.sell_image_two.url }}"
-                        alt=""></a>
-                <a href="{{ sell.sell_image_three.url }}"><img class="sell-images" src="{{ sell.sell_image_three.url }}"
-                        alt=""></a>
+        </div>
+        <div class="row">
+            <div class="col">
+                <div class="d-flex flex-column flex-md-row sell-images justify-content-center align-items-center my-5">
+                    <a href="{{ sell.sell_image_one.url }}"><img
+                            class="sell-images d-flex flex-column justify-content-center"
+                            src="{{ sell.sell_image_one.url }}" alt=""></a>
+                    <a href="{{ sell.sell_image_two.url }}"><img
+                            class="sell-images d-flex flex-column justify-content-center"
+                            src="{{ sell.sell_image_two.url }}" alt=""></a>
+                    <a href="{{ sell.sell_image_three.url }}"><img
+                            class="sell-images d-flex flex-column justify-content-center"
+                            src="{{ sell.sell_image_three.url }}" alt=""></a>
+                </div>
             </div>
         </div>
     </div>
