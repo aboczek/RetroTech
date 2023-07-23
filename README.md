@@ -502,7 +502,9 @@ lineitem_total is calculated items price * quantity.
 
 - [FontAwesome](https://fontawesome.com/) Icons used in this project.
 
-- [Jquery](https://en.wikipedia.org/wiki/JQuery)
+- [Jquery](https://en.wikipedia.org/wiki/JQuery) has been used because lack of time and was given in LMS in course.
+
+- [Crispy forms](https://django-crispy-forms.readthedocs.io/en/latest/install.html) for forms.
 
 ## Tools
 
@@ -1814,12 +1816,10 @@ If we had smtp to setup then variables would look like this:
 18. Now go back to front end, navigate to Account and **Admin Panel**, forms on left are responsible for Creating in front end, when you create products they will appear on right side where you can edit them or remove completely. Have fun!
 
 <details><summary>Picture</summary>
-<img src="docs/local-deployment/deployment-37.png" alt="heroku live"/>
-<img src="docs/local-deployment/deployment-38.png" alt="heroku live"/>
-<img src="docs/local-deployment/deployment-39.png" alt="heroku live"/>
-<img src="docs/local-deployment/deployment-40.png" alt="heroku live"/>
-<img src="docs/local-deployment/deployment-41.png" alt="heroku live"/>
-<img src="docs/local-deployment/deployment-42.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-43.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-44.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-45.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-46.png" alt="heroku live"/>
 </details>
 <br>
 
