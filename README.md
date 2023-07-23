@@ -1593,29 +1593,237 @@ lineitem_total is calculated items price * quantity.
 
 ### Heroku
 
-**placeholder**
+- Create an account [here](https://www.heroku.com/), it will be used later.
 
 ### GitHub
 
-**placeholder**
+- Create an account [here](https://github.com/), it will be used later.
+
+### Cloudinary
+
+- Create an account [here](https://cloudinary.com/).
+- Login and go to **Dashboard** and save **API Environment variable**, it will be used in near future.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-1.png" alt="cloudinary dashboard"/>
+    <img src="docs/local-deployment/deployment-2.png" alt="cloudinary dashboard"/>
+    </details>
+    <br>
 
 ### ElephantSQL
 
-**placeholder**
+- Create an account [here](https://www.elephantsql.com/).
+- Login and **Create new instance** as on pictures in spoiler. Save your URL, you will need it soon.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-3.png" alt="elephantsql dashboard"/>
+    <img src="docs/local-deployment/deployment-4.png" alt="elephantsql dashboard"/>
+    <img src="docs/local-deployment/deployment-5.png" alt="elephantsql dashboard"/>
+    <img src="docs/local-deployment/deployment-6.png" alt="elephantsql dashboard"/>
+    <img src="docs/local-deployment/deployment-7.png" alt="elephantsql dashboard"/>
+    <img src="docs/local-deployment/deployment-8.png" alt="elephantsql dashboard"/>
+    </details>
+    <br>
 
-## Local Development
+### Stripe
 
-**placeholder**
+- Create stripe account [here](https://stripe.com/ie).
+- When you created and verified your account, go to **Developers** as on screen in spoilers.
+- Copy your Published key and Secret key in safe place. You will need it soon as well.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-9.png" alt="stripe dashboard"/>
+    <img src="docs/local-deployment/deployment-10.png" alt="stripe dashboard"/>
+    </details>
+    <br>
 
-**loads of placeholders**
+### Local Development
 
-**loads of placeholders**
+1. Go to Github repo [here](https://github.com/aboczek/RetroTech) press **< CODE >**, and press COPY.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-11.png" alt="github"/>
+    </details>
+    <br>
 
-**loads of placeholders**
+OR **FORK** my repo [here](https://github.com/aboczek/RetroTech) and **CLONE IT**.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-12.png" alt="github"/>
+    </details>
+    <br>
+- If u copied the link to clone go to step 3 and instead of link provided there use the link you have copied from your fork.
 
-**loads of placeholders**
+2. Go to your github repositories and create new repo, call it whatever you like. Press Create Repository it will lead you to another page, and press Gitpod it should open workspace for you. If you use VSCODE on your PC just open new workspace.
 
-**loads of placeholders**
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-13.png" alt="github"/>
+    <img src="docs/local-deployment/deployment-14.png" alt="github"/>
+    <img src="docs/local-deployment/deployment-15.png" alt="github"/>
+    </details>
+    <br>
+
+3. When Gitpod or Vscode is open, type in in terminal, it will clone my repository, if you look for better explanation go to this [link](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository?tool=desktop&platform=linux).
+    ```
+    https://github.com/aboczek/RetroTech.git
+    ```
+    OR url from your forked repository. It will download it.
+
+    - When cloning is finished your directory should look like this.
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-16.png" alt="gitpod"/>
+    </details>
+    <br>
+
+    - Drag entire content of **RetroTech** folder into root directory, and remove **RetroTech** folder.
+
+    <details><summary>Picture</summary>
+    <img src="docs/local-deployment/deployment-17.png" alt="gitpod"/>
+    </details>
+    <br>
+
+4. Now you need to download all libraries and frameworks used in this project.
+```
+pip3 install -r requirements.txt
+```
+5. Create env.py in main folder and add all API Keys you saved. Should look like this below.
+```
+os.environ['DATABASE_URL] = "url from elephantsql"
+os.environ['SECRET_KEY] = "secret_key"
+os.environ['CLOUDINARY_URL] = "api key from cloudinary, remove CLOUDINARY_URL from begining"
+os.environ['STRIPE_PUBLIC_KEY] = "stripe public key"
+os.environ['STRIPE_SECRET_KEY] = "stripe secret key, dont leak it anywhere!"
+```
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-18.png" alt="gitpod"/>
+</details>
+<br>
+
+6. Now go to settings.py in main project directory. and add this code to **ALLOWED_HOST** if you run gitpod add gitpod url for your project, else localhost or '127.0.0.1' .
+```
+'.herokuapp.com', 'localhost'
+```
+
+Ps: when you run your project with pythno3 manage.py runserver it will throw an error wit gitpod thats where you will find your URL to put in place instead of localhost.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-19.png" alt="gitpod"/>
+</details>
+<br>
+
+7. Very important information, we didnt add emailing variables to env.py it should look like this with them added. I had hard time setting it up, so it might not work for you properly. **[here](https://support.google.com/accounts/answer/185833?hl=en) is a guide how to get app password** I will comment out code in settings for emailing so project is working in deployment.
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-20.png" alt="gitpod"/>
+</details>
+<br>
+
+#### **REMEMBER** if you want Smtp emailing you need to get gmail account working which gmail doesnt restrict, New accounts are blocked from having smtp option on. Yellow box on screenshot is so email is sent in background to terminal, Red box is if you setup smtp emailing.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-21.png" alt="gitpod"/>
+</details>
+<br>
+
+8. After everything matches in previous steps, we type in this command into terminal, it will migrate all models to database.
+```
+python3 manage.py migrate
+```
+- Should look like this
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-22.png" alt="gitpod"/>
+</details>
+<br>
+
+9. When migration is finished we create superuser for admin panel in django.
+it will ask you for user name, email which is not required and password. **REMEMBER THEM**
+```
+python3 manage.py createsuperuser
+```
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-23.png" alt="gitpod"/>
+</details>
+<br>
+
+10. Now we push code to Github, with:
+```
+git add .
+git commit -m "Your own commit"
+git push
+```
+your code has been pushed to your repo at this stage.
+
+11. Now we go to [heroku](https://www.heroku.com/) and login to your account. Create new app, give it a name and select server closer to you.
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-24.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-25.png" alt="heroku"/>
+</details>
+<br>
+
+12. Connect Heroku wit Github, select deployment method **Github** and search for the name of your repo and connect.
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-26.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-27.png" alt="heroku"/>
+</details>
+<br>
+
+13. Now we go setup variables in heroku, select **Settings** and **Reveal Config Vars**, now we setup all variables same way as in your project.
+pictures in spoiler.
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-28.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-29.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-30.png" alt="heroku"/>
+</details>
+<br>
+If we had smtp to setup then variables would look like this:
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-31.png" alt="heroku"/>
+</details>
+<br>
+
+14. Now we got to **Deploy** Tab, scroll down, pick main branch and press **Deploy Branch**.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-32.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-33.png" alt="heroku"/>
+</details>
+<br>
+
+15. When Heroku is ready deploying your project you will see button on the bottom **View**. Click it it will lead you to live project.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-34.png" alt="heroku"/>
+<img src="docs/local-deployment/deployment-35.png" alt="heroku"/>
+</details>
+<br>
+
+16. If you dont everything correctly you should see this. Congratulations.
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-36.png" alt="heroku"/>
+</details>
+<br>
+
+17. To add products to website, you need to login into django admin panel and add categories first, then you can use custom admin panel and add products. I will post pictures where to go and what to do. Categories have to be capital letter if you want it to be displayed that way in front end.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-37.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-38.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-39.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-40.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-41.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-42.png" alt="heroku live"/>
+</details>
+<br>
+
+18. Now go back to front end, navigate to Account and **Admin Panel**, forms on left are responsible for Creating in front end, when you create products they will appear on right side where you can edit them or remove completely. Have fun!
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-37.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-38.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-39.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-40.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-41.png" alt="heroku live"/>
+<img src="docs/local-deployment/deployment-42.png" alt="heroku live"/>
+</details>
+<br>
+
+PS: After deploying project to Heroku and Cloudinary go to Cloudinary and find placeholder image, and remove letters from it so its only 'placeholder' without numbers, otherwise wont render in project.
 
 # Credits 
 
