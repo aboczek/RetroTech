@@ -1846,3 +1846,4 @@ PS: After deploying project to Heroku and Cloudinary go to Cloudinary and find p
 - [Python linter](https://pep8ci.herokuapp.com/#) used to lint python code.
 - [JShint](https://jshint.com/) used to lint javascript.
 - [Autoprefixer](https://autoprefixer.github.io/) used to prefix CSS.
+- [boutique ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218) some of the code was used and then reworked on my side to fit my needs.
