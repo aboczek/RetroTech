@@ -1586,10 +1586,16 @@ lineitem_total is calculated items price * quantity.
     
     - I have removed code from template and filtered in backend for boolean if True. ISSUE: [#102](https://github.com/aboczek/RetroTech/issues/102)
     ```
-    quantity_str = request.POST.get('quantity', '')
-    quantity = int(quantity_str) if quantity_str else 0
+    items_sale = Item.objects.filter(sale=True)
+    items_featured = Item.objects.filter(featured=True)
     ```
 
+### Additional Information
+
+- Track your order isnt plugged in, and will lead you to [DPD](https://dpd.ie/tracking) website.
+
+- JQuery has been used, because projects deadlines were short and and was expected a lot from us students.
+JQuery used was provided to us in LMS from [boutique ado](https://github.com/Code-Institute-Solutions/boutique_ado_v1/tree/933797d5e14d6c3f072df31adf0ca6f938d02218), I have changed bits and pieces of JQuery for my own functionality, changed **var** to **const** or **let**, and targeting ID's to **querySelector** as per Javascript ES6.
 
 # Deployment
 
