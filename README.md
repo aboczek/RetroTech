@@ -1569,11 +1569,22 @@ lineitem_total is calculated items price * quantity.
 
 5. Known bugs.
 
-	**placeholder**
+	1. If too many messages appear on website, first one from top will close rest stay open for user to close down with [X]. ISSUE: [#100](https://github.com/aboczek/RetroTech/issues/100)
 
 6. Bugs fixed.
 
-	**placeholder**
+	1. Empty input field in product details throws 500 error, reading it as empty string. **FIXED**
+    I have checked if string is string at first then converted it to integer if string is empty it will change it to 0 instead of empty/ ''. ISSUE: [#101](https://github.com/aboczek/RetroTech/issues/101)
+    ```
+    quantity_str = request.POST.get('quantity', '')
+    quantity = int(quantity_str) if quantity_str else 0
+    ```
+
+    2. Django bug with if statement in template, boolean wouldnt render products with sale or featured, if they were True or False. **FIXED** I have removed code from template and filtered in backend for boolean if True. ISSUE: [#102](https://github.com/aboczek/RetroTech/issues/102)
+    ```
+    quantity_str = request.POST.get('quantity', '')
+    quantity = int(quantity_str) if quantity_str else 0
+    ```
 
 
 # Deployment
