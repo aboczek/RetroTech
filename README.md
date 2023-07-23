@@ -142,34 +142,187 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 
 ## Wireframes
 
+- Navbar.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/navbars.png" alt="navbar wireframe">
+    </details>
+    <br>
+
+- Footer.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/footer.png" alt="footer wireframe">
+    </details>
+    <br>
+
 - Home page.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/home-page.png" alt="home page wireframe">
+    </details>
+    <br>
 
 - Products/Categories.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/products.png" alt="product wireframe">
+    </details>
+    <br>
+
+- Product Details.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/products-details.png" alt="product details wireframe">
+    </details>
+    <br>
+
+- Basket.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/basket.png" alt="basket wireframe">
+    </details>
+    <br>
 
 - Checkout.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/checkout.png" alt="checkout wireframe">
+    </details>
+    <br>
+
+- Checkout Success.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/checkout-sucess.png" alt="checkout success wireframe">
+    </details>
+    <br>
 
 - Sales.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/SALE.png" alt="sale wireframe">
+    </details>
+    <br>
 
-- Front end admin panel
+- Sell to us.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/sel- to-us.png" alt="sell to us wireframe">
+    </details>
+    <br>
 
-- Profile account
+- FAQ.
 
-	**placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/faq.png" alt="faq wireframe">
+    </details>
+    <br>
 
-- Newsletter
+- Front end admin panel.
 
-    **placeholder**
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/admin-panel-crud.png" alt="admin panel crud wireframe">
+    </details>
+    <br>
 
+- Login.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/login.png" alt="login wireframe">
+    </details>
+    <br>
+
+- Logout.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/logout.png" alt="logout wireframe">
+    </details>
+    <br>
+
+- Sign up.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/signup.png" alt="sign up wireframe">
+    </details>
+    <br>
+
+- Profile account.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/user-account.png" alt="user account wireframe">
+    </details>
+    <br>
+
+- Order History.
+
+	<details><summary>Picture</summary>
+    <img src="docs/wireframes/order-history.png" alt="order history wireframe">
+    </details>
+    <br>
+
+- Profile account **ADMIN SIDE**.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/user-account-admin.png" alt="user account admin wireframe">
+    </details>
+    <br>
+
+- Edit Product **ADMIN SIDE**
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/admin-edit-product.png" alt="edit product admin wireframe">
+    </details>
+    <br>
+
+- Orders **ADMIN SIDE**
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/orders-admin.png" alt="orders admin wireframe">
+    </details>
+    <br>
+
+- Orders details **ADMIN SIDE**
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/order-details-admin.png" alt="orders details admin wireframe">
+    </details>
+    <br>
+
+- Sell to me **ADMIN SIDE**
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/sell-to-me.png" alt="sell to me admin wireframe">
+    </details>
+    <br>
+
+- Sell to me details **ADMIN SIDE**
+
+    <details><summary>Picture</summary>
+    <img src="ddocs/wireframes/sell-to-me-details.png" alt="sell to me details admin wireframe">
+    </details>
+    <br>
+
+- Newsletter.
+
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/newsletter.png" alt="newsletter email wireframe">
+    </details>
+    <br>
+
+- Terms & Conditions.
+    
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/terms-conditions.png" alt="terms conditions wireframe">
+    </details>
+    <br> 
+
+- Track your order.
+    
+    <details><summary>Picture</summary>
+    <img src="docs/wireframes/track-your-order.png" alt="track your order wireframe">
+    </details>
+    <br> 
 
 # Authentication and Security
 
