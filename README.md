@@ -1500,14 +1500,72 @@ lineitem_total is calculated items price * quantity.
 
 # Testing user stories
 
+
+##### All user stories have been already tested in manual testing, no pictures will be provided for this user testing.
 | **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
 |---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
-| **placeholder** | **placeholder** | **placeholder** | PASS |
-<details><summary>Picture</summary>
-<img src="" alt=""/>
-</details>
+| As a user, I want to land on main page.  | Load the page | Page should load on home page | PASS |
 <br>
 
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to navigate through main page. | Navigate through navigation bar | Selected buttons in navbar will lead you to selected page. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to navigate through categories. | Navigate to Products and hover over or press Products and select category you want. | Selected category will bring you to certain category | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to contact owner to sell my console or handheld device. | Navigate to **Sell to us** in navbar. Fill in the details upload pictures if you have any, and send query to us. | Query will be sent to us while notifying customer that we got the message. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to buy device of the website. | Navigate to products, select category, pick one of the products then add to basket. Adjust quantity, fill in your details, card details and complete order | User will buy product of my website and be charged with stripe | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to see what kind of device website has to offer. | Navigate to products and select whichever category you want. | User will display all of the devices he wants to look at. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to create account. | Navigate into Sign up, fill in email, user name and password then go to your email and verify your email. | User will create an account and verify their email. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to store my details on my account. | While in checkout login, Sign up or check a checkbox in checkout page. | While doing this action details will be saved to user account and can be previewed in user account. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to add item to shopping bag. | Navigate to any category you want pick one of the products and press **Add to basket** | This action will add product to basket. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to continue shopping after adding one or more items in the bag. | Navigate to product, select any category you want, pick any product and **add to basket**. User will be notified and can continue shopping. | After adding product to basket user can continue shopping. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to pay for my shopping with Stripe. | After adding products to basket and adjusting quantity, select **Checkout** Fill in your details and card details. Select **Complete order** order will be processed and you will land on Checkout success page if everything went alright, your card will be charged by stripe.| This action will charge users credit card by stripe. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to sign up for newsletter. | Navigate to footer, and fill in empty input field and press **Subscribe** you will be notified that your email was subscribed and you will receive email from us. | This action will subscribe to our newsletter if email doesnt exist in our database for newsletter emails. | PASS |
+<br>
+
+| **Feature**                     | **Action**                          | **Expected Result**                                                                  | **Result** |
+|---------------------------------|-------------------------------------|--------------------------------------------------------------------------------------|-------------------|
+| As a user, I want to be able to navigate through sales page. | Navigate to **SALE** page, you will land on **on Sale** page, where products are discounted | This action will lead user to Sale page where products are discounted. | PASS |
+<br>
 
 5. Known bugs.
 
