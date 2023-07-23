@@ -299,7 +299,7 @@ Websites goal is to promote my RetroTech shop and gain new customers.
 - Sell to me details **ADMIN SIDE**
 
     <details><summary>Picture</summary>
-    <img src="ddocs/wireframes/sell-to-me-details.png" alt="sell to me details admin wireframe">
+    <img src="docs/wireframes/sell-to-me-details.png" alt="sell to me details admin wireframe">
     </details>
     <br>
 
