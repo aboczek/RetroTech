@@ -1699,19 +1699,7 @@ os.environ['STRIPE_SECRET_KEY] = "stripe secret key, dont leak it anywhere!"
 </details>
 <br>
 
-6. Now go to settings.py in main project directory. and add this code to **ALLOWED_HOST** if you run gitpod add gitpod url for your project, else localhost or '127.0.0.1' .
-```
-'.herokuapp.com', 'localhost'
-```
-
-Ps: when you run your project with pythno3 manage.py runserver it will throw an error wit gitpod thats where you will find your URL to put in place instead of localhost.
-
-<details><summary>Picture</summary>
-<img src="docs/local-deployment/deployment-19.png" alt="gitpod"/>
-</details>
-<br>
-
-7. Very important information, we didnt add emailing variables to env.py it should look like this with them added. I had hard time setting it up, so it might not work for you properly. **[here](https://support.google.com/accounts/answer/185833?hl=en) is a guide how to get app password** I will comment out code in settings for emailing so project is working in deployment.
+6. Very important information, we didnt add emailing variables to env.py it should look like this with them added. I had hard time setting it up, so it might not work for you properly. **[here](https://support.google.com/accounts/answer/185833?hl=en) is a guide how to get app password** I will comment out code in settings for emailing so project is working in deployment.
 <details><summary>Picture</summary>
 <img src="docs/local-deployment/deployment-20.png" alt="gitpod"/>
 </details>
@@ -1721,6 +1709,18 @@ Ps: when you run your project with pythno3 manage.py runserver it will throw an 
 
 <details><summary>Picture</summary>
 <img src="docs/local-deployment/deployment-21.png" alt="gitpod"/>
+</details>
+<br>
+
+7. Now go to settings.py in main project directory. and add this code to **ALLOWED_HOST** if you run gitpod add gitpod url for your project, else localhost or '127.0.0.1' .
+```
+'.herokuapp.com', 'localhost'
+```
+
+Ps: when you run your project with pythno3 manage.py runserver it will throw an error wit gitpod thats where you will find your URL to put in place instead of localhost.
+
+<details><summary>Picture</summary>
+<img src="docs/local-deployment/deployment-19.png" alt="gitpod"/>
 </details>
 <br>
 
